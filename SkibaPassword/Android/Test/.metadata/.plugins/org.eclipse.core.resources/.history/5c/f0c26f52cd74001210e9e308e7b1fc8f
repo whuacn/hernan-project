@@ -1,0 +1,56 @@
+package com.skiba.password;
+
+import java.security.NoSuchAlgorithmException;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.Menu;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.TextView;
+
+public class Psw extends Activity {
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_psw);
+        
+        Spinner cboTam = (Spinner)findViewById(R.id.cboSize);
+        ArrayAdapter myAdap = (ArrayAdapter) cboTam.getAdapter(); //cast to an ArrayAdapter
+        int spinnerPosition = myAdap.getPosition("10");
+        cboTam.setSelection(spinnerPosition);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.activity_psw, menu);
+        return true;
+    }
+    
+    /** Called when the user clicks the Generate button 
+     * @throws NoSuchAlgorithmException */
+    public void Generate(View view) throws NoSuchAlgorithmException {
+       
+    	EditText siteText = (EditText) findViewById(R.id.txtSite);
+    	EditText pwsText = (EditText) findViewById(R.id.txtPassword);
+    	Spinner cboTam = (Spinner)findViewById(R.id.cboSize);
+    	
+    	String site = siteText.getText().toString();
+    	String pws = pwsText.getText().toString();    	
+    	int tam = Integer.valueOf(cboTam.getSelectedItem().toString());
+    	
+    	clsGenerate g = new clsGenerate();
+    	
+    	EditText ResultText = (EditText) findViewById(R.id.txtResult);
+    	TextView ResultLabel = (TextView)findViewById(R.id.lbResult);
+    	ResultLabel.setText("Password para " + site);
+    	ResultText.setText(g.generate(pws, site, tam));
+    	
+    }
+    
+}

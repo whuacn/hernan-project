@@ -1,0 +1,100 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Psw" >
+
+    <TextView
+        android:id="@+id/lbSite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtPassword"
+        android:layout_below="@+id/txtPassword"
+        android:layout_marginTop="18dp"
+        android:text="@string/site"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/txtSite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lbSite"
+        android:layout_alignRight="@+id/txtPassword"
+        android:layout_below="@+id/lbSite"
+        android:ems="10"
+        android:inputType="text" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/txtPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbPassword"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/lbSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtSite"
+        android:layout_below="@+id/txtSite"
+        android:layout_marginTop="16dp"
+        android:text="@string/size"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Spinner
+        android:id="@+id/cboSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lbSize"
+        android:layout_alignRight="@+id/txtSite"
+        android:layout_below="@+id/lbSize"
+        android:entries="@array/cboSize" />
+
+    <Button
+        android:id="@+id/btnGenerate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cboSize"
+        android:layout_centerHorizontal="true"
+        android:onClick="Generate"
+        android:text="@string/generate" />
+
+    <TextView
+        android:id="@+id/lbPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtPassword"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="14dp"
+        android:text="@string/secret_password"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/txtResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/cboSize"
+        android:layout_below="@+id/btnGenerate"
+        android:layout_marginTop="55dp"
+        android:ems="10"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/lbResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtResult"
+        android:layout_below="@+id/btnGenerate"
+        android:layout_marginTop="28dp"
+        android:text="Password para "
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:visibility="invisible" />
+
+</RelativeLayout>

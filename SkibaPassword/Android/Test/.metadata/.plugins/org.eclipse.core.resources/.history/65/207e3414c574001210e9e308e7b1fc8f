@@ -1,0 +1,5 @@
+package com.skiba.password;
+
+public class Base64Coder {
+
+}

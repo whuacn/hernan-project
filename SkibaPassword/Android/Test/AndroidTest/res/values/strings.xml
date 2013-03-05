@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Skiba Password</string>
+    <string name="menu_settings">Settings</string>
+    <string name="site">Sitio</string>
+    <string name="secret_password">Password Secreta</string>
+    <string name="generate">Generar Password</string>
+    <string name="size">Tamaño</string>
+
+</resources>
