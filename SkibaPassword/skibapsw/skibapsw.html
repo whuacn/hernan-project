@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
+    <title>Skiba Password</title>
+    <meta name="description" content="Generador de password" />
+    <meta name="author" content="Hernan Hegykozi" />
+    <!-- css styles -->
+    <link href="bootstrap.css" rel="stylesheet" />
+    <link href="skibapsw.css" rel="stylesheet">
+    <!-- Skiba script -->
+    <script src="skibapsw.js"></script>
+    <!-- HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+<center>
+    <div class="hero-unit" style="width:350px">
+        <form method="POST" class="form-stacked" name="passwordform" id="passwordform">
+        <h2 class="padlockbox rainbow " style="width:300px" align="left">
+            Skiba Password
+		</h2>
+        <div class="clearfix" id="secretpassworderror">
+            <label for="secretpassword" style="width:300px" align="left">
+                Password Secreta</label>
+            <div class="input">
+                <input class="xlarge" id="secretpassword" name="secretpassword" size="30" type="password" />
+            </div>
+        </div>
+        <!-- /clearfix -->
+        <div class="clearfix" id="sitenameerror">
+            <label for="sitename1" style="width:300px" align="left">
+                Sitio</label>
+            <div class="input">
+                <input class="xlarge" id="sitename1" name="sitename" size="30" type="text" placeholder="example.com" />
+            </div>
+        </div>
+        <!-- /clearfix -->
+        <div class="clearfix" id="sitenameerror">
+            <label for="pswlength" style="width:300px" align="left">
+                Tamaño</label>
+            <div class="input" align="left" style="padding-left: 25px;">
+			<select  class="mini" id="pswlength" name="pswlength" >
+				<option value="6">6</option>
+				<option value="8">8</option>
+				<option value="10" selected>10</option>
+				<option value="12">12</option>
+			</select>                
+            </div>
+        </div>
+        <!-- /clearfix -->		
+        <div class="clearfix">
+            <button type="button" class="btn primary large" id="buttonsubmit">
+                Generar password</button>
+        </div>
+        <!-- /clearfix -->
+        <div id="passwordmessage" class="passwordmessage">
+            <label for="password" style="width:300px" align="left">
+                Password para <span id="sitename2"></span>
+            </label>
+            <input class="xlarge password" id="password" name="password" />
+            <label style="width:300px" align="left">Copiada al clipboard</label>
+        </div>
+        </form>
+    </div>
+</center>	
+    <!-- /container -->
+</body>
+</html>
