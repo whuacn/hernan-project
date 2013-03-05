@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head> 	
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
+    <title>Skiba Password</title>
+    <meta name="description" content="Generador de Password" />
+    <meta name="author" content="Hernan Hegykozi" />
+    <!-- css styles -->
+    <link href="bootstrap.css" rel="stylesheet" />
+    <link href="skibapsw.css" rel="stylesheet">
+	<link rel="shortcut icon" href="http://www.skiba.com.ar/wp-content/uploads/2012/03/favicon.ico" type="image/gif" />
+	<link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/mmngonleemlmabbifodinekceadbeaca">
+    <!-- Skiba script -->
+    <script src="skibapsw.js"></script>
+    <!-- HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="html5.js"></script>
+    <![endif]-->
+</head>
+<body style="overflow-y: hidden; background-color:#f5f5f5">
+<center>
+    <div class="hero-unit" style="width:350px">
+        <form action="" method="POST" class="form-stacked" name="passwordform" onsubmit="return Send();">
+        <h2 class="padlockbox rainbow " style="width:300px" align="left">
+            Skiba Password
+		</h2>
+        <div class="clearfix" id="secretpassworderror">
+            <label for="secretpassword" style="width:300px" align="left">
+                Password Secreta</label>
+            <div class="input">
+                <input class="xlarge" id="secretpassword" name="secretpassword" size="30" type="password" />
+                <script type="text/javascript">
+                    document.passwordform.secretpassword.focus();
+                </script>
+            </div>
+        </div>
+        <!-- /clearfix -->
+        <div class="clearfix" id="sitenameerror">
+            <label for="sitename1" style="width:300px" align="left">
+                Sitio</label>
+            <div class="input">
+                <input class="xlarge" id="sitename1" name="sitename" size="30" type="text" placeholder="example.com" />
+            </div>
+        </div>
+        <!-- /clearfix -->
+        <div class="clearfix" id="sitenameerror">
+            <label for="pswlength" style="width:300px" align="left">
+                Tamaño</label>
+            <div class="input" align="left" style="padding-left: 25px;">
+			<select  class="mini" id="pswlength" name="pswlength" >
+				<option value="6">6</option>
+				<option value="8">8</option>
+				<option value="10" selected>10</option>
+				<option value="12">12</option>
+			</select>                
+            </div>
+        </div>
+        <!-- /clearfix -->		
+        <div class="clearfix">
+            <button type="submit" class="btn primary large">
+                Generar password</button>
+        </div>
+        <!-- /clearfix -->
+        <div id="passwordmessage" class="passwordmessage">
+            <label for="password" style="width:300px" align="left">
+                Password para <span id="sitename2"></span>
+            </label>
+            <input class="xlarge password" id="password" name="password" />
+        </div>
+        </form>
+    </div>
+	<hr width="100%"/>
+	<table style="width:400px; border:0; background-color:#CCCCCC">
+	<tr>
+	<td  id="install-button"  style="display:none">
+	<img src="addchrome.png" style="cursor:pointer;" onclick="window.open('https://chrome.google.com/webstore/detail/mmngonleemlmabbifodinekceadbeaca');"  align="center"/>
+	</td>
+	<td>
+	<img src="android.png" style="cursor:pointer;display:block" onclick="window.open('https://play.google.com/store/apps/details?id=com.skiba.password');"  align="center"/>
+	</td>
+	</tr>
+	</table>
+</center>	
+
+
+	<script>
+	if (typeof chrome != "undefined"){
+		if (!chrome.app.isInstalled) {
+		  document.getElementById('install-button').style.display = 'block';
+		}
+	}
+	</script>
+    <!-- /container -->
+</body>
+</html>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-29879202-1']);
+  _gaq.push(['_setDomainName', 'skiba.com.ar']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
