@@ -11,7 +11,7 @@
         Para obtener más información acerca de ASP.NET, visite <a href="http://www.asp.net" title="Sitio web de ASP.NET">www.asp.net</a>.
     </p>
     <p>
-        <cc:TextBoxExt ID="txt" runat="server" Required="true" ></cc:TextBoxExt>        
+        <cc:TextBoxExt ID="txt" runat="server" Required="true" Validation="AlphaNumeric" />    
                 
     </p>
 
