@@ -39,18 +39,18 @@ namespace Srt.WebControlExtend
         [Browsable(true)]
         [DefaultValue(ValidationType.None)]
         [Category("Validations")]
-        [Description("Valida el texto con las opciones seleccionadas.")]      
-        public ValidationType Validation
+        [Description("Tipo de dato a validar.")]      
+        public ValidationType Type
         {
             get
             {
-                if (ViewState["Validation"] == null)
-                    ViewState["Validation"] = ValidationType.None;
-                return (ValidationType)ViewState["Validation"];
+                if (ViewState["Type"] == null)
+                    ViewState["Type"] = ValidationType.None;
+                return (ValidationType)ViewState["Type"];
             }
             set
             {
-                ViewState["Validation"] = value;
+                ViewState["Type"] = value;
             }
         }
 
@@ -60,9 +60,9 @@ namespace Srt.WebControlExtend
 
             //Agrega el Lang
             String val = Required.ToString().ToLower();
-            if (Validation != ValidationType.None)
+            if (Type != ValidationType.None)
             {
-                val += ";" + Converter.EnumToString(Validation);
+                val += ";" + Converter.EnumToString(Type);
             }
             writer.AddAttribute("lang", val);
 
