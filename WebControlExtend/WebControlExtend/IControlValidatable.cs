@@ -7,6 +7,6 @@ namespace Srt.WebControlExtend
 {
     interface IControlValidatable
     {
-        void ValidateInput();
+        void Validate();
     }
 }
