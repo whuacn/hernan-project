@@ -15,8 +15,7 @@ namespace SiproBlock
 {
     /*
      secpol.msc
-
-gpedit.msc
+    gpedit.msc
      */
     public partial class Form1 : Form
     {
@@ -27,30 +26,53 @@ gpedit.msc
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            /*
-            var processToRun = new[] { "notepad.exe" };
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Block(txtMachine.Text);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            UnBlock(txtMachine.Text);
+        }
+
+
+        private void Block(string machine)
+        {
+            ExecuteRemoteCommand("netsh ipsec static add policy name=ProxyDesa assign=yes", machine);
+            ExecuteRemoteCommand("netsh ipsec static add filterlist name=IPProxy", machine);
+            ExecuteRemoteCommand("netsh ipsec static add filter filterlist=IPProxy srcaddr=Me dstaddr=any protocol=TCP srcport=0 dstport=8080", machine);
+            ExecuteRemoteCommand("netsh ipsec static add filteraction name=blockIPProxy action=block", machine);
+            ExecuteRemoteCommand("netsh ipsec static add rule name=myrule policy=ProxyDesa filterlist=IPProxy filteraction=blockIPProxy", machine);
+        }
+
+        private void UnBlock(string machine)
+        {
+            ExecuteRemoteCommand("netsh ipsec static set policy name=ProxyDesa assign=no", machine);
+            ExecuteRemoteCommand("netsh ipsec static delete policy name=ProxyDesa", machine);
+            ExecuteRemoteCommand("netsh ipsec static delete filterlist name=IPProxy", machine);
+            ExecuteRemoteCommand("netsh ipsec static add filteraction name=blockIPProxy action=block", machine);
+            ExecuteRemoteCommand("netsh ipsec static delete filteraction name=blockIPProxy", machine);
+        }
+
+
+        void ExecuteRemoteCommand(object command, string machine)
+        {
+            var processToRun = new[] { command };
             var connection = new ConnectionOptions();
             connection.Impersonation = ImpersonationLevel.Impersonate;
             connection.EnablePrivileges = true;
             //connection.Username = "username";
             //connection.Password = "password";
-            var wmiScope = new ManagementScope(String.Format("\\\\{0}\\root\\cimv2", "HernanDesktop"), connection);
+            var wmiScope = new ManagementScope(String.Format("\\\\{0}\\root\\cimv2", machine), connection);
             var wmiProcess = new ManagementClass(wmiScope, new ManagementPath("Win32_Process"), new ObjectGetOptions());
             wmiProcess.InvokeMethod("Create", processToRun);
-            */
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Block();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            UnBlock();
-        }
-
-        private void Block()
+        private void Block_local()
         {
             ExecuteCommandSync("netsh ipsec static add policy name=ProxyDesa assign=yes");
             ExecuteCommandSync("netsh ipsec static add filterlist name=IPProxy");
@@ -59,7 +81,7 @@ gpedit.msc
             ExecuteCommandSync("netsh ipsec static add rule name=myrule policy=ProxyDesa filterlist=IPProxy filteraction=blockIPProxy");
         }
 
-        private void UnBlock()
+        private void UnBlock_local()
         {
             ExecuteCommandSync("netsh ipsec static set policy name=ProxyDesa assign=no");
             ExecuteCommandSync("netsh ipsec static delete policy name=ProxyDesa");

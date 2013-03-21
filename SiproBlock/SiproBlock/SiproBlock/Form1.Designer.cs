@@ -30,6 +30,8 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.txtMachine = new System.Windows.Forms.TextBox();
+            this.lbPC = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -52,17 +54,36 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // txtMachine
+            // 
+            this.txtMachine.Location = new System.Drawing.Point(87, 12);
+            this.txtMachine.Name = "txtMachine";
+            this.txtMachine.Size = new System.Drawing.Size(100, 20);
+            this.txtMachine.TabIndex = 2;
+            // 
+            // lbPC
+            // 
+            this.lbPC.AutoSize = true;
+            this.lbPC.Location = new System.Drawing.Point(58, 15);
+            this.lbPC.Name = "lbPC";
+            this.lbPC.Size = new System.Drawing.Size(20, 13);
+            this.lbPC.TabIndex = 3;
+            this.lbPC.Text = "Pc";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 109);
+            this.ClientSize = new System.Drawing.Size(284, 94);
+            this.Controls.Add(this.lbPC);
+            this.Controls.Add(this.txtMachine);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -70,6 +91,8 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txtMachine;
+        private System.Windows.Forms.Label lbPC;
     }
 }
 
