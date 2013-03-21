@@ -26,7 +26,10 @@ namespace SiproBlock
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            /*
+            ProcessWMI p = new ProcessWMI();
+            p.ExecuteRemoteProcessWMI(remoteMachine, sBatFile, timeout);
+             * */
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -59,7 +62,51 @@ namespace SiproBlock
         }
 
 
+
         void ExecuteRemoteCommand(object command, string machine)
+        {
+
+            ConnectionOptions connection = new ConnectionOptions();
+            connection.Impersonation = ImpersonationLevel.Impersonate;
+            connection.EnablePrivileges = true;
+            ManagementPath managementPath = new ManagementPath("Win32_Process");
+            ManagementScope manScope = new ManagementScope(String.Format("\\\\{0}\\root\\cimv2", machine), connection);
+            ObjectGetOptions objectGetOptions = new ObjectGetOptions();
+
+            try
+            {
+                manScope.Connect();
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Management Connect to remote machine " + machine +  " failed with the following error " + e.Message);
+            }
+
+
+            using (ManagementClass process = new ManagementClass(manScope, managementPath, objectGetOptions))
+            {
+                using (ManagementBaseObject inParams = process.GetMethodParameters("Create"))
+                {
+                    inParams["CommandLine"] = command;
+                    using (ManagementBaseObject outParams = process.InvokeMethod("Create", inParams, null))
+                    {
+
+                        if ((uint)outParams["returnValue"] != 0)
+                        {
+                            throw new Exception("Error while starting process " + command + " creation returned an exit code of " + outParams["returnValue"] + ". It was launched on " + machine);
+                        }
+                        uint ProcessId = (uint)outParams["processId"];
+
+                    }
+                }
+            }
+
+
+            //String ProcID = outparams["ProcessID"].ToString();
+            //String retval = outparams["ReturnValue"].ToString();
+
+        }
+        void ExecuteRemoteCommand_2(object command, string machine)
         {
             var processToRun = new[] { command };
             var connection = new ConnectionOptions();
