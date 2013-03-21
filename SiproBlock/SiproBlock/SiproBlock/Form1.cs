@@ -10,6 +10,7 @@ using System.Net.Sockets;
 using System.Net;
 using System.Threading;
 using System.Management;
+using System.IO;
 
 namespace SiproBlock
 {
@@ -45,25 +46,90 @@ namespace SiproBlock
 
         private void Block(string machine)
         {
+
+            String[] commands = { 
+                                    "netsh ipsec static add policy name=ProxyDesa assign=yes",
+                                    "netsh ipsec static add filterlist name=IPProxy",
+                                    "netsh ipsec static add filter filterlist=IPProxy srcaddr=Me dstaddr=any protocol=TCP srcport=0 dstport=8080",
+                                    "netsh ipsec static add filteraction name=blockIPProxy action=block",
+                                    "netsh ipsec static add rule name=myrule policy=ProxyDesa filterlist=IPProxy filteraction=blockIPProxy"
+                                };
+
+
+            String sBatFile = "";
+            if (machine != string.Empty)
+                sBatFile = @"\\" + machine + "\\admin$\\SiproProcess.bat";
+            else
+                Console.WriteLine("Invalid Machine name");
+
+            if (File.Exists(sBatFile))
+                File.Delete(sBatFile);
+            StreamWriter sw = new StreamWriter(sBatFile);
+
+
+            String commandline = String.Join("\n\r", commands);
+
+            sw.Write(commandline);
+            sw.Close();
+
+            ExecuteRemoteCommand(sBatFile, machine);
+            /*
             ExecuteRemoteCommand("netsh ipsec static add policy name=ProxyDesa assign=yes", machine);
             ExecuteRemoteCommand("netsh ipsec static add filterlist name=IPProxy", machine);
             ExecuteRemoteCommand("netsh ipsec static add filter filterlist=IPProxy srcaddr=Me dstaddr=any protocol=TCP srcport=0 dstport=8080", machine);
             ExecuteRemoteCommand("netsh ipsec static add filteraction name=blockIPProxy action=block", machine);
             ExecuteRemoteCommand("netsh ipsec static add rule name=myrule policy=ProxyDesa filterlist=IPProxy filteraction=blockIPProxy", machine);
+             */
         }
 
         private void UnBlock(string machine)
         {
+
+            String[] commands = { 
+                                    "netsh ipsec static set policy name=ProxyDesa assign=no",
+                                    "netsh ipsec static delete policy name=ProxyDesa",
+                                    "netsh ipsec static delete filterlist name=IPProxy",
+                                    "netsh ipsec static add filteraction name=blockIPProxy action=block",
+                                    "netsh ipsec static delete filteraction name=blockIPProxy"
+                                };
+
+            String sBatFile = "";
+            if (machine != string.Empty)
+                sBatFile = @"\\" + machine + "\\admin$\\SiproProcess.bat";
+            else
+                Console.WriteLine("Invalid Machine name");
+
+            if (File.Exists(sBatFile))
+                File.Delete(sBatFile);
+            StreamWriter sw = new StreamWriter(sBatFile);
+
+
+            String commandline = String.Join("\n\r", commands);
+
+            sw.Write(commandline);
+            sw.Close();
+
+            ExecuteRemoteCommand(sBatFile, machine);
+            /*
             ExecuteRemoteCommand("netsh ipsec static set policy name=ProxyDesa assign=no", machine);
             ExecuteRemoteCommand("netsh ipsec static delete policy name=ProxyDesa", machine);
             ExecuteRemoteCommand("netsh ipsec static delete filterlist name=IPProxy", machine);
             ExecuteRemoteCommand("netsh ipsec static add filteraction name=blockIPProxy action=block", machine);
             ExecuteRemoteCommand("netsh ipsec static delete filteraction name=blockIPProxy", machine);
+             * */
         }
 
+        /*
+         Ping ping = new Ping();
+        PingReply pingReply = ping.Send("ip address here");
 
+        if(pingReply.Status == IPStatus.Success)
+        {
+            //Machine is alive
+        }
+         * */
 
-        void ExecuteRemoteCommand(object command, string machine)
+        void ExecuteRemoteCommand(String command, string machine)
         {
 
             ConnectionOptions connection = new ConnectionOptions();
@@ -87,7 +153,9 @@ namespace SiproBlock
             {
                 using (ManagementBaseObject inParams = process.GetMethodParameters("Create"))
                 {
+    
                     inParams["CommandLine"] = command;
+
                     using (ManagementBaseObject outParams = process.InvokeMethod("Create", inParams, null))
                     {
 
