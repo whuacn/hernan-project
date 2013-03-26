@@ -5,10 +5,12 @@ using System.Text;
 
 namespace SiproBlock
 {
-    class Machine
+    [Serializable()]
+    public class Machine
     {
-        String IP { get; set; }
-        String Name { get; set; }
-        String User { get; set; }
+        public String IP { get; set; }
+        public String Name { get; set; }
+        public String Description { get; set; }
     }
+
 }

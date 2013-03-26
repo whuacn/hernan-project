@@ -27,6 +27,24 @@ namespace SiproBlock
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+            List<Machine> lm = new List<Machine>();
+            Machine m = new Machine();
+            m.IP = "192.168.1.1";
+            m.Name = "D04";
+            m.Description = "Hernan, Hegykozi";
+            lm.Add(m);
+
+            m = new Machine();
+            m.IP = "192.168.1.5";
+            m.Name = "D55";
+            m.Description = "Pepe, Lepu";
+            lm.Add(m);
+
+            Servicios.Repository<List<Machine>>.Serialize(lm, "Machines.data");
+
+            List<Machine> lm2 = Servicios.Repository<List<Machine>>.Deserialize("Machines.data");
+            MessageBox.Show(lm2.First().Description);
             /*
             ProcessWMI p = new ProcessWMI();
             p.ExecuteRemoteProcessWMI(remoteMachine, sBatFile, timeout);
