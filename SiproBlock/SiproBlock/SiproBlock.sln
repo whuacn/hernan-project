@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiproBlock", "SiproBlock\Si
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servicios", "Servicios\Servicios.csproj", "{7753DA8B-41C5-43AC-918C-6DD7A9A57436}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Entidades.csproj", "{1A1A889C-7427-4DCB-B87B-A5418F1EFA74}"
+EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
@@ -39,6 +41,16 @@ Global
 		{7753DA8B-41C5-43AC-918C-6DD7A9A57436}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{7753DA8B-41C5-43AC-918C-6DD7A9A57436}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{7753DA8B-41C5-43AC-918C-6DD7A9A57436}.Release|x86.ActiveCfg = Release|Any CPU
+		{1A1A889C-7427-4DCB-B87B-A5418F1EFA74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A1A889C-7427-4DCB-B87B-A5418F1EFA74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A1A889C-7427-4DCB-B87B-A5418F1EFA74}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{1A1A889C-7427-4DCB-B87B-A5418F1EFA74}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{1A1A889C-7427-4DCB-B87B-A5418F1EFA74}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1A1A889C-7427-4DCB-B87B-A5418F1EFA74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A1A889C-7427-4DCB-B87B-A5418F1EFA74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A1A889C-7427-4DCB-B87B-A5418F1EFA74}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{1A1A889C-7427-4DCB-B87B-A5418F1EFA74}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{1A1A889C-7427-4DCB-B87B-A5418F1EFA74}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -11,6 +11,8 @@ using System.Net;
 using System.Threading;
 using System.Management;
 using System.IO;
+using Entidades;
+using Servicios;
 
 namespace SiproBlock
 {
@@ -41,9 +43,9 @@ namespace SiproBlock
             m.Description = "Pepe, Lepu";
             lm.Add(m);
 
-            Servicios.Repository<List<Machine>>.Serialize(lm, "Machines.data");
+            GestorMachine.Save(lm);
 
-            List<Machine> lm2 = Servicios.Repository<List<Machine>>.Deserialize("Machines.data");
+            List<Machine> lm2 = GestorMachine.Get();
             MessageBox.Show(lm2.First().Description);
             /*
             ProcessWMI p = new ProcessWMI();
