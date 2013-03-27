@@ -14,7 +14,7 @@ namespace Servicios
                 String[] commands = { 
                                     "netsh ipsec static add policy name=ProxyDesa assign=yes",
                                     "netsh ipsec static add filterlist name=IPProxy",
-                                    "netsh ipsec static add filter filterlist=IPProxy srcaddr=Me dstaddr=any protocol=TCP srcport=0 dstport=8080",
+                                    "netsh ipsec static add filter filterlist=IPProxy srcaddr=Me dstaddr=any protocol=TCP srcport=0 dstport=1433",
                                     "netsh ipsec static add filteraction name=blockIPProxy action=block",
                                     "netsh ipsec static add rule name=blockIPProxyrule policy=ProxyDesa filterlist=IPProxy filteraction=blockIPProxy"
                                 };

@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Management;
 using System.IO;
+using System.Net;
+using System.Net.Sockets;
+using Entidades;
 
 namespace Servicios
 {
@@ -71,6 +74,72 @@ namespace Servicios
                     }
                 }
             }
+        }
+        public static bool TestPort(Machine machine, int port)
+        {
+            bool test = false;
+
+            try
+            {
+
+                using (TcpClient tcp = new TcpClient())
+                {
+                    IAsyncResult ar = tcp.BeginConnect(machine.Name, port, null, null);
+                    System.Threading.WaitHandle wh = ar.AsyncWaitHandle;
+                    try
+                    {
+                        if (!ar.AsyncWaitHandle.WaitOne(500, false))
+                        {
+                            tcp.Close();
+                            test = false;
+                            throw new TimeoutException();
+                        }
+
+                        tcp.EndConnect(ar);
+                    }
+                    finally
+                    {
+                        wh.Close();
+
+                    }
+                }
+                /*
+                System.Net.Sockets.Socket s = new System.Net.Sockets.Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+                
+                s.Connect(machine.Name, port);
+                if (s.Connected == true)
+                    test = true;
+                s.Close();
+                 */
+                //TcpClient c = new TcpClient(machine.Name, port);
+                test = true;
+            }
+            catch (Exception)
+            {
+                test = false;
+            }
+            
+
+            return test;
+        }
+
+
+        public static bool IsComputerAlive(Machine machine)
+        {
+            try
+            {
+                /*IPAddress[] addresslist = Dns.GetHostAddresses(machine.Name);
+                machine.IP = addresslist[0].AddressFamily.ToString();
+                */
+                IPHostEntry host;
+                host = Dns.GetHostEntry(machine.Name);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
         }
     }
 }

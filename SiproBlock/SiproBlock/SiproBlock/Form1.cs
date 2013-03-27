@@ -61,7 +61,12 @@ namespace SiproBlock
             Remote.Execute(Command.UnBlockPort, txtMachine.Text);
         }
 
-
+        private void btnTestport_Click(object sender, EventArgs e)
+        {
+            Machine m = new Machine();
+            m.Name = txtMachine.Text;
+            MessageBox.Show(Remote.IsComputerAlive(m).ToString());
+        }
        
 
         /*
@@ -217,6 +222,8 @@ namespace SiproBlock
                 // Log the exception
             }
         }
+
+
 
 
 

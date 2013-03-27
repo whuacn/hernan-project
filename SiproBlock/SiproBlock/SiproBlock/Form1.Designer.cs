@@ -32,6 +32,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.txtMachine = new System.Windows.Forms.TextBox();
             this.lbPC = new System.Windows.Forms.Label();
+            this.btnTestport = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -70,11 +71,22 @@
             this.lbPC.TabIndex = 3;
             this.lbPC.Text = "Pc";
             // 
+            // btnTestport
+            // 
+            this.btnTestport.Location = new System.Drawing.Point(61, 74);
+            this.btnTestport.Name = "btnTestport";
+            this.btnTestport.Size = new System.Drawing.Size(75, 23);
+            this.btnTestport.TabIndex = 4;
+            this.btnTestport.Text = "Test PC";
+            this.btnTestport.UseVisualStyleBackColor = true;
+            this.btnTestport.Click += new System.EventHandler(this.btnTestport_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 94);
+            this.ClientSize = new System.Drawing.Size(290, 119);
+            this.Controls.Add(this.btnTestport);
             this.Controls.Add(this.lbPC);
             this.Controls.Add(this.txtMachine);
             this.Controls.Add(this.button2);
@@ -93,6 +105,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox txtMachine;
         private System.Windows.Forms.Label lbPC;
+        private System.Windows.Forms.Button btnTestport;
     }
 }
 

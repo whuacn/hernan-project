@@ -8,14 +8,34 @@ namespace Servicios
 {
     public class GestorMachine
     {
-        public static List<Machine> Get()
+        public static List<Machine> GetAll()
         {
-            return Servicios.Repository<List<Machine>>.Deserialize("Machines.data");
+            try
+            {
+                return Servicios.Repository<List<Machine>>.Deserialize("Machines.data");
+            }
+            catch (Exception)
+            {
+                return new List<Machine>();
+            }
+            
         }
 
-        public static void Save(List<Machine> machinelist)
+        public static void SaveAll()
         {
-            Servicios.Repository<List<Machine>>.Serialize(machinelist, "Machines.data");
+            Servicios.Repository<List<Machine>>.Serialize(Contexto.Machines, "Machines.data");
+        }
+
+        public static void Add(Machine machine)
+        {
+            Contexto.Machines.Add(machine);
+            SaveAll();
+        }
+
+        public static void Delete(Machine machine)
+        {
+            Contexto.Machines.Remove(machine);
+            SaveAll();
         }
 
     }
