@@ -22,6 +22,7 @@ namespace SiproBlock
      */
     public partial class Form1 : Form
     {
+        static List<Machine> lm;
         public Form1()
         {
             InitializeComponent();
@@ -29,8 +30,8 @@ namespace SiproBlock
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
-            List<Machine> lm = new List<Machine>();
+            /*
+            lm = new List<Machine>();
             Machine m = new Machine();
             m.IP = "192.168.1.1";
             m.Name = "D04";
@@ -47,97 +48,21 @@ namespace SiproBlock
 
             List<Machine> lm2 = GestorMachine.Get();
             MessageBox.Show(lm2.First().Description);
-            /*
-            ProcessWMI p = new ProcessWMI();
-            p.ExecuteRemoteProcessWMI(remoteMachine, sBatFile, timeout);
-             * */
+            */
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Block(txtMachine.Text);
+            Remote.Execute(Command.BlockPort, txtMachine.Text);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            UnBlock(txtMachine.Text);
+            Remote.Execute(Command.UnBlockPort, txtMachine.Text);
         }
 
 
-        private void Block(string machine)
-        {
-
-            String[] commands = { 
-                                    "netsh ipsec static add policy name=ProxyDesa assign=yes",
-                                    "netsh ipsec static add filterlist name=IPProxy",
-                                    "netsh ipsec static add filter filterlist=IPProxy srcaddr=Me dstaddr=any protocol=TCP srcport=0 dstport=8080",
-                                    "netsh ipsec static add filteraction name=blockIPProxy action=block",
-                                    "netsh ipsec static add rule name=myrule policy=ProxyDesa filterlist=IPProxy filteraction=blockIPProxy"
-                                };
-
-
-            String sBatFile = "";
-            if (machine != string.Empty)
-                sBatFile = @"\\" + machine + "\\admin$\\SiproProcess.bat";
-            else
-                Console.WriteLine("Invalid Machine name");
-
-            if (File.Exists(sBatFile))
-                File.Delete(sBatFile);
-            StreamWriter sw = new StreamWriter(sBatFile);
-
-
-            String commandline = String.Join("\n\r", commands);
-
-            sw.Write(commandline);
-            sw.Close();
-
-            ExecuteRemoteCommand(sBatFile, machine);
-            /*
-            ExecuteRemoteCommand("netsh ipsec static add policy name=ProxyDesa assign=yes", machine);
-            ExecuteRemoteCommand("netsh ipsec static add filterlist name=IPProxy", machine);
-            ExecuteRemoteCommand("netsh ipsec static add filter filterlist=IPProxy srcaddr=Me dstaddr=any protocol=TCP srcport=0 dstport=8080", machine);
-            ExecuteRemoteCommand("netsh ipsec static add filteraction name=blockIPProxy action=block", machine);
-            ExecuteRemoteCommand("netsh ipsec static add rule name=myrule policy=ProxyDesa filterlist=IPProxy filteraction=blockIPProxy", machine);
-             */
-        }
-
-        private void UnBlock(string machine)
-        {
-
-            String[] commands = { 
-                                    "netsh ipsec static set policy name=ProxyDesa assign=no",
-                                    "netsh ipsec static delete policy name=ProxyDesa",
-                                    "netsh ipsec static delete filterlist name=IPProxy",
-                                    "netsh ipsec static add filteraction name=blockIPProxy action=block",
-                                    "netsh ipsec static delete filteraction name=blockIPProxy"
-                                };
-
-            String sBatFile = "";
-            if (machine != string.Empty)
-                sBatFile = @"\\" + machine + "\\admin$\\SiproProcess.bat";
-            else
-                Console.WriteLine("Invalid Machine name");
-
-            if (File.Exists(sBatFile))
-                File.Delete(sBatFile);
-            StreamWriter sw = new StreamWriter(sBatFile);
-
-
-            String commandline = String.Join("\n\r", commands);
-
-            sw.Write(commandline);
-            sw.Close();
-
-            ExecuteRemoteCommand(sBatFile, machine);
-            /*
-            ExecuteRemoteCommand("netsh ipsec static set policy name=ProxyDesa assign=no", machine);
-            ExecuteRemoteCommand("netsh ipsec static delete policy name=ProxyDesa", machine);
-            ExecuteRemoteCommand("netsh ipsec static delete filterlist name=IPProxy", machine);
-            ExecuteRemoteCommand("netsh ipsec static add filteraction name=blockIPProxy action=block", machine);
-            ExecuteRemoteCommand("netsh ipsec static delete filteraction name=blockIPProxy", machine);
-             * */
-        }
+       
 
         /*
          Ping ping = new Ping();

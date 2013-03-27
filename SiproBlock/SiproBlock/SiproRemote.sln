@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiproBlock", "SiproBlock\SiproBlock.csproj", "{28937A24-21FB-44E7-8456-CD7DCF0480F0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiproRemote", "SiproBlock\SiproRemote.csproj", "{28937A24-21FB-44E7-8456-CD7DCF0480F0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servicios", "Servicios\Servicios.csproj", "{7753DA8B-41C5-43AC-918C-6DD7A9A57436}"
 EndProject

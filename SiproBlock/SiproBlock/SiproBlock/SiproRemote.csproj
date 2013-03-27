@@ -8,8 +8,8 @@
     <ProjectGuid>{28937A24-21FB-44E7-8456-CD7DCF0480F0}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SiproBlock</RootNamespace>
-    <AssemblyName>SiproBlock</AssemblyName>
+    <RootNamespace>SiproRemote</RootNamespace>
+    <AssemblyName>SiproRemote</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -70,6 +70,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.manifest" />
     <None Include="Properties\Settings.settings">
