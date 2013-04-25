@@ -27,5 +27,45 @@ namespace SiteTrace
         {
             HttpContext.Current.Session["TracerActive"] = "Off";
         }
+
+        protected void Timer1_Tick(object sender, EventArgs e)
+        {
+            //Label1.Text = "Grid Refreshed at: " + DateTime.Now.ToLongTimeString();
+            DataGrid1.DataSource = WebTrace.Tracer.TracerList;
+            DataGrid1.DataBind();
+        }
+
+        protected void DataGrid1_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+
+            DetailsView1.DataSource = WebTrace.Tracer.TracerList;
+            DetailsView1.DataBind();
+
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append(@"<script type='text/javascript'>");
+            sb.Append("$('#currentdetail').modal('show');");
+            sb.Append(@"</script>");
+            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "ModalScript", sb.ToString(), false);
+            /*
+            if (e.CommandName.Equals("detail"))
+            {
+                int index = Convert.ToInt32(e.CommandArgument);
+                string code = GridView1.DataKeys[index].Value.ToString();
+
+                IEnumerable<DataRow> query = from i in dt.AsEnumerable()
+                                             where i.Field<String>("Code").Equals(code)
+                                             select i;
+                DataTable detailTable = query.CopyToDataTable<DataRow>();
+                DetailsView1.DataSource = detailTable;
+                DetailsView1.DataBind();
+                System.Text.StringBuilder sb = new System.Text.StringBuilder();
+                sb.Append(@"<script type='text/javascript'>");
+                sb.Append("$('#currentdetail').modal('show');");
+                sb.Append(@"</script>");
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(),
+                           "ModalScript", sb.ToString(), false);
+            
+            }*/
+        }
     }
 }

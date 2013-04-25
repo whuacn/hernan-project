@@ -11,7 +11,7 @@ namespace SiteTrace
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            WebTrace.Tracer.Write("Mensaje de Prueba", WebTrace.TracerType.Info);
+            WebTrace.Tracer.Write("Mensaje de Prueba", WebTrace.TracerType.Error);
         }
     }
 }
