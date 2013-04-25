@@ -5,7 +5,7 @@
 <head runat="server">
     <title></title>
     <link href="Styles/bootstrap.css" rel="stylesheet" type="text/css" />
-    <script src="Scripts/jquery.js"></script>
+    <script src="Scripts/jquery-1.9.js"></script>
     <script src="Scripts/bootstrap.js" type="text/javascript"></script>
 </head>
 <body>

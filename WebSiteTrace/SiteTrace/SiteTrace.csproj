@@ -57,7 +57,7 @@
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\jquery-1.9.js" />
     <Content Include="Styles\bootstrap.css" />
     <Content Include="Styles\Site.css" />
     <Content Include="Default.aspx" />
