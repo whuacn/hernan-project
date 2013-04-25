@@ -9,6 +9,7 @@
     <script src="Scripts/bootstrap.js" type="text/javascript"></script>
 </head>
 <body>
+    <h3 id="H1">Tracer Viewer</h3>
     <form id="form1" runat="server">
     <div>
         <asp:ScriptManager ID="ScriptManager1" runat="server" />
@@ -21,9 +22,10 @@
                 <asp:AsyncPostBackTrigger ControlID="Timer1" EventName="Tick" />
             </Triggers>
             <ContentTemplate>
+                <div style="overflow: auto; width: 100%; height: 400px">
                 <asp:GridView  ID="DataGrid1" runat="server" CellPadding="3" AutoGenerateColumns="False"
                     Width="100%" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px"
-                    OnRowCommand="DataGrid1_RowCommand" CssClass="table table-hover table-striped">
+                    OnRowCommand="DataGrid1_RowCommand" CssClass="table table-hover table-striped" >
                     <Columns>
                         <asp:ButtonField CommandName="detail" ControlStyle-CssClass="btn btn-info" ButtonType="Button"
                             Text="Detalle" HeaderText="Detalle" />
@@ -33,6 +35,7 @@
                         <asp:BoundField DataField="Type" HeaderText="Tipo"></asp:BoundField>
                     </Columns>
                 </asp:GridView>
+                </div>
             </ContentTemplate>
         </asp:UpdatePanel>
         <asp:Button ID="btnDelete" runat="server" Text="Borrar" OnClick="Clear" CssClass="btn btn-danger" />
@@ -48,6 +51,7 @@
             <div class="modal-body">
                 <asp:UpdatePanel ID="UpdatePanel2" runat="server">
                     <ContentTemplate>
+                    <div style="overflow: auto; width: 100%; height: 350px">
                         <asp:DetailsView ID="DetailsView1" runat="server" CssClass="table table-bordered table-hover"
                             BackColor="White" ForeColor="Black" FieldHeaderStyle-Wrap="false" FieldHeaderStyle-Font-Bold="true"
                             FieldHeaderStyle-BackColor="LavenderBlush" FieldHeaderStyle-ForeColor="Black"
@@ -56,6 +60,7 @@
                                 <asp:BoundField DataField="Page" HeaderText="Page" />
                             </Fields>
                         </asp:DetailsView>
+                        </div>
                     </ContentTemplate>
                     <Triggers>
                         <asp:AsyncPostBackTrigger ControlID="DataGrid1" EventName="RowCommand" />

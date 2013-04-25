@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
 
 namespace SiteTrace
 {
@@ -50,7 +51,7 @@ namespace SiteTrace
             if (e.CommandName.Equals("detail"))
             {
                 int index = Convert.ToInt32(e.CommandArgument);
-                string code = GridView1.DataKeys[index].Value.ToString();
+                string code = DataGrid1.DataKeys[index].Value.ToString();
 
                 IEnumerable<DataRow> query = from i in dt.AsEnumerable()
                                              where i.Field<String>("Code").Equals(code)
