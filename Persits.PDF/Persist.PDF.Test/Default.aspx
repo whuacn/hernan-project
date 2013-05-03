@@ -11,14 +11,31 @@ void Page_Load(Object Source, EventArgs E)
 {
 
     PdfManager objPdf = new PdfManager();
+    
     PdfDocument objDoc = objPdf.CreateDocument();
-    objDoc.ImportFromUrl("http://es.wikipedia.org");
+    objDoc.ImportFromUrl("http://tablefilter.free.fr/filter-sort.htm");
+    byte[] r1 = objDoc.SaveToMemory();
+    objDoc.Close();
+    
+    objPdf = new PdfManager();
+    objDoc = objPdf.OpenDocument(r1);
+    foreach (PdfPage objPage in objDoc.Pages)
+    {
+        objPage.Background.DrawText("Hello World!", "x=10, y=10; width=100; height=100; size=15; alignment=center; Angle=45; Rendering=7", objDoc.Fonts["Courier"]);
+    }
+
+    /*
+    string strText = "";
 
     foreach (PdfPage objPage in objDoc.Pages)
     {
-        objPage.Canvas.DrawText("Hello World!", "x=10, y=100; width=400; height=200; size=15; alignment=center; angle=45; rendering=7", objDoc.Fonts["Courier"]);
+        strText += objPage.ExtractText();
     }
     
+    PdfPage objPage2 = objDoc.Pages.Add(500, 500);
+    objPage2.Canvas.
+        */
+    //Response.Write(strText);
     // Save to HTTP stream for instant viewing by user        
    objDoc.SaveHttp( "filename=test.pdf");
 }
