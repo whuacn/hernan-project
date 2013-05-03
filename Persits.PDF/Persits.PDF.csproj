@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{39E7846E-BFC3-4028-B767-B617B4716E56}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Persits.PDF</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Configuration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Persits.PDF.zlib\Adler32.cs" />
+    <Compile Include="Persits.PDF.zlib\Deflate.cs" />
+    <Compile Include="Persits.PDF.zlib\InfBlocks.cs" />
+    <Compile Include="Persits.PDF.zlib\InfCodes.cs" />
+    <Compile Include="Persits.PDF.zlib\Inflate.cs" />
+    <Compile Include="Persits.PDF.zlib\InfTree.cs" />
+    <Compile Include="Persits.PDF.zlib\PdfZLibException.cs" />
+    <Compile Include="Persits.PDF.zlib\StaticTree.cs" />
+    <Compile Include="Persits.PDF.zlib\SupportClass.cs" />
+    <Compile Include="Persits.PDF.zlib\Tree.cs" />
+    <Compile Include="Persits.PDF.zlib\ZInputStream.cs" />
+    <Compile Include="Persits.PDF.zlib\zlibConst.cs" />
+    <Compile Include="Persits.PDF.zlib\ZOutputStream.cs" />
+    <Compile Include="Persits.PDF.zlib\ZStream.cs" />
+    <Compile Include="Persits.PDF\ActionType.cs" />
+    <Compile Include="Persits.PDF\Adler32Computer.cs" />
+    <Compile Include="Persits.PDF\AnnotType.cs" />
+    <Compile Include="Persits.PDF\arabic_level.cs" />
+    <Compile Include="Persits.PDF\AspPDF.cs" />
+    <Compile Include="Persits.PDF\Aux2DArray.cs" />
+    <Compile Include="Persits.PDF\AuxException.cs" />
+    <Compile Include="Persits.PDF\AuxFile.cs" />
+    <Compile Include="Persits.PDF\AuxHtml.cs" />
+    <Compile Include="Persits.PDF\AuxMatrix.cs" />
+    <Compile Include="Persits.PDF\AuxPair.cs" />
+    <Compile Include="Persits.PDF\AuxRect.cs" />
+    <Compile Include="Persits.PDF\AuxRGB.cs" />
+    <Compile Include="Persits.PDF\AuxSnippetRange.cs" />
+    <Compile Include="Persits.PDF\AuxSparce2DArray.cs" />
+    <Compile Include="Persits.PDF\AuxTextChunk.cs" />
+    <Compile Include="Persits.PDF\BarProperties.cs" />
+    <Compile Include="Persits.PDF\BigNumber.cs" />
+    <Compile Include="Persits.PDF\BuiltinFont.cs" />
+    <Compile Include="Persits.PDF\BuiltinFontWidth.cs" />
+    <Compile Include="Persits.PDF\BuiltinFontWidths.cs" />
+    <Compile Include="Persits.PDF\charstruct.cs" />
+    <Compile Include="Persits.PDF\CITTCode.cs" />
+    <Compile Include="Persits.PDF\ClipType.cs" />
+    <Compile Include="Persits.PDF\CMap.cs" />
+    <Compile Include="Persits.PDF\CMapCache.cs" />
+    <Compile Include="Persits.PDF\CSSNames.cs" />
+    <Compile Include="Persits.PDF\CssProperties.cs" />
+    <Compile Include="Persits.PDF\CssPropertyType.cs" />
+    <Compile Include="Persits.PDF\CSSRegistry.cs" />
+    <Compile Include="Persits.PDF\CssSymbol.cs" />
+    <Compile Include="Persits.PDF\DCTCompInfo.cs" />
+    <Compile Include="Persits.PDF\DCTHuffTable.cs" />
+    <Compile Include="Persits.PDF\DCTScanInfo.cs" />
+    <Compile Include="Persits.PDF\ecc200matrix_s.cs" />
+    <Compile Include="Persits.PDF\EncodingType.cs" />
+    <Compile Include="Persits.PDF\EncType.cs" />
+    <Compile Include="Persits.PDF\enumBlendMode.cs" />
+    <Compile Include="Persits.PDF\enumColorSpaceMode.cs" />
+    <Compile Include="Persits.PDF\enumEncoding.cs" />
+    <Compile Include="Persits.PDF\enumIndirectType.cs" />
+    <Compile Include="Persits.PDF\enumType.cs" />
+    <Compile Include="Persits.PDF\FieldType.cs" />
+    <Compile Include="Persits.PDF\FlagTag.cs" />
+    <Compile Include="Persits.PDF\FloatRect.cs" />
+    <Compile Include="Persits.PDF\FontCacheStruct.cs" />
+    <Compile Include="Persits.PDF\GlyphInfo.cs" />
+    <Compile Include="Persits.PDF\Group4Modes.cs" />
+    <Compile Include="Persits.PDF\HorMetric.cs" />
+    <Compile Include="Persits.PDF\HtmlAttributes.cs" />
+    <Compile Include="Persits.PDF\HtmlBox.cs" />
+    <Compile Include="Persits.PDF\HtmlBreak.cs" />
+    <Compile Include="Persits.PDF\HtmlCell.cs" />
+    <Compile Include="Persits.PDF\HtmlChunk.cs" />
+    <Compile Include="Persits.PDF\HtmlCSS.cs" />
+    <Compile Include="Persits.PDF\HtmlCSSProperty.cs" />
+    <Compile Include="Persits.PDF\HtmlCSSRule.cs" />
+    <Compile Include="Persits.PDF\HtmlCSSSelector.cs" />
+    <Compile Include="Persits.PDF\HtmlGridLine.cs" />
+    <Compile Include="Persits.PDF\HtmlHR.cs" />
+    <Compile Include="Persits.PDF\HtmlImage.cs" />
+    <Compile Include="Persits.PDF\HtmlManager.cs" />
+    <Compile Include="Persits.PDF\HtmlObject.cs" />
+    <Compile Include="Persits.PDF\HtmlSymbolMap.cs" />
+    <Compile Include="Persits.PDF\HtmlTable.cs" />
+    <Compile Include="Persits.PDF\HtmlTag.cs" />
+    <Compile Include="Persits.PDF\HtmlTreeItem.cs" />
+    <Compile Include="Persits.PDF\HtmlWord.cs" />
+    <Compile Include="Persits.PDF\HtmlXmlUrl.cs" />
+    <Compile Include="Persits.PDF\IccProfile.cs" />
+    <Compile Include="Persits.PDF\ImageCacheStruct.cs" />
+    <Compile Include="Persits.PDF\ImageSection.cs" />
+    <Compile Include="Persits.PDF\InputStruct.cs" />
+    <Compile Include="Persits.PDF\InputTypeAttribute.cs" />
+    <Compile Include="Persits.PDF\JArithmeticDecoder.cs" />
+    <Compile Include="Persits.PDF\JArithmeticDecoderStats.cs" />
+    <Compile Include="Persits.PDF\JBIG2Bitmap.cs" />
+    <Compile Include="Persits.PDF\JBIG2BitmapPtr.cs" />
+    <Compile Include="Persits.PDF\JBIG2CodeTable.cs" />
+    <Compile Include="Persits.PDF\JBIG2HuffmanDecoder.cs" />
+    <Compile Include="Persits.PDF\JBIG2HuffmanTable.cs" />
+    <Compile Include="Persits.PDF\JBIG2MMRDecoder.cs" />
+    <Compile Include="Persits.PDF\JBIG2PatternDict.cs" />
+    <Compile Include="Persits.PDF\JBIG2Segment.cs" />
+    <Compile Include="Persits.PDF\JBIG2SegmentType.cs" />
+    <Compile Include="Persits.PDF\JBIG2Stream.cs" />
+    <Compile Include="Persits.PDF\JBIG2Stream2.cs" />
+    <Compile Include="Persits.PDF\JBIG2SymbolDict.cs" />
+    <Compile Include="Persits.PDF\JPXChannelDefn.cs" />
+    <Compile Include="Persits.PDF\JPXCodeBlock.cs" />
+    <Compile Include="Persits.PDF\JPXCoeff.cs" />
+    <Compile Include="Persits.PDF\JPXColorSpaceType.cs" />
+    <Compile Include="Persits.PDF\JPXColorSpec.cs" />
+    <Compile Include="Persits.PDF\JPXCompMap.cs" />
+    <Compile Include="Persits.PDF\JPXImage.cs" />
+    <Compile Include="Persits.PDF\JPXPalette.cs" />
+    <Compile Include="Persits.PDF\JPXPrecinct.cs" />
+    <Compile Include="Persits.PDF\JPXResLevel.cs" />
+    <Compile Include="Persits.PDF\JPXStream.cs" />
+    <Compile Include="Persits.PDF\JPXSubband.cs" />
+    <Compile Include="Persits.PDF\JPXTagTreeNode.cs" />
+    <Compile Include="Persits.PDF\JPXTile.cs" />
+    <Compile Include="Persits.PDF\JPXTileComp.cs" />
+    <Compile Include="Persits.PDF\LZWDecoder.cs" />
+    <Compile Include="Persits.PDF\MapEntry.cs" />
+    <Compile Include="Persits.PDF\MD5Context.cs" />
+    <Compile Include="Persits.PDF\NameToCharCode.cs" />
+    <Compile Include="Persits.PDF\NameToCharCodeEntry.cs" />
+    <Compile Include="Persits.PDF\ObjectType.cs" />
+    <Compile Include="Persits.PDF\PdfAction.cs" />
+    <Compile Include="Persits.PDF\PdfAES.cs" />
+    <Compile Include="Persits.PDF\PdfAnnot.cs" />
+    <Compile Include="Persits.PDF\PdfAnnots.cs" />
+    <Compile Include="Persits.PDF\PdfArabic.cs" />
+    <Compile Include="Persits.PDF\PdfArray.cs" />
+    <Compile Include="Persits.PDF\PdfAxialShading.cs" />
+    <Compile Include="Persits.PDF\PdfBarcode.cs" />
+    <Compile Include="Persits.PDF\PdfBarcode417.cs" />
+    <Compile Include="Persits.PDF\PdfBarcodeMatrix.cs" />
+    <Compile Include="Persits.PDF\PdfBarcodeQR.cs" />
+    <Compile Include="Persits.PDF\pdfBarcodeType.cs" />
+    <Compile Include="Persits.PDF\PdfBigEndianString.cs" />
+    <Compile Include="Persits.PDF\PdfBlendModeInfo.cs" />
+    <Compile Include="Persits.PDF\PdfBmp.cs" />
+    <Compile Include="Persits.PDF\PdfBool.cs" />
+    <Compile Include="Persits.PDF\PdfCalGrayColorSpace.cs" />
+    <Compile Include="Persits.PDF\PdfCalRGBColorSpace.cs" />
+    <Compile Include="Persits.PDF\PdfCanvas.cs" />
+    <Compile Include="Persits.PDF\PdfCell.cs" />
+    <Compile Include="Persits.PDF\PdfCells.cs" />
+    <Compile Include="Persits.PDF\pdfCharSets.cs" />
+    <Compile Include="Persits.PDF\PdfCITTFaxStream.cs" />
+    <Compile Include="Persits.PDF\PdfCMYK.cs" />
+    <Compile Include="Persits.PDF\PdfColor.cs" />
+    <Compile Include="Persits.PDF\PdfColorSpace.cs" />
+    <Compile Include="Persits.PDF\PdfColorSpaceTop.cs" />
+    <Compile Include="Persits.PDF\PdfDate.cs" />
+    <Compile Include="Persits.PDF\PdfDCTStream.cs" />
+    <Compile Include="Persits.PDF\PdfDecoderHelper.cs" />
+    <Compile Include="Persits.PDF\PdfDest.cs" />
+    <Compile Include="Persits.PDF\PdfDeviceCMYKColorSpace.cs" />
+    <Compile Include="Persits.PDF\PdfDeviceGrayColorSpace.cs" />
+    <Compile Include="Persits.PDF\PdfDeviceNColorSpace.cs" />
+    <Compile Include="Persits.PDF\PdfDeviceRGBColorSpace.cs" />
+    <Compile Include="Persits.PDF\PdfDict.cs" />
+    <Compile Include="Persits.PDF\PdfDictWithStream.cs" />
+    <Compile Include="Persits.PDF\PdfDocument.cs" />
+    <Compile Include="Persits.PDF\PdfErrors.cs" />
+    <Compile Include="Persits.PDF\PdfException.cs" />
+    <Compile Include="Persits.PDF\PdfExponentialFunction.cs" />
+    <Compile Include="Persits.PDF\PdfFont.cs" />
+    <Compile Include="Persits.PDF\PdfFontDict.cs" />
+    <Compile Include="Persits.PDF\PdfFonts.cs" />
+    <Compile Include="Persits.PDF\PdfForm.cs" />
+    <Compile Include="Persits.PDF\PdfFunction.cs" />
+    <Compile Include="Persits.PDF\PdfFunctionShading.cs" />
+    <Compile Include="Persits.PDF\PdfFunctionTop.cs" />
+    <Compile Include="Persits.PDF\PdfGif.cs" />
+    <Compile Include="Persits.PDF\PdfGraphics.cs" />
+    <Compile Include="Persits.PDF\PdfGraphicsCollection.cs" />
+    <Compile Include="Persits.PDF\PdfGray.cs" />
+    <Compile Include="Persits.PDF\PdfHash.cs" />
+    <Compile Include="Persits.PDF\PdfICCBasedColorSpace.cs" />
+    <Compile Include="Persits.PDF\PdfIdentityFunction.cs" />
+    <Compile Include="Persits.PDF\PdfImage.cs" />
+    <Compile Include="Persits.PDF\PdfImageColorMap.cs" />
+    <Compile Include="Persits.PDF\PdfImageStream.cs" />
+    <Compile Include="Persits.PDF\PdfIndexedColorSpace.cs" />
+    <Compile Include="Persits.PDF\PdfIndirectObj.cs" />
+    <Compile Include="Persits.PDF\PdfInput.cs" />
+    <Compile Include="Persits.PDF\PdfJpeg.cs" />
+    <Compile Include="Persits.PDF\PdfLabColorSpace.cs" />
+    <Compile Include="Persits.PDF\PdfLZW.cs" />
+    <Compile Include="Persits.PDF\PdfManager.cs" />
+    <Compile Include="Persits.PDF\PdfName.cs" />
+    <Compile Include="Persits.PDF\PdfNull.cs" />
+    <Compile Include="Persits.PDF\PdfNumber.cs" />
+    <Compile Include="Persits.PDF\PdfObject.cs" />
+    <Compile Include="Persits.PDF\PdfObjectList.cs" />
+    <Compile Include="Persits.PDF\PdfOther.cs" />
+    <Compile Include="Persits.PDF\PdfOutline.cs" />
+    <Compile Include="Persits.PDF\PdfOutlineItem.cs" />
+    <Compile Include="Persits.PDF\PdfOutput.cs" />
+    <Compile Include="Persits.PDF\PdfOutputToFile.cs" />
+    <Compile Include="Persits.PDF\PdfOutputToHttp.cs" />
+    <Compile Include="Persits.PDF\PdfPage.cs" />
+    <Compile Include="Persits.PDF\pdfPageLayout.cs" />
+    <Compile Include="Persits.PDF\pdfPageMode.cs" />
+    <Compile Include="Persits.PDF\PdfPages.cs" />
+    <Compile Include="Persits.PDF\PdfParam.cs" />
+    <Compile Include="Persits.PDF\PdfParamItem.cs" />
+    <Compile Include="Persits.PDF\PdfPatch.cs" />
+    <Compile Include="Persits.PDF\PdfPatchMeshShading.cs" />
+    <Compile Include="Persits.PDF\PdfPath.cs" />
+    <Compile Include="Persits.PDF\PdfPattern.cs" />
+    <Compile Include="Persits.PDF\PdfPatternColorSpace.cs" />
+    <Compile Include="Persits.PDF\pdfPermissions.cs" />
+    <Compile Include="Persits.PDF\PdfPng.cs" />
+    <Compile Include="Persits.PDF\PdfPoint.cs" />
+    <Compile Include="Persits.PDF\PdfPostScriptFunction.cs" />
+    <Compile Include="Persits.PDF\PdfPreview.cs" />
+    <Compile Include="Persits.PDF\PdfPreviewFont.cs" />
+    <Compile Include="Persits.PDF\PdfRadialShading.cs" />
+    <Compile Include="Persits.PDF\PdfRavenOutputDev.cs" />
+    <Compile Include="Persits.PDF\PdfRect.cs" />
+    <Compile Include="Persits.PDF\PdfRef.cs" />
+    <Compile Include="Persits.PDF\PdfReference.cs" />
+    <Compile Include="Persits.PDF\PdfResources.cs" />
+    <Compile Include="Persits.PDF\PdfRGB.cs" />
+    <Compile Include="Persits.PDF\PdfRow.cs" />
+    <Compile Include="Persits.PDF\PdfRows.cs" />
+    <Compile Include="Persits.PDF\PdfRunLengthStream.cs" />
+    <Compile Include="Persits.PDF\PdfSampledFunction.cs" />
+    <Compile Include="Persits.PDF\PdfSeparationColorSpace.cs" />
+    <Compile Include="Persits.PDF\PdfShading.cs" />
+    <Compile Include="Persits.PDF\PdfShadingBitBuf.cs" />
+    <Compile Include="Persits.PDF\PdfShadingPattern.cs" />
+    <Compile Include="Persits.PDF\PdfSignature.cs" />
+    <Compile Include="Persits.PDF\PdfState.cs" />
+    <Compile Include="Persits.PDF\PdfStitchingFunction.cs" />
+    <Compile Include="Persits.PDF\PdfStream.cs" />
+    <Compile Include="Persits.PDF\PdfStreamPredictor.cs" />
+    <Compile Include="Persits.PDF\PdfString.cs" />
+    <Compile Include="Persits.PDF\PdfSubpath.cs" />
+    <Compile Include="Persits.PDF\PdfTable.cs" />
+    <Compile Include="Persits.PDF\PdfTiff.cs" />
+    <Compile Include="Persits.PDF\PdfTiffField.cs" />
+    <Compile Include="Persits.PDF\PdfTiffLine.cs" />
+    <Compile Include="Persits.PDF\PdfTilingPattern.cs" />
+    <Compile Include="Persits.PDF\PdfXRef.cs" />
+    <Compile Include="Persits.PDF\PdfXRefEntry.cs" />
+    <Compile Include="Persits.PDF\PeekValues.cs" />
+    <Compile Include="Persits.PDF\PipeFunc.cs" />
+    <Compile Include="Persits.PDF\PngPoint.cs" />
+    <Compile Include="Persits.PDF\PSObject.cs" />
+    <Compile Include="Persits.PDF\PSObjectType.cs" />
+    <Compile Include="Persits.PDF\PSOp.cs" />
+    <Compile Include="Persits.PDF\PSStack.cs" />
+    <Compile Include="Persits.PDF\Raven.cs" />
+    <Compile Include="Persits.PDF\RavenBitmap.cs" />
+    <Compile Include="Persits.PDF\RavenBlendFunc.cs" />
+    <Compile Include="Persits.PDF\RavenClip.cs" />
+    <Compile Include="Persits.PDF\RavenClipResult.cs" />
+    <Compile Include="Persits.PDF\RavenColor.cs" />
+    <Compile Include="Persits.PDF\RavenColorMode.cs" />
+    <Compile Include="Persits.PDF\RavenColorPtr.cs" />
+    <Compile Include="Persits.PDF\RavenConstants.cs" />
+    <Compile Include="Persits.PDF\RavenError.cs" />
+    <Compile Include="Persits.PDF\RavenFontEngine.cs" />
+    <Compile Include="Persits.PDF\RavenImageMaskSource.cs" />
+    <Compile Include="Persits.PDF\RavenImageSource.cs" />
+    <Compile Include="Persits.PDF\RavenIntersect.cs" />
+    <Compile Include="Persits.PDF\RavenMath.cs" />
+    <Compile Include="Persits.PDF\RavenPath.cs" />
+    <Compile Include="Persits.PDF\RavenPathHint.cs" />
+    <Compile Include="Persits.PDF\RavenPathPoint.cs" />
+    <Compile Include="Persits.PDF\RavenPattern.cs" />
+    <Compile Include="Persits.PDF\RavenPipe.cs" />
+    <Compile Include="Persits.PDF\RavenPipeResultColorCtrl.cs" />
+    <Compile Include="Persits.PDF\RavenPtr.cs" />
+    <Compile Include="Persits.PDF\RavenScreen.cs" />
+    <Compile Include="Persits.PDF\RavenScreenParams.cs" />
+    <Compile Include="Persits.PDF\RavenScreenPoint.cs" />
+    <Compile Include="Persits.PDF\RavenScreenType.cs" />
+    <Compile Include="Persits.PDF\RavenSolidColor.cs" />
+    <Compile Include="Persits.PDF\RavenState.cs" />
+    <Compile Include="Persits.PDF\RavenTypes.cs" />
+    <Compile Include="Persits.PDF\RavenXPath.cs" />
+    <Compile Include="Persits.PDF\RavenXPathAdjust.cs" />
+    <Compile Include="Persits.PDF\RavenXPathPoint.cs" />
+    <Compile Include="Persits.PDF\RavenXPathScanner.cs" />
+    <Compile Include="Persits.PDF\RavenXPathSeg.cs" />
+    <Compile Include="Persits.PDF\RC4State.cs" />
+    <Compile Include="Persits.PDF\ReedSol.cs" />
+    <Compile Include="Persits.PDF\Segment.cs" />
+    <Compile Include="Persits.PDF\SegmentList.cs" />
+    <Compile Include="Persits.PDF\shapestruct.cs" />
+    <Compile Include="Persits.PDF\ShiftMap.cs" />
+    <Compile Include="Persits.PDF\StreamColorSpaceMode.cs" />
+    <Compile Include="Persits.PDF\StyleFlags.cs" />
+    <Compile Include="Persits.PDF\TagFlagStruct.cs" />
+    <Compile Include="Persits.PDF\TagStruct.cs" />
+    <Compile Include="Persits.PDF\TagType.cs" />
+    <Compile Include="Persits.PDF\TempStruct1.cs" />
+    <Compile Include="Persits.PDF\TextProperties.cs" />
+    <Compile Include="Persits.PDF\TiffCompressions.cs" />
+    <Compile Include="Persits.PDF\TiffFieldType.cs" />
+    <Compile Include="Persits.PDF\TiffTags.cs" />
+    <Compile Include="Persits.PDF\TreeNode.cs" />
+    <Compile Include="Persits.PDF\UserManager.cs" />
+    <Compile Include="Persits.PDF\_Point.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AspPDF.AspPDF.resources" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
