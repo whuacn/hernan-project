@@ -14,6 +14,11 @@ void Page_Load(Object Source, EventArgs E)
     PdfDocument objDoc = objPdf.CreateDocument();
     objDoc.ImportFromUrl("http://es.wikipedia.org");
 
+    foreach (PdfPage objPage in objDoc.Pages)
+    {
+        objPage.Canvas.DrawText("Hello World!", "x=10, y=100; width=400; height=200; size=15; alignment=center; angle=45; rendering=7", objDoc.Fonts["Courier"]);
+    }
+    
     // Save to HTTP stream for instant viewing by user        
    objDoc.SaveHttp( "filename=test.pdf");
 }
