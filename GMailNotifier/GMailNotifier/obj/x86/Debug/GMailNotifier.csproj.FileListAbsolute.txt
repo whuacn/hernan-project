@@ -1,0 +1,7 @@
+E:\DESARROLLO\C#\GMailNotifier\GMailNotifier\GMailNotifier\bin\Debug\GMailNotifier.exe
+E:\DESARROLLO\C#\GMailNotifier\GMailNotifier\GMailNotifier\bin\Debug\GMailNotifier.pdb
+E:\DESARROLLO\C#\GMailNotifier\GMailNotifier\GMailNotifier\obj\x86\Debug\GMailNotifier.Properties.Resources.resources
+E:\DESARROLLO\C#\GMailNotifier\GMailNotifier\GMailNotifier\obj\x86\Debug\GMailNotifier.csproj.GenerateResource.Cache
+E:\DESARROLLO\C#\GMailNotifier\GMailNotifier\GMailNotifier\obj\x86\Debug\GMailNotifier.exe
+E:\DESARROLLO\C#\GMailNotifier\GMailNotifier\GMailNotifier\obj\x86\Debug\GMailNotifier.pdb
+E:\DESARROLLO\C#\GMailNotifier\GMailNotifier\GMailNotifier\obj\x86\Debug\GMailNotifier.frmNotifier.resources
