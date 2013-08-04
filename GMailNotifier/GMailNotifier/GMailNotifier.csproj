@@ -38,7 +38,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Security" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -53,7 +55,15 @@
     <Compile Include="Engine\author.cs" />
     <Compile Include="Engine\entry.cs" />
     <Compile Include="Engine\Inbox.cs" />
+    <Compile Include="Engine\Security.cs" />
+    <Compile Include="Engine\Storage.cs" />
     <Compile Include="Engine\svrNotifier.cs" />
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmNotifier.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +72,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmNotifier.resx">
       <DependentUpon>frmNotifier.cs</DependentUpon>
     </EmbeddedResource>
@@ -96,6 +109,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\gmail1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnclose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\gmail.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -30,20 +30,23 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNotifier));
             this.PanelPrincipal = new System.Windows.Forms.Panel();
+            this.lbSumary = new System.Windows.Forms.Label();
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lbIndex = new System.Windows.Forms.Label();
             this.lbFrom = new System.Windows.Forms.Label();
             this.lbCount = new System.Windows.Forms.Label();
-            this.lbSubject = new System.Windows.Forms.Label();
             this.ScrollInbox = new System.Windows.Forms.HScrollBar();
-            this.lbSumary = new System.Windows.Forms.Label();
-            this.lbIndex = new System.Windows.Forms.Label();
+            this.lbSubject = new System.Windows.Forms.Label();
+            this.picClose = new System.Windows.Forms.PictureBox();
             this.PanelPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelPrincipal
             // 
             this.PanelPrincipal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PanelPrincipal.Controls.Add(this.picClose);
             this.PanelPrincipal.Controls.Add(this.lbSumary);
             this.PanelPrincipal.Controls.Add(this.PictureBox1);
             this.PanelPrincipal.Controls.Add(this.lbIndex);
@@ -54,12 +57,22 @@
             resources.ApplyResources(this.PanelPrincipal, "PanelPrincipal");
             this.PanelPrincipal.Name = "PanelPrincipal";
             // 
+            // lbSumary
+            // 
+            resources.ApplyResources(this.lbSumary, "lbSumary");
+            this.lbSumary.Name = "lbSumary";
+            // 
             // PictureBox1
             // 
             this.PictureBox1.Image = global::GMailNotifier.Properties.Resources.gmail;
             resources.ApplyResources(this.PictureBox1, "PictureBox1");
             this.PictureBox1.Name = "PictureBox1";
             this.PictureBox1.TabStop = false;
+            // 
+            // lbIndex
+            // 
+            resources.ApplyResources(this.lbIndex, "lbIndex");
+            this.lbIndex.Name = "lbIndex";
             // 
             // lbFrom
             // 
@@ -71,11 +84,6 @@
             resources.ApplyResources(this.lbCount, "lbCount");
             this.lbCount.Name = "lbCount";
             // 
-            // lbSubject
-            // 
-            resources.ApplyResources(this.lbSubject, "lbSubject");
-            this.lbSubject.Name = "lbSubject";
-            // 
             // ScrollInbox
             // 
             resources.ApplyResources(this.ScrollInbox, "ScrollInbox");
@@ -83,15 +91,23 @@
             this.ScrollInbox.Name = "ScrollInbox";
             this.ScrollInbox.Scroll += new System.Windows.Forms.ScrollEventHandler(this.ScrollInbox_Scroll);
             // 
-            // lbSumary
+            // lbSubject
             // 
-            resources.ApplyResources(this.lbSumary, "lbSumary");
-            this.lbSumary.Name = "lbSumary";
+            this.lbSubject.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.lbSubject, "lbSubject");
+            this.lbSubject.Name = "lbSubject";
+            this.lbSubject.TabStop = true;
+            this.lbSubject.Click += new System.EventHandler(this.lbSubject_LinkClicked);
             // 
-            // lbIndex
+            // picClose
             // 
-            resources.ApplyResources(this.lbIndex, "lbIndex");
-            this.lbIndex.Name = "lbIndex";
+            this.picClose.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picClose.Image = global::GMailNotifier.Properties.Resources.btnclose;
+            resources.ApplyResources(this.picClose, "picClose");
+            this.picClose.Name = "picClose";
+            this.picClose.TabStop = false;
+            this.picClose.Click += new System.EventHandler(this.picClose_Click);
             // 
             // frmNotifier
             // 
@@ -107,6 +123,7 @@
             this.Load += new System.EventHandler(this.frmNotifier_Load);
             this.PanelPrincipal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -121,6 +138,7 @@
         private System.Windows.Forms.Label lbCount;
         private System.Windows.Forms.HScrollBar ScrollInbox;
         private System.Windows.Forms.Label lbSubject;
+        internal System.Windows.Forms.PictureBox picClose;
 
     }
 }

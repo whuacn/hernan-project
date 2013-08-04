@@ -19,10 +19,14 @@ namespace GMailNotifier.Engine
         {
             Inbox ibx = GetInbox();
 
+            if (ibx == null)
+                return;
+
             if (Program.inbox == null)
             {
                 Program.inbox = ibx;
-                OnUpdate(null,null);
+                if (OnUpdate != null)
+                    OnUpdate(null, null);
             }
             else if (ibx.modified != Program.inbox.modified)
             {
@@ -34,7 +38,8 @@ namespace GMailNotifier.Engine
                     }
                 }
                 Program.inbox = ibx;
-                OnUpdate(null, null);              
+                if (OnUpdate != null)
+                    OnUpdate(null, null);
             }
             else
             {
@@ -44,17 +49,22 @@ namespace GMailNotifier.Engine
 
         static Inbox GetInbox()
         {
-            WebClient objClient = new WebClient();
-            objClient.Credentials = new NetworkCredential("xxx", "xxxx");
-            string response = Encoding.UTF8.GetString(objClient.DownloadData("https://mail.google.com/mail/feed/atom"));
-            response = response.Replace("<feed version=\"0.3\" xmlns=\"http://purl.org/atom/ns#\">", "<feed>");
-  
+            string response = LoadData(Security.Unprotect(Storage.getSetting("UID")), Security.Unprotect(Storage.getSetting("CLV")));
             byte[] byteArray = Encoding.ASCII.GetBytes(response);
             MemoryStream stream = new MemoryStream(byteArray);
             XDocument document = XDocument.Load(stream);
             XElement element = document.Root;
 
             return InboxConverter(element);
+
+        }
+        internal static string LoadData(string user, string pass)
+        {
+            WebClient objClient = new WebClient();
+            objClient.Credentials = new NetworkCredential(user, pass);
+            string response = Encoding.UTF8.GetString(objClient.DownloadData("https://mail.google.com/mail/feed/atom"));
+            response = response.Replace("<feed version=\"0.3\" xmlns=\"http://purl.org/atom/ns#\">", "<feed>");
+            return response;
         }
         static Inbox InboxConverter(XElement element)
         {
