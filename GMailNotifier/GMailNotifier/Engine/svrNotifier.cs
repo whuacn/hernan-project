@@ -1,4 +1,4 @@
-﻿using System;
+ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -45,7 +45,7 @@ namespace GMailNotifier.Engine
         static Inbox GetInbox()
         {
             WebClient objClient = new WebClient();
-            objClient.Credentials = new NetworkCredential("hernanjh", "herfxis1826");
+            objClient.Credentials = new NetworkCredential("xxxxx", "xxxxxx");
             string response = Encoding.UTF8.GetString(objClient.DownloadData("https://mail.google.com/mail/feed/atom"));
             response = response.Replace("<feed version=\"0.3\" xmlns=\"http://purl.org/atom/ns#\">", "<feed>");
   
