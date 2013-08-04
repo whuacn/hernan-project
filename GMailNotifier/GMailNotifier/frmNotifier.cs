@@ -174,7 +174,7 @@ namespace GMailNotifier
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Gmail Notifier", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                timerCheck.Interval = timerCheck.Interval * 2;
+                timerCheck.Interval = 60000;
             }
         }
 
@@ -266,10 +266,6 @@ namespace GMailNotifier
 
             this.Show();
         }
-
-
-
-
 
     }
 }

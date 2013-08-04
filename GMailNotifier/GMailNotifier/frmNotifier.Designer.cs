@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNotifier));
             this.PanelPrincipal = new System.Windows.Forms.Panel();
+            this.picClose = new System.Windows.Forms.PictureBox();
             this.lbSumary = new System.Windows.Forms.Label();
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbIndex = new System.Windows.Forms.Label();
@@ -37,10 +38,9 @@
             this.lbCount = new System.Windows.Forms.Label();
             this.ScrollInbox = new System.Windows.Forms.HScrollBar();
             this.lbSubject = new System.Windows.Forms.Label();
-            this.picClose = new System.Windows.Forms.PictureBox();
             this.PanelPrincipal.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelPrincipal
@@ -56,6 +56,16 @@
             this.PanelPrincipal.Controls.Add(this.lbSubject);
             resources.ApplyResources(this.PanelPrincipal, "PanelPrincipal");
             this.PanelPrincipal.Name = "PanelPrincipal";
+            // 
+            // picClose
+            // 
+            this.picClose.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picClose.Image = global::GMailNotifier.Properties.Resources.btnclose;
+            resources.ApplyResources(this.picClose, "picClose");
+            this.picClose.Name = "picClose";
+            this.picClose.TabStop = false;
+            this.picClose.Click += new System.EventHandler(this.picClose_Click);
             // 
             // lbSumary
             // 
@@ -87,6 +97,7 @@
             // ScrollInbox
             // 
             resources.ApplyResources(this.ScrollInbox, "ScrollInbox");
+            this.ScrollInbox.LargeChange = 1;
             this.ScrollInbox.Maximum = 9999;
             this.ScrollInbox.Name = "ScrollInbox";
             this.ScrollInbox.Scroll += new System.Windows.Forms.ScrollEventHandler(this.ScrollInbox_Scroll);
@@ -98,16 +109,6 @@
             this.lbSubject.Name = "lbSubject";
             this.lbSubject.TabStop = true;
             this.lbSubject.Click += new System.EventHandler(this.lbSubject_LinkClicked);
-            // 
-            // picClose
-            // 
-            this.picClose.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picClose.Image = global::GMailNotifier.Properties.Resources.btnclose;
-            resources.ApplyResources(this.picClose, "picClose");
-            this.picClose.Name = "picClose";
-            this.picClose.TabStop = false;
-            this.picClose.Click += new System.EventHandler(this.picClose_Click);
             // 
             // frmNotifier
             // 
@@ -122,8 +123,8 @@
             this.TopMost = true;
             this.Load += new System.EventHandler(this.frmNotifier_Load);
             this.PanelPrincipal.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
