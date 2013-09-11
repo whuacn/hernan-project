@@ -8,6 +8,47 @@
     <link href="/css/jquery-ui-1.10.3.custom.min.css" rel="stylesheet" type="text/css" />
     <script src="/js/jquery-1.9.1.js" type="text/javascript"></script>
     <script src="/js/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            var icons = {
+                header: "ui-icon-pencil",
+                activeHeader: "ui-icon-circle-arrow-s"
+            };
+
+            $(".accordion").accordion({
+                icons: icons,
+                collapsible: true,
+                active: false,
+                heightStyle: "content"
+            });
+
+
+            $(".boton").button();
+
+            $(document).tooltip();
+
+
+            $(".fecha").datepicker({
+                changeMonth: true,
+                changeYear: true,
+                yearRange: "-100:+0",
+                showAnim: "slideDown",
+                dateFormat: "dd/mm/yy",
+                showOn: "button",
+                //buttonImage: "/css/images/icons/calendar.png",
+                buttonImageOnly: true
+            }).next(".ui-datepicker-trigger").addClass("ui-button ui-state-default ui-corner-all");
+
+            $(".spinner").spinner({ min: 1, max: 102, increment: 1 }).val("1");
+
+            $(".slider").slider();
+
+            $(".radio").buttonset();
+
+
+        });
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">
