@@ -1,0 +1,72 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using HerGoS.Interfaces;
+
+namespace {NAMESPACE}
+{
+	public class {OBJECTNAME}
+	{
+		public static {CLASSTYPE} Obtener(int oid)
+		{
+            try
+            {
+                IRepository repo = RepositoryFactory.Create(Config.RepositoryName);
+                repo.Nombre = "{TABLENAME}_SP";
+                repo.AddParameter("@ACCION", "BYID");
+                repo.AddParameter("@ID", oid);
+                DataTable dt = repo.ExecuteDataTable();
+                {CLASSTYPE} result = dt.ToGenericList<{CLASSTYPE}>({CLASSTYPE}Converter).FirstOrDefault();
+                return result;
+            }
+            catch (Exception ex)
+            {
+                throw new {CLASSTYPE}GetException(ex);
+            }		
+		}
+		
+        public static void Guardar({CLASSTYPE} {CLASSTYPELOWER})
+        {
+            try
+            {
+                IRepository repo = RepositoryFactory.CreateTransactional(Config.RepositoryName);
+                repo.Nombre = "{TABLENAME}_PROC";
+                repo.AddParameter("@ACCION ",{CLASSTYPELOWER}.Persistencia);
+                repo.AddParameter("@ID", {CLASSTYPELOWER}.OID);
+				{STOREDPARAMS}
+                {CLASSTYPELOWER}.OID = repo.ExecuteReturnValue().ToInteger();
+                repo.Commit();  
+             
+            }
+            catch (Exception ex)
+            {
+                throw new {CLASSTYPE}SaveException(ex);
+            }
+        }
+
+        public static void Eliminar({CLASSTYPE} {CLASSTYPELOWER})
+        {
+            {CLASSTYPELOWER}.Persistencia = EstadoPersistencia.DELETE;
+            Guardar({CLASSTYPELOWER});
+            {CLASSTYPELOWER}.Persistencia = EstadoPersistencia.UPDATE;
+            {CLASSTYPELOWER}.Activo = false;
+        }
+
+		
+		#region Converter
+
+        public static {CLASSTYPE} {CLASSTYPE}Converter(DataRow row)
+        {
+            {CLASSTYPE} {CLASSTYPELOWER}  =  new {CLASSTYPE}
+            {
+				OID = row["ID"].ToInteger(),
+				Persistencia = EstadoPersistencia.UPDATE,
+				{MAPPER}
+            };
+
+            return {CLASSTYPELOWER};
+        }
+        #endregion
+	}
+}
