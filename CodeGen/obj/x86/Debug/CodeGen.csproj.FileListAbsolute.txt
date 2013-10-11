@@ -1,0 +1,11 @@
+C:\Users\hernan\Desktop\CodeGen\CodeGen\CodeGen\bin\Debug\CodeGen.exe
+C:\Users\hernan\Desktop\CodeGen\CodeGen\CodeGen\bin\Debug\CodeGen.pdb
+C:\Users\hernan\Desktop\CodeGen\CodeGen\CodeGen\obj\x86\Debug\CodeGen.Properties.Resources.resources
+C:\Users\hernan\Desktop\CodeGen\CodeGen\CodeGen\obj\x86\Debug\CodeGen.csproj.GenerateResource.Cache
+C:\Users\hernan\Desktop\CodeGen\CodeGen\CodeGen\obj\x86\Debug\CodeGen.exe
+C:\Users\hernan\Desktop\CodeGen\CodeGen\CodeGen\obj\x86\Debug\CodeGen.pdb
+C:\Users\hernan\Desktop\CodeGen\CodeGen\CodeGen\obj\x86\Debug\CodeGen.Columnas.resources
+C:\Users\hernan\Desktop\CodeGen\CodeGen\CodeGen\obj\x86\Debug\CodeGen.Tablas.resources
+C:\Users\hernan\Desktop\CodeGen\CodeGen\CodeGen\obj\x86\Debug\CodeGen.Properties.Template.resources
+C:\Users\hernan\Desktop\CodeGen\CodeGen\CodeGen\bin\Debug\TemplateGestor.txt
+C:\Users\hernan\Desktop\CodeGen\CodeGen\CodeGen\bin\Debug\TemplateEntidad.txt
