@@ -5,3 +5,10 @@ D:\Desarrollo\Sipro\Sipro\bin\Autenticacion.pdb
 D:\Desarrollo\Sipro\Sipro\obj\Debug\Sipro.csprojResolveAssemblyReference.cache
 D:\Desarrollo\Sipro\Sipro\obj\Debug\Sipro.dll
 D:\Desarrollo\Sipro\Sipro\obj\Debug\Sipro.pdb
+D:\Desarrollo\hernan-project\Sipro\Sipro\bin\Sipro.dll
+D:\Desarrollo\hernan-project\Sipro\Sipro\bin\Sipro.pdb
+D:\Desarrollo\hernan-project\Sipro\Sipro\bin\Autenticacion.dll
+D:\Desarrollo\hernan-project\Sipro\Sipro\bin\Autenticacion.pdb
+D:\Desarrollo\hernan-project\Sipro\Sipro\obj\Debug\Sipro.csprojResolveAssemblyReference.cache
+D:\Desarrollo\hernan-project\Sipro\Sipro\obj\Debug\Sipro.dll
+D:\Desarrollo\hernan-project\Sipro\Sipro\obj\Debug\Sipro.pdb

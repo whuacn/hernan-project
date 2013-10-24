@@ -1,0 +1,4 @@
+D:\Desarrollo\hernan-project\Sipro\Autenticacion\bin\Debug\Autenticacion.dll
+D:\Desarrollo\hernan-project\Sipro\Autenticacion\bin\Debug\Autenticacion.pdb
+D:\Desarrollo\hernan-project\Sipro\Autenticacion\obj\Debug\Autenticacion.dll
+D:\Desarrollo\hernan-project\Sipro\Autenticacion\obj\Debug\Autenticacion.pdb
