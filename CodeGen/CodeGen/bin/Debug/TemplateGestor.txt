@@ -35,6 +35,7 @@ namespace {NAMESPACE}
                 repo.AddParameter("@ACCION ",{CLASSTYPELOWER}.Persistencia);
                 repo.AddParameter("@ID", {CLASSTYPELOWER}.OID);
 				{STOREDPARAMS}
+		repo.AddParameter("@IDUSUARIO", HGSContext.Usuario.OID);
                 {CLASSTYPELOWER}.OID = repo.ExecuteReturnValue().ToInteger();
                 repo.Commit();  
              
