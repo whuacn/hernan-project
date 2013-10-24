@@ -12,7 +12,7 @@ namespace Sipro
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            lblName.Text = "Hello " + Context.User.Identity.Name + ".";
+            lblName.Text = "Hello " + Context.User.Identity.Name + ". SV: " + Request.ServerVariables["AUTH_USER"];
             lblAuthType.Text = "You were authenticated using " + Context.User.Identity.AuthenticationType + ".";
 
         }
