@@ -28,8 +28,14 @@ namespace UrlStress
         static int CantThreads = 0;
         static int CantRequest = 0;
         static bool isforever = false;
-        
-        
+        static bool autenticate = false;
+        static string authUser = "";
+        static string authPass = "";
+        static bool proxy = false;
+        static string proxyHost = "";
+        static string proxyUser = "";
+        static string proxyPass = "";
+        static int proxyPort = 0;
 
         public Form1()
         {
@@ -57,6 +63,16 @@ namespace UrlStress
             CantThreads = Int32.Parse(intHilos.Value.ToString());
             CantRequest = Int32.Parse(numRequest.Value.ToString());
             isforever = chkForever.Checked;
+
+            autenticate = chkAutenticacion.Checked;
+            authUser = txtAuthUser.Text;
+            authPass = txtAuthPass.Text;
+
+            proxy = chkProxy.Checked;
+            proxyPort = Int32.Parse(numPort.Value.ToString());
+            proxyHost = txtProxyHost.Text;
+            proxyUser = txtProxyUser.Text;
+            proxyPass = txtProxyPass.Text;
 
             foreach (string url in listBoxUrls.Items)
             {
@@ -119,7 +135,20 @@ namespace UrlStress
                 try
                 {
                     request.Method = "GET";
+
+                    if (autenticate)
+                        request.Credentials = new NetworkCredential(authUser, authPass);
+
+                    if (proxy)
+                    {
+                        WebProxy myproxy = new WebProxy(proxyHost, proxyPort);
+                        if (proxyUser != "")
+                            myproxy.Credentials = new NetworkCredential(proxyUser, proxyPass);
+                        request.Proxy = myproxy;
+                    }
+
                     HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+
                     if (response.StatusCode == HttpStatusCode.OK) Interlocked.Increment(ref count200);
                     if (response.StatusCode == HttpStatusCode.Unauthorized) Interlocked.Increment(ref count401);
                     if (response.StatusCode == HttpStatusCode.NotFound) Interlocked.Increment(ref count404);
@@ -145,8 +174,17 @@ namespace UrlStress
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (txtUrl.Text.Trim() != "")
-                listBoxUrls.Items.Add(txtUrl.Text);
+            try
+            {
+                string url = new UriBuilder(txtUrl.Text).Uri.ToString();
+                if (txtUrl.Text.Trim() != "")
+                    listBoxUrls.Items.Add(url);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("La url no es valida");
+            }
+
         }
 
         private void btnRemove_Click(object sender, EventArgs e)
@@ -158,6 +196,20 @@ namespace UrlStress
             catch (Exception)
             {
             }            
+        }
+
+        private void chkAutenticacion_CheckedChanged(object sender, EventArgs e)
+        {
+                txtAuthUser.Enabled = chkAutenticacion.Checked;
+                txtAuthPass.Enabled = chkAutenticacion.Checked;
+        }
+
+        private void chkProxy_CheckedChanged(object sender, EventArgs e)
+        {
+            numPort.Enabled = chkProxy.Checked;
+            txtProxyHost.Enabled = chkProxy.Checked;
+            txtProxyUser.Enabled = chkProxy.Checked;
+            txtProxyPass.Enabled = chkProxy.Checked;
         }
     }
 }
