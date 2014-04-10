@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.ButtonRun = new System.Windows.Forms.Button();
             this.ButtonStop = new System.Windows.Forms.Button();
             this.buttonReset = new System.Windows.Forms.Button();
@@ -635,8 +636,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(671, 431);
             this.Controls.Add(this.tabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Url Stress";
             this.Load += new System.EventHandler(this.Form1_Load);
