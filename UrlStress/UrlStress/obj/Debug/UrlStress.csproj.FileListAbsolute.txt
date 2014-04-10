@@ -21,7 +21,6 @@ E:\DESARROLLO\C#\UrlStress\UrlStress\obj\Debug\UrlStress.exe
 E:\DESARROLLO\C#\UrlStress\UrlStress\obj\Debug\UrlStress.pdb
 E:\DESARROLLO\C#\UrlStress\UrlStress\bin\Debug\UrlStress.exe
 E:\DESARROLLO\C#\UrlStress\UrlStress\bin\Debug\UrlStress.pdb
-E:\DESARROLLO\C#\UrlStress\UrlStress\obj\Debug\UrlStress.csprojResolveAssemblyReference.cache
 E:\DESARROLLO\C#\UrlStress\UrlStress\obj\Debug\UrlStress.Form1.resources
 E:\DESARROLLO\C#\UrlStress\UrlStress\obj\Debug\UrlStress.Properties.Resources.resources
 E:\DESARROLLO\C#\UrlStress\UrlStress\obj\Debug\UrlStress.csproj.GenerateResource.Cache
