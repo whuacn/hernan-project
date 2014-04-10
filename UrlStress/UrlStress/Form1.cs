@@ -143,7 +143,6 @@ namespace UrlStress
                         request.Credentials = cache;
 
                     }
-                        //request.Credentials = new NetworkCredential(authUser, authPass);
 
                     if (proxy)
                     {
