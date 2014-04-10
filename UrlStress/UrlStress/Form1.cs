@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -215,6 +216,60 @@ namespace UrlStress
             txtProxyHost.Enabled = chkProxy.Checked;
             txtProxyUser.Enabled = chkProxy.Checked;
             txtProxyPass.Enabled = chkProxy.Checked;
+        }
+
+        private void btnLoadFile_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();            
+            openFileDialog1.Filter = "Text Files (.txt)|*.txt|All Files (*.*)|*.*";
+            openFileDialog1.FilterIndex = 1;
+            openFileDialog1.Multiselect = false;
+            openFileDialog1.RestoreDirectory = true;
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    string[] filelines = File.ReadAllLines(openFileDialog1.FileName);
+                    foreach (string line in filelines)
+                    {
+                        string url = new UriBuilder(line).Uri.ToString();
+                        listBoxUrls.Items.Add(url);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: No se puede leer el archivo seleccionado. Detalle: " + ex.Message);
+                }
+
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+
+            saveFileDialog1.Filter = "Text Files (.txt)|*.txt|All Files (*.*)|*.*";
+            saveFileDialog1.RestoreDirectory = true;
+
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    using (StreamWriter writer = new StreamWriter(saveFileDialog1.OpenFile()))
+                    {
+                        for (int i = 0; i < listBoxUrls.Items.Count; i++)
+                        {
+                            writer.WriteLine(listBoxUrls.Items[i]);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: No se puede escribir el archivo seleccionado. Detalle: " + ex.Message);
+                }
+                
+            }
         }
     }
 }

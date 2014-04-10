@@ -80,6 +80,8 @@
             this.txtAuthUser = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.chkAutenticacion = new System.Windows.Forms.CheckBox();
+            this.btnLoadFile = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.intHilos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numRequest)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -422,6 +424,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btnSave);
+            this.tabPage1.Controls.Add(this.btnLoadFile);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.btnRemove);
             this.tabPage1.Controls.Add(this.ButtonRun);
@@ -630,6 +634,26 @@
             this.chkAutenticacion.UseVisualStyleBackColor = true;
             this.chkAutenticacion.CheckedChanged += new System.EventHandler(this.chkAutenticacion_CheckedChanged);
             // 
+            // btnLoadFile
+            // 
+            this.btnLoadFile.Location = new System.Drawing.Point(9, 306);
+            this.btnLoadFile.Name = "btnLoadFile";
+            this.btnLoadFile.Size = new System.Drawing.Size(98, 23);
+            this.btnLoadFile.TabIndex = 22;
+            this.btnLoadFile.Text = "Cargar archivo";
+            this.btnLoadFile.UseVisualStyleBackColor = true;
+            this.btnLoadFile.Click += new System.EventHandler(this.btnLoadFile_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(113, 306);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(98, 23);
+            this.btnSave.TabIndex = 23;
+            this.btnSave.Text = "Guardar";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -710,6 +734,8 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.NumericUpDown numPort;
+        private System.Windows.Forms.Button btnLoadFile;
+        private System.Windows.Forms.Button btnSave;
     }
 }
 
