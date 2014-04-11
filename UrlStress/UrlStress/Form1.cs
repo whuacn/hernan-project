@@ -26,17 +26,6 @@ namespace UrlStress
         static int count404 = 0;
         static int count304 = 0;
         static int countFailures = 0;
-        static int CantThreads = 0;
-        static int CantRequest = 0;
-        static bool isforever = false;
-        static bool autenticate = false;
-        static string authUser = "";
-        static string authPass = "";
-        static bool proxy = false;
-        static string proxyHost = "";
-        static string proxyUser = "";
-        static string proxyPass = "";
-        static int proxyPort = 0;
 
         public Form1()
         {
@@ -61,23 +50,23 @@ namespace UrlStress
             count404 = 0;
             count304 = 0;
             countFailures = 0;
-            CantThreads = Int32.Parse(intHilos.Value.ToString());
-            CantRequest = Int32.Parse(numRequest.Value.ToString());
-            isforever = chkForever.Checked;
+            Settings.CountThreads = Int32.Parse(numThreads.Value.ToString());
+            Settings.CountRequest = Int32.Parse(numRequest.Value.ToString());
+            Settings.isforever = chkForever.Checked;
 
-            autenticate = chkAutenticacion.Checked;
-            authUser = txtAuthUser.Text;
-            authPass = txtAuthPass.Text;
+            Settings.autenticate = chkAutenticacion.Checked;
+            Settings.authUser = txtAuthUser.Text;
+            Settings.authPass = txtAuthPass.Text;
 
-            proxy = chkProxy.Checked;
-            proxyPort = Int32.Parse(numPort.Value.ToString());
-            proxyHost = txtProxyHost.Text;
-            proxyUser = txtProxyUser.Text;
-            proxyPass = txtProxyPass.Text;
+            Settings.proxy = chkProxy.Checked;
+            Settings.proxyPort = Int32.Parse(numPort.Value.ToString());
+            Settings.proxyHost = txtProxyHost.Text;
+            Settings.proxyUser = txtProxyUser.Text;
+            Settings.proxyPass = txtProxyPass.Text;
 
             foreach (string url in listBoxUrls.Items)
             {
-                for (int i = 1; i <= CantThreads; i++)
+                for (int i = 1; i <= Settings.CountThreads; i++)
                 {
                     Thread workerThread = new Thread(() => WorkerThreadProc(url));
                     workerThread.Start();
@@ -129,7 +118,7 @@ namespace UrlStress
         {
             Interlocked.Increment(ref numWorkItems);
             int tries = 0;
-            while ((!_shouldStop) && ((tries < CantRequest || (isforever))))
+            while ((!_shouldStop) && ((tries < Settings.CountRequest || (Settings.isforever))))
             {
                 HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
                 request.KeepAlive = true;
@@ -137,19 +126,19 @@ namespace UrlStress
                 {
                     request.Method = "GET";
 
-                    if (autenticate)
+                    if (Settings.autenticate)
                     {
                         var cache = new CredentialCache();
-                        cache.Add(new Uri(url), "Basic", new NetworkCredential(authUser, authPass));
+                        cache.Add(new Uri(url), "Basic", new NetworkCredential(Settings.authUser, Settings.authPass));
                         request.Credentials = cache;
 
                     }
 
-                    if (proxy)
+                    if (Settings.proxy)
                     {
-                        WebProxy myproxy = new WebProxy(proxyHost, proxyPort);
-                        if (proxyUser != "")
-                            myproxy.Credentials = new NetworkCredential(proxyUser, proxyPass);
+                        WebProxy myproxy = new WebProxy(Settings.proxyHost, Settings.proxyPort);
+                        if (Settings.proxyUser != "")
+                            myproxy.Credentials = new NetworkCredential(Settings.proxyUser, Settings.proxyPass);
                         request.Proxy = myproxy;
                     }
 
@@ -188,7 +177,7 @@ namespace UrlStress
             }
             catch (Exception)
             {
-                MessageBox.Show("La url no es valida");
+                MessageBox.Show("Url invalid: " + txtUrl.Text);
             }
 
         }
@@ -239,7 +228,7 @@ namespace UrlStress
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error: No se puede leer el archivo seleccionado. Detalle: " + ex.Message);
+                    MessageBox.Show("Error: Can not read the selected file. Details: " + ex.Message);
                 }
 
             }
@@ -266,7 +255,7 @@ namespace UrlStress
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error: No se puede escribir el archivo seleccionado. Detalle: " + ex.Message);
+                    MessageBox.Show("Error: Unable to write the selected file. Details: " + ex.Message);
                 }
                 
             }

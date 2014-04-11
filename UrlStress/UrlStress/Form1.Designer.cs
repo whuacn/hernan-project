@@ -35,7 +35,7 @@
             this.buttonReset = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.intHilos = new System.Windows.Forms.NumericUpDown();
+            this.numThreads = new System.Windows.Forms.NumericUpDown();
             this.numRequest = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.chkForever = new System.Windows.Forms.CheckBox();
@@ -63,6 +63,8 @@
             this.btnRemove = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnLoadFile = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -80,9 +82,7 @@
             this.txtAuthUser = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.chkAutenticacion = new System.Windows.Forms.CheckBox();
-            this.btnLoadFile = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.intHilos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numThreads)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numRequest)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -99,7 +99,7 @@
             this.ButtonRun.Name = "ButtonRun";
             this.ButtonRun.Size = new System.Drawing.Size(75, 23);
             this.ButtonRun.TabIndex = 0;
-            this.ButtonRun.Text = "Iniciar";
+            this.ButtonRun.Text = "Start";
             this.ButtonRun.UseVisualStyleBackColor = true;
             this.ButtonRun.Click += new System.EventHandler(this.ButtonRun_Click);
             // 
@@ -109,7 +109,7 @@
             this.ButtonStop.Name = "ButtonStop";
             this.ButtonStop.Size = new System.Drawing.Size(75, 23);
             this.ButtonStop.TabIndex = 1;
-            this.ButtonStop.Text = "Detener";
+            this.ButtonStop.Text = "Stop";
             this.ButtonStop.UseVisualStyleBackColor = true;
             this.ButtonStop.Click += new System.EventHandler(this.ButtonStop_Click);
             // 
@@ -119,7 +119,7 @@
             this.buttonReset.Name = "buttonReset";
             this.buttonReset.Size = new System.Drawing.Size(75, 23);
             this.buttonReset.TabIndex = 2;
-            this.buttonReset.Text = "Limpiar";
+            this.buttonReset.Text = "Reset";
             this.buttonReset.UseVisualStyleBackColor = true;
             this.buttonReset.Click += new System.EventHandler(this.buttonReset_Click);
             // 
@@ -133,22 +133,22 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(6, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 13);
+            this.label1.Size = new System.Drawing.Size(94, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Cantidad de Hilos";
+            this.label1.Text = "Number of threads";
             // 
-            // intHilos
+            // numThreads
             // 
-            this.intHilos.Location = new System.Drawing.Point(130, 12);
-            this.intHilos.Minimum = new decimal(new int[] {
+            this.numThreads.Location = new System.Drawing.Point(130, 12);
+            this.numThreads.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.intHilos.Name = "intHilos";
-            this.intHilos.Size = new System.Drawing.Size(63, 20);
-            this.intHilos.TabIndex = 5;
-            this.intHilos.Value = new decimal(new int[] {
+            this.numThreads.Name = "numThreads";
+            this.numThreads.Size = new System.Drawing.Size(63, 20);
+            this.numThreads.TabIndex = 5;
+            this.numThreads.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -181,18 +181,18 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(6, 40);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 13);
+            this.label2.Size = new System.Drawing.Size(94, 13);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Cantidad de Solicitudes";
+            this.label2.Text = "Number of request";
             // 
             // chkForever
             // 
             this.chkForever.AutoSize = true;
             this.chkForever.Location = new System.Drawing.Point(200, 40);
             this.chkForever.Name = "chkForever";
-            this.chkForever.Size = new System.Drawing.Size(86, 17);
+            this.chkForever.Size = new System.Drawing.Size(59, 17);
             this.chkForever.TabIndex = 8;
-            this.chkForever.Text = "para siempre";
+            this.chkForever.Text = "forever";
             this.chkForever.UseVisualStyleBackColor = true;
             this.chkForever.CheckedChanged += new System.EventHandler(this.chkForever_CheckedChanged);
             // 
@@ -201,9 +201,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(6, 71);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 13);
+            this.label3.Size = new System.Drawing.Size(34, 13);
             this.label3.TabIndex = 9;
-            this.label3.Text = "Lista de direcciones";
+            this.label3.Text = "URLs";
             // 
             // txtUrl
             // 
@@ -397,7 +397,7 @@
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 20;
-            this.btnAdd.Text = "Agregar";
+            this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
@@ -407,7 +407,7 @@
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(75, 23);
             this.btnRemove.TabIndex = 21;
-            this.btnRemove.Text = "Quitar";
+            this.btnRemove.Text = "Remove";
             this.btnRemove.UseVisualStyleBackColor = true;
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
@@ -434,7 +434,7 @@
             this.tabPage1.Controls.Add(this.listBoxUrls);
             this.tabPage1.Controls.Add(this.buttonReset);
             this.tabPage1.Controls.Add(this.labelCantHilos);
-            this.tabPage1.Controls.Add(this.intHilos);
+            this.tabPage1.Controls.Add(this.numThreads);
             this.tabPage1.Controls.Add(this.labelHilos);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.labeCantlRequestSec);
@@ -454,6 +454,26 @@
             this.tabPage1.Text = "Stress";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(113, 306);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(98, 23);
+            this.btnSave.TabIndex = 23;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnLoadFile
+            // 
+            this.btnLoadFile.Location = new System.Drawing.Point(9, 306);
+            this.btnLoadFile.Name = "btnLoadFile";
+            this.btnLoadFile.Size = new System.Drawing.Size(98, 23);
+            this.btnLoadFile.TabIndex = 22;
+            this.btnLoadFile.Text = "Load";
+            this.btnLoadFile.UseVisualStyleBackColor = true;
+            this.btnLoadFile.Click += new System.EventHandler(this.btnLoadFile_Click);
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.groupBox3);
@@ -463,7 +483,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(663, 405);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Configuracion";
+            this.tabPage2.Text = "Setting";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // groupBox3
@@ -489,9 +509,9 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(233, 45);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(38, 13);
+            this.label9.Size = new System.Drawing.Size(26, 13);
             this.label9.TabIndex = 12;
-            this.label9.Text = "Puerto";
+            this.label9.Text = "Port";
             // 
             // numPort
             // 
@@ -559,18 +579,18 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(20, 82);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(43, 13);
+            this.label7.Size = new System.Drawing.Size(29, 13);
             this.label7.TabIndex = 5;
-            this.label7.Text = "Usuario";
+            this.label7.Text = "User";
             // 
             // chkProxy
             // 
             this.chkProxy.AutoSize = true;
             this.chkProxy.Location = new System.Drawing.Point(18, 19);
             this.chkProxy.Name = "chkProxy";
-            this.chkProxy.Size = new System.Drawing.Size(92, 17);
+            this.chkProxy.Size = new System.Drawing.Size(69, 17);
             this.chkProxy.TabIndex = 1;
-            this.chkProxy.Text = "Habilitar proxy";
+            this.chkProxy.Text = "Required";
             this.chkProxy.UseVisualStyleBackColor = true;
             this.chkProxy.CheckedChanged += new System.EventHandler(this.chkProxy_CheckedChanged);
             // 
@@ -586,7 +606,7 @@
             this.groupBox2.Size = new System.Drawing.Size(357, 150);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Autenticacion";
+            this.groupBox2.Text = "Authentication";
             // 
             // txtAuthPass
             // 
@@ -619,40 +639,20 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(20, 55);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 13);
+            this.label4.Size = new System.Drawing.Size(29, 13);
             this.label4.TabIndex = 1;
-            this.label4.Text = "Usuario";
+            this.label4.Text = "User";
             // 
             // chkAutenticacion
             // 
             this.chkAutenticacion.AutoSize = true;
             this.chkAutenticacion.Location = new System.Drawing.Point(18, 20);
             this.chkAutenticacion.Name = "chkAutenticacion";
-            this.chkAutenticacion.Size = new System.Drawing.Size(136, 17);
+            this.chkAutenticacion.Size = new System.Drawing.Size(69, 17);
             this.chkAutenticacion.TabIndex = 0;
-            this.chkAutenticacion.Text = "Requiere autenticacion";
+            this.chkAutenticacion.Text = "Required";
             this.chkAutenticacion.UseVisualStyleBackColor = true;
             this.chkAutenticacion.CheckedChanged += new System.EventHandler(this.chkAutenticacion_CheckedChanged);
-            // 
-            // btnLoadFile
-            // 
-            this.btnLoadFile.Location = new System.Drawing.Point(9, 306);
-            this.btnLoadFile.Name = "btnLoadFile";
-            this.btnLoadFile.Size = new System.Drawing.Size(98, 23);
-            this.btnLoadFile.TabIndex = 22;
-            this.btnLoadFile.Text = "Cargar archivo";
-            this.btnLoadFile.UseVisualStyleBackColor = true;
-            this.btnLoadFile.Click += new System.EventHandler(this.btnLoadFile_Click);
-            // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(113, 306);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(98, 23);
-            this.btnSave.TabIndex = 23;
-            this.btnSave.Text = "Guardar";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // Form1
             // 
@@ -665,7 +665,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Url Stress";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.intHilos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numThreads)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numRequest)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -689,7 +689,7 @@
         private System.Windows.Forms.Button buttonReset;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown intHilos;
+        private System.Windows.Forms.NumericUpDown numThreads;
         private System.Windows.Forms.NumericUpDown numRequest;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox chkForever;
