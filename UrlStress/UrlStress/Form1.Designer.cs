@@ -43,21 +43,21 @@
             this.txtUrl = new System.Windows.Forms.TextBox();
             this.label200 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.labelCantFallos = new System.Windows.Forms.Label();
+            this.labelCountFailures = new System.Windows.Forms.Label();
             this.labelFallos = new System.Windows.Forms.Label();
-            this.labelCant404 = new System.Windows.Forms.Label();
+            this.labelCount404 = new System.Windows.Forms.Label();
             this.label404 = new System.Windows.Forms.Label();
-            this.labelCant401 = new System.Windows.Forms.Label();
+            this.labelCount401 = new System.Windows.Forms.Label();
             this.label401 = new System.Windows.Forms.Label();
-            this.labelCant304 = new System.Windows.Forms.Label();
+            this.labelCount304 = new System.Windows.Forms.Label();
             this.label304 = new System.Windows.Forms.Label();
-            this.labelCant200 = new System.Windows.Forms.Label();
-            this.labelCantRequest = new System.Windows.Forms.Label();
+            this.labelCount200 = new System.Windows.Forms.Label();
+            this.labelCountRequest = new System.Windows.Forms.Label();
             this.labelRequest = new System.Windows.Forms.Label();
-            this.labeCantlRequestSec = new System.Windows.Forms.Label();
+            this.labeCountRequestSec = new System.Windows.Forms.Label();
             this.labelRequestSec = new System.Windows.Forms.Label();
-            this.labelCantHilos = new System.Windows.Forms.Label();
-            this.labelHilos = new System.Windows.Forms.Label();
+            this.labelCountThreads = new System.Windows.Forms.Label();
+            this.labelThreads = new System.Windows.Forms.Label();
             this.listBoxUrls = new System.Windows.Forms.ListBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
@@ -223,15 +223,15 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.labelCantFallos);
+            this.groupBox1.Controls.Add(this.labelCountFailures);
             this.groupBox1.Controls.Add(this.labelFallos);
-            this.groupBox1.Controls.Add(this.labelCant404);
+            this.groupBox1.Controls.Add(this.labelCount404);
             this.groupBox1.Controls.Add(this.label404);
-            this.groupBox1.Controls.Add(this.labelCant401);
+            this.groupBox1.Controls.Add(this.labelCount401);
             this.groupBox1.Controls.Add(this.label401);
-            this.groupBox1.Controls.Add(this.labelCant304);
+            this.groupBox1.Controls.Add(this.labelCount304);
             this.groupBox1.Controls.Add(this.label304);
-            this.groupBox1.Controls.Add(this.labelCant200);
+            this.groupBox1.Controls.Add(this.labelCount200);
             this.groupBox1.Controls.Add(this.label200);
             this.groupBox1.Location = new System.Drawing.Point(424, 87);
             this.groupBox1.Name = "groupBox1";
@@ -240,33 +240,33 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Status";
             // 
-            // labelCantFallos
+            // labelCountFailures
             // 
-            this.labelCantFallos.AutoSize = true;
-            this.labelCantFallos.ForeColor = System.Drawing.Color.Red;
-            this.labelCantFallos.Location = new System.Drawing.Point(106, 78);
-            this.labelCantFallos.Name = "labelCantFallos";
-            this.labelCantFallos.Size = new System.Drawing.Size(13, 13);
-            this.labelCantFallos.TabIndex = 20;
-            this.labelCantFallos.Text = "0";
+            this.labelCountFailures.AutoSize = true;
+            this.labelCountFailures.ForeColor = System.Drawing.Color.Red;
+            this.labelCountFailures.Location = new System.Drawing.Point(106, 78);
+            this.labelCountFailures.Name = "labelCountFailures";
+            this.labelCountFailures.Size = new System.Drawing.Size(13, 13);
+            this.labelCountFailures.TabIndex = 20;
+            this.labelCountFailures.Text = "0";
             // 
             // labelFallos
             // 
             this.labelFallos.AutoSize = true;
             this.labelFallos.Location = new System.Drawing.Point(25, 78);
             this.labelFallos.Name = "labelFallos";
-            this.labelFallos.Size = new System.Drawing.Size(34, 13);
+            this.labelFallos.Size = new System.Drawing.Size(43, 13);
             this.labelFallos.TabIndex = 19;
-            this.labelFallos.Text = "Fallos";
+            this.labelFallos.Text = "Failures";
             // 
-            // labelCant404
+            // labelCount404
             // 
-            this.labelCant404.AutoSize = true;
-            this.labelCant404.Location = new System.Drawing.Point(106, 65);
-            this.labelCant404.Name = "labelCant404";
-            this.labelCant404.Size = new System.Drawing.Size(13, 13);
-            this.labelCant404.TabIndex = 18;
-            this.labelCant404.Text = "0";
+            this.labelCount404.AutoSize = true;
+            this.labelCount404.Location = new System.Drawing.Point(106, 65);
+            this.labelCount404.Name = "labelCount404";
+            this.labelCount404.Size = new System.Drawing.Size(13, 13);
+            this.labelCount404.TabIndex = 18;
+            this.labelCount404.Text = "0";
             // 
             // label404
             // 
@@ -277,14 +277,14 @@
             this.label404.TabIndex = 17;
             this.label404.Text = "404";
             // 
-            // labelCant401
+            // labelCount401
             // 
-            this.labelCant401.AutoSize = true;
-            this.labelCant401.Location = new System.Drawing.Point(106, 52);
-            this.labelCant401.Name = "labelCant401";
-            this.labelCant401.Size = new System.Drawing.Size(13, 13);
-            this.labelCant401.TabIndex = 16;
-            this.labelCant401.Text = "0";
+            this.labelCount401.AutoSize = true;
+            this.labelCount401.Location = new System.Drawing.Point(106, 52);
+            this.labelCount401.Name = "labelCount401";
+            this.labelCount401.Size = new System.Drawing.Size(13, 13);
+            this.labelCount401.TabIndex = 16;
+            this.labelCount401.Text = "0";
             // 
             // label401
             // 
@@ -295,14 +295,14 @@
             this.label401.TabIndex = 15;
             this.label401.Text = "401";
             // 
-            // labelCant304
+            // labelCount304
             // 
-            this.labelCant304.AutoSize = true;
-            this.labelCant304.Location = new System.Drawing.Point(106, 39);
-            this.labelCant304.Name = "labelCant304";
-            this.labelCant304.Size = new System.Drawing.Size(13, 13);
-            this.labelCant304.TabIndex = 14;
-            this.labelCant304.Text = "0";
+            this.labelCount304.AutoSize = true;
+            this.labelCount304.Location = new System.Drawing.Point(106, 39);
+            this.labelCount304.Name = "labelCount304";
+            this.labelCount304.Size = new System.Drawing.Size(13, 13);
+            this.labelCount304.TabIndex = 14;
+            this.labelCount304.Text = "0";
             // 
             // label304
             // 
@@ -313,26 +313,26 @@
             this.label304.TabIndex = 13;
             this.label304.Text = "304";
             // 
-            // labelCant200
+            // labelCount200
             // 
-            this.labelCant200.AutoSize = true;
-            this.labelCant200.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCant200.ForeColor = System.Drawing.Color.Green;
-            this.labelCant200.Location = new System.Drawing.Point(106, 26);
-            this.labelCant200.Name = "labelCant200";
-            this.labelCant200.Size = new System.Drawing.Size(14, 13);
-            this.labelCant200.TabIndex = 12;
-            this.labelCant200.Text = "0";
+            this.labelCount200.AutoSize = true;
+            this.labelCount200.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCount200.ForeColor = System.Drawing.Color.Green;
+            this.labelCount200.Location = new System.Drawing.Point(106, 26);
+            this.labelCount200.Name = "labelCount200";
+            this.labelCount200.Size = new System.Drawing.Size(14, 13);
+            this.labelCount200.TabIndex = 12;
+            this.labelCount200.Text = "0";
             // 
-            // labelCantRequest
+            // labelCountRequest
             // 
-            this.labelCantRequest.AutoSize = true;
-            this.labelCantRequest.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCantRequest.Location = new System.Drawing.Point(530, 210);
-            this.labelCantRequest.Name = "labelCantRequest";
-            this.labelCantRequest.Size = new System.Drawing.Size(14, 13);
-            this.labelCantRequest.TabIndex = 14;
-            this.labelCantRequest.Text = "0";
+            this.labelCountRequest.AutoSize = true;
+            this.labelCountRequest.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCountRequest.Location = new System.Drawing.Point(530, 210);
+            this.labelCountRequest.Name = "labelCountRequest";
+            this.labelCountRequest.Size = new System.Drawing.Size(14, 13);
+            this.labelCountRequest.TabIndex = 14;
+            this.labelCountRequest.Text = "0";
             // 
             // labelRequest
             // 
@@ -343,14 +343,14 @@
             this.labelRequest.TabIndex = 13;
             this.labelRequest.Text = "Request";
             // 
-            // labeCantlRequestSec
+            // labeCountRequestSec
             // 
-            this.labeCantlRequestSec.AutoSize = true;
-            this.labeCantlRequestSec.Location = new System.Drawing.Point(530, 223);
-            this.labeCantlRequestSec.Name = "labeCantlRequestSec";
-            this.labeCantlRequestSec.Size = new System.Drawing.Size(13, 13);
-            this.labeCantlRequestSec.TabIndex = 16;
-            this.labeCantlRequestSec.Text = "0";
+            this.labeCountRequestSec.AutoSize = true;
+            this.labeCountRequestSec.Location = new System.Drawing.Point(530, 223);
+            this.labeCountRequestSec.Name = "labeCountRequestSec";
+            this.labeCountRequestSec.Size = new System.Drawing.Size(13, 13);
+            this.labeCountRequestSec.TabIndex = 16;
+            this.labeCountRequestSec.Text = "0";
             // 
             // labelRequestSec
             // 
@@ -361,27 +361,27 @@
             this.labelRequestSec.TabIndex = 15;
             this.labelRequestSec.Text = "Request/Sec";
             // 
-            // labelCantHilos
+            // labelCountThreads
             // 
-            this.labelCantHilos.AutoSize = true;
-            this.labelCantHilos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCantHilos.ForeColor = System.Drawing.Color.Blue;
-            this.labelCantHilos.Location = new System.Drawing.Point(530, 253);
-            this.labelCantHilos.Name = "labelCantHilos";
-            this.labelCantHilos.Size = new System.Drawing.Size(14, 13);
-            this.labelCantHilos.TabIndex = 18;
-            this.labelCantHilos.Text = "0";
+            this.labelCountThreads.AutoSize = true;
+            this.labelCountThreads.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCountThreads.ForeColor = System.Drawing.Color.Blue;
+            this.labelCountThreads.Location = new System.Drawing.Point(530, 253);
+            this.labelCountThreads.Name = "labelCountThreads";
+            this.labelCountThreads.Size = new System.Drawing.Size(14, 13);
+            this.labelCountThreads.TabIndex = 18;
+            this.labelCountThreads.Text = "0";
             // 
-            // labelHilos
+            // labelThreads
             // 
-            this.labelHilos.AutoSize = true;
-            this.labelHilos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHilos.ForeColor = System.Drawing.Color.Blue;
-            this.labelHilos.Location = new System.Drawing.Point(449, 253);
-            this.labelHilos.Name = "labelHilos";
-            this.labelHilos.Size = new System.Drawing.Size(35, 13);
-            this.labelHilos.TabIndex = 17;
-            this.labelHilos.Text = "Hilos";
+            this.labelThreads.AutoSize = true;
+            this.labelThreads.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelThreads.ForeColor = System.Drawing.Color.Blue;
+            this.labelThreads.Location = new System.Drawing.Point(449, 253);
+            this.labelThreads.Name = "labelThreads";
+            this.labelThreads.Size = new System.Drawing.Size(53, 13);
+            this.labelThreads.TabIndex = 17;
+            this.labelThreads.Text = "Threads";
             // 
             // listBoxUrls
             // 
@@ -433,15 +433,15 @@
             this.tabPage1.Controls.Add(this.ButtonStop);
             this.tabPage1.Controls.Add(this.listBoxUrls);
             this.tabPage1.Controls.Add(this.buttonReset);
-            this.tabPage1.Controls.Add(this.labelCantHilos);
+            this.tabPage1.Controls.Add(this.labelCountThreads);
             this.tabPage1.Controls.Add(this.numThreads);
-            this.tabPage1.Controls.Add(this.labelHilos);
+            this.tabPage1.Controls.Add(this.labelThreads);
             this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.labeCantlRequestSec);
+            this.tabPage1.Controls.Add(this.labeCountRequestSec);
             this.tabPage1.Controls.Add(this.numRequest);
             this.tabPage1.Controls.Add(this.labelRequestSec);
             this.tabPage1.Controls.Add(this.chkForever);
-            this.tabPage1.Controls.Add(this.labelCantRequest);
+            this.tabPage1.Controls.Add(this.labelCountRequest);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Controls.Add(this.labelRequest);
@@ -697,21 +697,21 @@
         private System.Windows.Forms.TextBox txtUrl;
         private System.Windows.Forms.Label label200;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label labelCantFallos;
+        private System.Windows.Forms.Label labelCountFailures;
         private System.Windows.Forms.Label labelFallos;
-        private System.Windows.Forms.Label labelCant404;
+        private System.Windows.Forms.Label labelCount404;
         private System.Windows.Forms.Label label404;
-        private System.Windows.Forms.Label labelCant401;
+        private System.Windows.Forms.Label labelCount401;
         private System.Windows.Forms.Label label401;
-        private System.Windows.Forms.Label labelCant304;
+        private System.Windows.Forms.Label labelCount304;
         private System.Windows.Forms.Label label304;
-        private System.Windows.Forms.Label labelCant200;
-        private System.Windows.Forms.Label labelCantRequest;
+        private System.Windows.Forms.Label labelCount200;
+        private System.Windows.Forms.Label labelCountRequest;
         private System.Windows.Forms.Label labelRequest;
-        private System.Windows.Forms.Label labeCantlRequestSec;
+        private System.Windows.Forms.Label labeCountRequestSec;
         private System.Windows.Forms.Label labelRequestSec;
-        private System.Windows.Forms.Label labelCantHilos;
-        private System.Windows.Forms.Label labelHilos;
+        private System.Windows.Forms.Label labelCountThreads;
+        private System.Windows.Forms.Label labelThreads;
         private System.Windows.Forms.ListBox listBoxUrls;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnRemove;

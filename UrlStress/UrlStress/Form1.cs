@@ -80,14 +80,14 @@ namespace UrlStress
         {
 
             sec = sec + 1;
-            labelCantRequest.Text = requests.ToString();
-            labeCantlRequestSec.Text = Convert.ToDecimal(requests / sec).ToString();
-            labelCant200.Text = count200.ToString();
-            labelCant401.Text = count401.ToString();
-            labelCant304.Text = count304.ToString();
-            labelCant404.Text = count404.ToString();
-            labelCantFallos.Text = countFailures.ToString();
-            labelCantHilos.Text = numWorkItems.ToString();
+            labelCountRequest.Text = requests.ToString();
+            labeCountRequestSec.Text = Convert.ToDecimal(requests / sec).ToString();
+            labelCount200.Text = count200.ToString();
+            labelCount401.Text = count401.ToString();
+            labelCount304.Text = count304.ToString();
+            labelCount404.Text = count404.ToString();
+            labelCountFailures.Text = countFailures.ToString();
+            labelCountThreads.Text = numWorkItems.ToString();
             requestsLastSec = 0;
 
             if (numWorkItems == 0)
