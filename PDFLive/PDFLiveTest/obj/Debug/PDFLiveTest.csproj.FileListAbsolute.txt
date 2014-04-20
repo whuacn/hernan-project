@@ -1,0 +1,11 @@
+E:\DESARROLLO\hernan-project\PDFLive\PDFLiveTest\bin\Debug\PDFLiveTest.exe.config
+E:\DESARROLLO\hernan-project\PDFLive\PDFLiveTest\bin\Debug\PDFLiveTest.exe
+E:\DESARROLLO\hernan-project\PDFLive\PDFLiveTest\bin\Debug\PDFLiveTest.pdb
+E:\DESARROLLO\hernan-project\PDFLive\PDFLiveTest\bin\Debug\PDFLive.dll
+E:\DESARROLLO\hernan-project\PDFLive\PDFLiveTest\bin\Debug\PDFLive.pdb
+E:\DESARROLLO\hernan-project\PDFLive\PDFLiveTest\obj\Debug\PDFLiveTest.csprojResolveAssemblyReference.cache
+E:\DESARROLLO\hernan-project\PDFLive\PDFLiveTest\obj\Debug\PDFLiveTest.PDF2.resources
+E:\DESARROLLO\hernan-project\PDFLive\PDFLiveTest\obj\Debug\PDFLiveTest.Properties.Resources.resources
+E:\DESARROLLO\hernan-project\PDFLive\PDFLiveTest\obj\Debug\PDFLiveTest.csproj.GenerateResource.Cache
+E:\DESARROLLO\hernan-project\PDFLive\PDFLiveTest\obj\Debug\PDFLiveTest.exe
+E:\DESARROLLO\hernan-project\PDFLive\PDFLiveTest\obj\Debug\PDFLiveTest.pdb

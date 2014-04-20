@@ -59,6 +59,7 @@ namespace PDFLive
 
         string getHeader(string key);
 
+		void Proteger(string password);
 
         void newPage();
 
