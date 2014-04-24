@@ -2676,8 +2676,9 @@ namespace My_Watermark
 			this.Controls.Add(this.Label_Donate);
 			this.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0);
 			this.ForeColor = Color.Black;
-			this.Icon = (Icon)componentResourceManager.GetObject("$this.Icon");
-			size = new Size(800, 530);
+			//this.Icon = (Icon)componentResourceManager.GetObject("$this.Icon");
+            this.Icon = Properties.Resources.Icon;
+            size = new Size(800, 530);
 			this.MinimumSize = size;
 			this.Name = "Form_Main";
 			this.StartPosition = FormStartPosition.CenterScreen;

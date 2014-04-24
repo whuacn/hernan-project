@@ -4,3 +4,11 @@ C:\Users\hernan\Desktop\MyWaterMark_HH2\bin\Debug\My_Watermark.pdb
 C:\Users\hernan\Desktop\MyWaterMark_HH2\obj\x86\Debug\My_Watermark.exe
 C:\Users\hernan\Desktop\MyWaterMark_HH2\obj\x86\Debug\My_Watermark.pdb
 C:\Users\hernan\Desktop\MyWaterMark_HH2\obj\x86\Debug\My_Watermark.csprojResolveAssemblyReference.cache
+E:\DESARROLLO\hernan-project\MyWaterMark\bin\Debug\My_Watermark.exe.config
+E:\DESARROLLO\hernan-project\MyWaterMark\obj\x86\Debug\My_Watermark.exe
+E:\DESARROLLO\hernan-project\MyWaterMark\obj\x86\Debug\My_Watermark.pdb
+E:\DESARROLLO\hernan-project\MyWaterMark\bin\Debug\My_Watermark.exe
+E:\DESARROLLO\hernan-project\MyWaterMark\bin\Debug\My_Watermark.pdb
+E:\DESARROLLO\hernan-project\MyWaterMark\obj\x86\Debug\My_Watermark.csprojResolveAssemblyReference.cache
+E:\DESARROLLO\hernan-project\MyWaterMark\obj\x86\Debug\Properties.Resources.resources
+E:\DESARROLLO\hernan-project\MyWaterMark\obj\x86\Debug\My_Watermark.csproj.GenerateResource.Cache
