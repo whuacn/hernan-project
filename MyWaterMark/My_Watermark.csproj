@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{5B924D6E-26BB-41FD-8DBA-8F2ABAFF9C50}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>My_Watermark</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="My_Watermark.My.Resources\Resources.cs" />
+    <Compile Include="My_Watermark.My\MyApplication.cs" />
+    <Compile Include="My_Watermark.My\MyComputer.cs" />
+    <Compile Include="My_Watermark.My\MyProject.cs" />
+    <Compile Include="My_Watermark.My\MySettings.cs" />
+    <Compile Include="My_Watermark.My\MySettingsProperty.cs" />
+    <Compile Include="My_Watermark\Class_AddDataItem.cs" />
+    <Compile Include="My_Watermark\Form_About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My_Watermark\Form_Bundle_Q.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My_Watermark\Form_Donate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My_Watermark\Form_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My_Watermark\Form_VerDwl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My_Watermark\Module_Donate.cs" />
+    <Compile Include="My_Watermark\Module_Encrypter.cs" />
+    <Compile Include="My_Watermark\Module_Graphics.cs" />
+    <Compile Include="My_Watermark\Module_Internet.cs" />
+    <Compile Include="My_Watermark\Module_MyFunctions.cs" />
+    <Compile Include="My_Watermark\Module_Watermark.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My_Watermark\Form_About.resources" />
+    <EmbeddedResource Include="My_Watermark\Form_Bundle_Q.resources" />
+    <EmbeddedResource Include="My_Watermark\Form_Donate.resources" />
+    <EmbeddedResource Include="My_Watermark\Form_Main.resources" />
+    <EmbeddedResource Include="My_Watermark\Form_VerDwl.resources" />
+    <EmbeddedResource Include="My_Watermark\Resources.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

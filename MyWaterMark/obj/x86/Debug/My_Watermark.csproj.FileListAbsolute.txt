@@ -1,0 +1,6 @@
+C:\Users\hernan\Desktop\MyWaterMark_HH2\bin\Debug\My_Watermark.exe.config
+C:\Users\hernan\Desktop\MyWaterMark_HH2\bin\Debug\My_Watermark.exe
+C:\Users\hernan\Desktop\MyWaterMark_HH2\bin\Debug\My_Watermark.pdb
+C:\Users\hernan\Desktop\MyWaterMark_HH2\obj\x86\Debug\My_Watermark.exe
+C:\Users\hernan\Desktop\MyWaterMark_HH2\obj\x86\Debug\My_Watermark.pdb
+C:\Users\hernan\Desktop\MyWaterMark_HH2\obj\x86\Debug\My_Watermark.csprojResolveAssemblyReference.cache
