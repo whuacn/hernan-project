@@ -12,11 +12,12 @@ namespace PDFLive
     {
 
         #region DataMember
-        string _password = null;
+        string _password = "0p7N4ATMtJWSjBg13XgeyoCUT";
         Document doc = new Document();
         MemoryStream docStream;
         PdfWriter writer;
         PdfDictionary Dictionary = new PdfDictionary();
+        bool allowPrint = true;
         #endregion
 
         #region Properties
@@ -69,6 +70,22 @@ namespace PDFLive
                 this.addHeader("Subject", value);
             }
         }
+
+        /// <summary>
+        /// Setea si esta permitido imprimir el documento
+        /// </summary>  
+        public bool AllowPrint
+        {
+            get
+            {
+                return this.allowPrint;
+            }
+            set
+            {
+                this.allowPrint =  value;
+            }
+        }
+
         #endregion
 
         #region Public Methods
@@ -100,6 +117,7 @@ namespace PDFLive
             doc = new Document();
             docStream = new MemoryStream();
             writer = PdfWriter.GetInstance(doc, docStream);
+            encryptPdf();
             doc.Open();
         }
         /// <summary>
@@ -121,6 +139,8 @@ namespace PDFLive
             doc = new Document();
             docStream = new MemoryStream();
             writer = PdfWriter.GetInstance(doc, docStream);
+            //writer.CompressionLevel = PdfStream.BEST_COMPRESSION;
+            encryptPdf();
             doc.Open();
             writer.Info.Merge(Dictionary);
             Merge(content);
@@ -158,6 +178,18 @@ namespace PDFLive
         {
             return writer.PageNumber;
         }
+
+        /// <summary>
+        /// Devuelve la cantidad de paginas del PDF
+        /// </summary>
+        public int cantPages(byte[] content)
+        {
+            PdfReader reader = new PdfReader(content, System.Text.Encoding.UTF8.GetBytes(_password));
+            int r = reader.NumberOfPages;
+            reader.Close();
+            return r;
+        }
+
         /// <summary>
         /// Agrega un encabezado header
         /// </summary>
@@ -222,19 +254,29 @@ namespace PDFLive
         /// </summary>     
         public byte[] Generar()
         {
+
             doc.Close();
-            if (_password != null)
-            {
-                encryptPdf();
-            }
-            return docStream.GetBuffer();
+            return docStream.ToArray();
         }
 
         private void encryptPdf()
         {
-            Dictionary = writer.Info;
-            doc.Close();
-            using (PdfReader reader = new PdfReader(docStream.GetBuffer()))
+            try
+            {
+                //Dictionary = writer.Info;
+                int permissions = PdfWriter.ALLOW_COPY;
+                if (this.allowPrint)
+                    permissions = permissions | PdfWriter.ALLOW_PRINTING;
+                byte[] pass = System.Text.Encoding.UTF8.GetBytes(_password);
+                writer.SetEncryption(null, pass, permissions, PdfWriter.ENCRYPTION_AES_128);
+            }
+            catch (Exception exception)
+            {
+                throw new Exception("PDFLive - Metodo: encryptPdf - Ocurrio un error al realizar la proteccion del PDF. Detalle: " + exception.Message, exception);
+            }
+
+            /*doc.Close();
+            using (PdfReader reader = new PdfReader(docStream.ToArray()))
             {
                 docStream.Dispose();
                 docStream = new MemoryStream();
@@ -242,7 +284,7 @@ namespace PDFLive
                 stamper.SetEncryption(null, System.Text.Encoding.UTF8.GetBytes(_password), PdfWriter.ALLOW_COPY, PdfWriter.STRENGTH40BITS);
                 stamper.Close();
                 reader.Close();
-            }
+            }*/
         }
 
         /// <summary>
@@ -258,7 +300,7 @@ namespace PDFLive
             {
                 Dictionary = writer.Info;
                 doc.Close();
-                using (PdfReader reader = new PdfReader(docStream.GetBuffer()))
+                using (PdfReader reader = new PdfReader(docStream.ToArray(), System.Text.Encoding.UTF8.GetBytes(_password)))
                 {
                     docStream.Dispose();
                     using (PdfStamper pdfStamper = new PdfStamper(reader, Stream))
@@ -288,7 +330,7 @@ namespace PDFLive
                         pdfStamper.Close();
                     }
                 }
-                open(Stream.GetBuffer());
+                open(Stream.ToArray());
             }
             addHeader("WaterMark", "1");
             addHeader("WaterMarkText", watermarkText);
@@ -309,7 +351,7 @@ namespace PDFLive
             {
                 Dictionary = writer.Info;
                 doc.Close();
-                using (PdfReader reader = new PdfReader(docStream.GetBuffer()))
+                using (PdfReader reader = new PdfReader(docStream.ToArray(), System.Text.Encoding.UTF8.GetBytes(_password)))
                 {
                     docStream.Dispose();
                     using (PdfStamper pdfStamper = new PdfStamper(reader, Stream))
@@ -333,7 +375,7 @@ namespace PDFLive
                         pdfStamper.Close();
                     }
                 }
-                open(Stream.GetBuffer());
+                open(Stream.ToArray());
             }
         }
          #endregion
@@ -343,8 +385,8 @@ namespace PDFLive
         {
             try
             {
-                PdfContentByte content = writer.DirectContent;                
-                using (PdfReader reader = new PdfReader(source))
+                PdfContentByte content = writer.DirectContent;
+                using (PdfReader reader = new PdfReader(source, System.Text.Encoding.UTF8.GetBytes(_password)))
                 {
                     int numberOfPages = reader.NumberOfPages;
                     for (int currentPageIndex = 1; currentPageIndex <= numberOfPages; currentPageIndex++)
@@ -369,8 +411,7 @@ namespace PDFLive
             }
             catch (Exception exception)
             {
-                throw new Exception("There has an unexpected exception" +
-                      " occured during the pdf merging process.", exception);
+                throw new Exception("PDFLive - Metodo: Merge - Ocurrio un error al realizar el Merge del PDF. Detalle: " + exception.Message, exception);
             }
         }
         #endregion

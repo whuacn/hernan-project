@@ -9,3 +9,14 @@ E:\DESARROLLO\hernan-project\PDFLive\PDFLiveTest\obj\Debug\PDFLiveTest.Propertie
 E:\DESARROLLO\hernan-project\PDFLive\PDFLiveTest\obj\Debug\PDFLiveTest.csproj.GenerateResource.Cache
 E:\DESARROLLO\hernan-project\PDFLive\PDFLiveTest\obj\Debug\PDFLiveTest.exe
 E:\DESARROLLO\hernan-project\PDFLive\PDFLiveTest\obj\Debug\PDFLiveTest.pdb
+C:\Users\hhegykozi\Desktop\PDFLive\PDFLiveTest\bin\Debug\PDFLiveTest.exe.config
+C:\Users\hhegykozi\Desktop\PDFLive\PDFLiveTest\obj\Debug\PDFLiveTest.exe
+C:\Users\hhegykozi\Desktop\PDFLive\PDFLiveTest\obj\Debug\PDFLiveTest.pdb
+C:\Users\hhegykozi\Desktop\PDFLive\PDFLiveTest\bin\Debug\PDFLiveTest.exe
+C:\Users\hhegykozi\Desktop\PDFLive\PDFLiveTest\bin\Debug\PDFLiveTest.pdb
+C:\Users\hhegykozi\Desktop\PDFLive\PDFLiveTest\bin\Debug\PDFLive.dll
+C:\Users\hhegykozi\Desktop\PDFLive\PDFLiveTest\bin\Debug\PDFLive.pdb
+C:\Users\hhegykozi\Desktop\PDFLive\PDFLiveTest\obj\Debug\PDFLiveTest.csprojResolveAssemblyReference.cache
+C:\Users\hhegykozi\Desktop\PDFLive\PDFLiveTest\obj\Debug\PDFLiveTest.PDF2.resources
+C:\Users\hhegykozi\Desktop\PDFLive\PDFLiveTest\obj\Debug\PDFLiveTest.Properties.Resources.resources
+C:\Users\hhegykozi\Desktop\PDFLive\PDFLiveTest\obj\Debug\PDFLiveTest.csproj.GenerateResource.Cache

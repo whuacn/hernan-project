@@ -4,3 +4,9 @@ E:\DESARROLLO\hernan-project\PDFLive\PDFLive\obj\Debug\PDFLive.dll
 E:\DESARROLLO\hernan-project\PDFLive\PDFLive\obj\Debug\PDFLive.pdb
 E:\DESARROLLO\hernan-project\PDFLive\PDFLive\obj\Debug\PDFLive.Properties.Resources.resources
 E:\DESARROLLO\hernan-project\PDFLive\PDFLive\obj\Debug\PDFLive.csproj.GenerateResource.Cache
+C:\Users\hhegykozi\Desktop\PDFLive\PDFLive\bin\Debug\PDFLive.dll
+C:\Users\hhegykozi\Desktop\PDFLive\PDFLive\bin\Debug\PDFLive.pdb
+C:\Users\hhegykozi\Desktop\PDFLive\PDFLive\obj\Debug\PDFLive.Properties.Resources.resources
+C:\Users\hhegykozi\Desktop\PDFLive\PDFLive\obj\Debug\PDFLive.csproj.GenerateResource.Cache
+C:\Users\hhegykozi\Desktop\PDFLive\PDFLive\obj\Debug\PDFLive.dll
+C:\Users\hhegykozi\Desktop\PDFLive\PDFLive\obj\Debug\PDFLive.pdb
