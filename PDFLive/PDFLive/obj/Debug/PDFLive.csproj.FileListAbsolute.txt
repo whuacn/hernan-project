@@ -10,3 +10,4 @@ C:\Users\hhegykozi\Desktop\PDFLive\PDFLive\obj\Debug\PDFLive.Properties.Resource
 C:\Users\hhegykozi\Desktop\PDFLive\PDFLive\obj\Debug\PDFLive.csproj.GenerateResource.Cache
 C:\Users\hhegykozi\Desktop\PDFLive\PDFLive\obj\Debug\PDFLive.dll
 C:\Users\hhegykozi\Desktop\PDFLive\PDFLive\obj\Debug\PDFLive.pdb
+E:\DESARROLLO\hernan-project\PDFLive\PDFLive\obj\Debug\PDFLive.csprojResolveAssemblyReference.cache

@@ -102,6 +102,7 @@ namespace PDFLive
                 try
                 {
                     docStream.Dispose();
+                    doc.Dispose();
                 }
                 catch (Exception)
                 {
@@ -187,6 +188,7 @@ namespace PDFLive
             PdfReader reader = new PdfReader(content, System.Text.Encoding.UTF8.GetBytes(_password));
             int r = reader.NumberOfPages;
             reader.Close();
+            reader.Dispose();
             return r;
         }
 
@@ -322,7 +324,20 @@ namespace PDFLive
                             BaseColor c = new BaseColor(System.Drawing.ColorTranslator.FromHtml(color).ToArgb());
                             pdfPageContents.SetColorFill(c);
 
-                            pdfPageContents.ShowTextAligned(PdfContentByte.ALIGN_CENTER, watermarkText, pageSize.Width / 2, pageSize.Height / 2, textAngle);
+                           
+                            var x = (pageSize.Width) / 2;
+                            var y = (pageSize.Height) / 2;
+
+                            //float fw = getTextheight(baseFont, size, watermarkText);
+                           // x = x - (fw / 2);
+                           /* Type1Font baseFont2 = baseFont as Type1Font;
+                            if (baseFont2 != null)
+                            { 
+                                x = x + baseFont2.llx;
+                                y = y + baseFont2.lly;
+                            }*/
+
+                            pdfPageContents.ShowTextAligned(PdfContentByte.ALIGN_CENTER, watermarkText, x, y, textAngle);
 
                             pdfPageContents.EndText();
                         }
@@ -335,6 +350,8 @@ namespace PDFLive
             addHeader("WaterMark", "1");
             addHeader("WaterMarkText", watermarkText);
         }
+
+
         /// <summary>
         /// Inserta texto en todas las paginas del PDF abierto
         /// </summary>

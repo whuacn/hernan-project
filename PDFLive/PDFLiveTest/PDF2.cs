@@ -48,10 +48,10 @@ namespace PDFLiveTest
             buffer = br.ReadBytes((int)Stream.Length);
             PDF2.add(buffer);
 
-            Stream = new FileStream("pdf_clavesrt.pdf", FileMode.Open, FileAccess.Read);
+           /* Stream = new FileStream("pdf_clavesrt.pdf", FileMode.Open, FileAccess.Read);
             br = new BinaryReader(Stream);
             buffer = br.ReadBytes((int)Stream.Length);
-            PDF2.add(buffer);
+            PDF2.add(buffer);*/
 
             PDF2.addWaterMark("VERSION DIGITAL", "Helvetica", 80, "#F9150D");
             PDF2.addTextAllPages("VERSION DIGITAL", "Helvetica", 18, "#F9150D", 20, 250, 90);
