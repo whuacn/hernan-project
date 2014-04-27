@@ -1,0 +1,7 @@
+E:\DESARROLLO\hernan-project\RemoteCmd\Servicios\bin\Debug\Servicios.dll
+E:\DESARROLLO\hernan-project\RemoteCmd\Servicios\bin\Debug\Servicios.pdb
+E:\DESARROLLO\hernan-project\RemoteCmd\Servicios\bin\Debug\Entidades.dll
+E:\DESARROLLO\hernan-project\RemoteCmd\Servicios\bin\Debug\Entidades.pdb
+E:\DESARROLLO\hernan-project\RemoteCmd\Servicios\obj\Debug\Servicios.csprojResolveAssemblyReference.cache
+E:\DESARROLLO\hernan-project\RemoteCmd\Servicios\obj\Debug\Servicios.dll
+E:\DESARROLLO\hernan-project\RemoteCmd\Servicios\obj\Debug\Servicios.pdb

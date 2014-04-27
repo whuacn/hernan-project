@@ -1,0 +1,4 @@
+E:\DESARROLLO\hernan-project\RemoteCmd\RemoteCmd\bin\Debug\RemoteCmd.exe
+E:\DESARROLLO\hernan-project\RemoteCmd\RemoteCmd\bin\Debug\RemoteCmd.pdb
+E:\DESARROLLO\hernan-project\RemoteCmd\RemoteCmd\obj\x86\Debug\RemoteCmd.exe
+E:\DESARROLLO\hernan-project\RemoteCmd\RemoteCmd\obj\x86\Debug\RemoteCmd.pdb

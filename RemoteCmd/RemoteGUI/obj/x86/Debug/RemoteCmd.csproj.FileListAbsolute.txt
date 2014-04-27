@@ -1,0 +1,13 @@
+E:\DESARROLLO\hernan-project\RemoteCmd\RemoteCmd\bin\Debug\Entidades.dll
+E:\DESARROLLO\hernan-project\RemoteCmd\RemoteCmd\bin\Debug\Servicios.dll
+E:\DESARROLLO\hernan-project\RemoteCmd\RemoteCmd\bin\Debug\Entidades.pdb
+E:\DESARROLLO\hernan-project\RemoteCmd\RemoteCmd\bin\Debug\Servicios.pdb
+E:\DESARROLLO\hernan-project\RemoteCmd\RemoteCmd\obj\x86\Debug\RemoteCmd.csprojResolveAssemblyReference.cache
+E:\DESARROLLO\hernan-project\RemoteCmd\RemoteCmd\obj\x86\Debug\RemoteCmd.csproj.GenerateResource.Cache
+E:\DESARROLLO\hernan-project\RemoteCmd\RemoteCmd\bin\Debug\RemoteCmd.exe
+E:\DESARROLLO\hernan-project\RemoteCmd\RemoteCmd\bin\Debug\RemoteCmd.pdb
+E:\DESARROLLO\hernan-project\RemoteCmd\RemoteCmd\obj\x86\Debug\RemoteCmd.Form1.resources
+E:\DESARROLLO\hernan-project\RemoteCmd\RemoteCmd\obj\x86\Debug\RemoteCmd.Properties.Resources.resources
+E:\DESARROLLO\hernan-project\RemoteCmd\RemoteCmd\obj\x86\Debug\RemoteCmd.exe
+E:\DESARROLLO\hernan-project\RemoteCmd\RemoteCmd\obj\x86\Debug\RemoteCmd.pdb
+E:\DESARROLLO\hernan-project\RemoteCmd\RemoteCmd\obj\x86\Debug\RemoteCmd.Form2.resources

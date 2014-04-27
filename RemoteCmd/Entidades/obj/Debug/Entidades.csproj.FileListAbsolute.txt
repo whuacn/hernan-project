@@ -1,0 +1,4 @@
+E:\DESARROLLO\hernan-project\RemoteCmd\Entidades\bin\Debug\Entidades.dll
+E:\DESARROLLO\hernan-project\RemoteCmd\Entidades\bin\Debug\Entidades.pdb
+E:\DESARROLLO\hernan-project\RemoteCmd\Entidades\obj\Debug\Entidades.dll
+E:\DESARROLLO\hernan-project\RemoteCmd\Entidades\obj\Debug\Entidades.pdb
