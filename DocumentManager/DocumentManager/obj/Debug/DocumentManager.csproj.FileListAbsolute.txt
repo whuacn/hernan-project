@@ -1,0 +1,4 @@
+E:\DESARROLLO\hernan-project\DocumentManager\DocumentManager\bin\Debug\DocumentManager.dll
+E:\DESARROLLO\hernan-project\DocumentManager\DocumentManager\bin\Debug\DocumentManager.pdb
+E:\DESARROLLO\hernan-project\DocumentManager\DocumentManager\obj\Debug\DocumentManager.dll
+E:\DESARROLLO\hernan-project\DocumentManager\DocumentManager\obj\Debug\DocumentManager.pdb

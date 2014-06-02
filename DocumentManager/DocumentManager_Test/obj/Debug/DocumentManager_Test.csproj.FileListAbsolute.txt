@@ -1,0 +1,11 @@
+c:\users\hernan\desktop\DocumentManager\DocumentManager\bin\Debug\DocumentManager.exe.config
+c:\users\hernan\desktop\DocumentManager\DocumentManager\obj\Debug\DocumentManager.exe
+c:\users\hernan\desktop\DocumentManager\DocumentManager\obj\Debug\DocumentManager.pdb
+E:\DESARROLLO\hernan-project\DocumentManager\DocumentManager_Test\bin\Debug\DocumentManager_Test.exe.config
+E:\DESARROLLO\hernan-project\DocumentManager\DocumentManager_Test\bin\Debug\DocumentManager_Test.exe
+E:\DESARROLLO\hernan-project\DocumentManager\DocumentManager_Test\bin\Debug\DocumentManager_Test.pdb
+E:\DESARROLLO\hernan-project\DocumentManager\DocumentManager_Test\bin\Debug\DocumentManager.dll
+E:\DESARROLLO\hernan-project\DocumentManager\DocumentManager_Test\bin\Debug\DocumentManager.pdb
+E:\DESARROLLO\hernan-project\DocumentManager\DocumentManager_Test\obj\Debug\DocumentManager_Test.csprojResolveAssemblyReference.cache
+E:\DESARROLLO\hernan-project\DocumentManager\DocumentManager_Test\obj\Debug\DocumentManager_Test.exe
+E:\DESARROLLO\hernan-project\DocumentManager\DocumentManager_Test\obj\Debug\DocumentManager_Test.pdb

@@ -1,0 +1,6 @@
+c:\users\hernan\desktop\DocumentManager\DocumentManager\bin\Debug\DocumentManager.exe.config
+c:\users\hernan\desktop\DocumentManager\DocumentManager\bin\Debug\DocumentManager.exe
+c:\users\hernan\desktop\DocumentManager\DocumentManager\bin\Debug\DocumentManager.pdb
+c:\users\hernan\desktop\DocumentManager\DocumentManager\obj\Debug\DocumentManager.csprojResolveAssemblyReference.cache
+c:\users\hernan\desktop\DocumentManager\DocumentManager\obj\Debug\DocumentManager.exe
+c:\users\hernan\desktop\DocumentManager\DocumentManager\obj\Debug\DocumentManager.pdb
