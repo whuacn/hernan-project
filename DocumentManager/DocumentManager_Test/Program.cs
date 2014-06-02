@@ -11,7 +11,7 @@ namespace DocumentManager
     {
         static void Main(string[] args)
         {
-
+            /*
             FileStream Stream = new FileStream("test7.docx", FileMode.Open, FileAccess.Read);
             BinaryReader br = new BinaryReader(Stream);
             byte[] buffer = br.ReadBytes((int)Stream.Length);
@@ -27,8 +27,8 @@ namespace DocumentManager
             Stream.Close();
 
             System.Diagnostics.Process.Start("test7.pdf");
+            */
             
-            /*
             FileStream Stream = new FileStream("test7.docx", FileMode.Open, FileAccess.Read);
             BinaryReader br = new BinaryReader(Stream);
             byte[] buffer = br.ReadBytes((int)Stream.Length);
@@ -44,7 +44,7 @@ namespace DocumentManager
             Stream.Close();
 
             System.Diagnostics.Process.Start("test7.html");             
-             */
+             
 
 
             /*
@@ -65,21 +65,21 @@ namespace DocumentManager
             System.Diagnostics.Process.Start("testxls2.pdf");
             */
             /*
-            FileStream Stream = new FileStream("test1.xlsx", FileMode.Open, FileAccess.Read);
+            FileStream Stream = new FileStream("test2.xlsx", FileMode.Open, FileAccess.Read);
             BinaryReader br = new BinaryReader(Stream);
             byte[] buffer = br.ReadBytes((int)Stream.Length);
             br.Close();
             Stream.Close();
 
-            byte[] result = ExcelManager.ToHTML(buffer);
+            string result = ExcelManager.ToHTML(buffer);
 
-            Stream = new FileStream("test1.html", FileMode.Create, FileAccess.Write);
-            BinaryWriter Write = new BinaryWriter(Stream);
+            Stream = new FileStream("testxls2.html", FileMode.Create, FileAccess.Write);
+            StreamWriter Write = new StreamWriter(Stream, Encoding.GetEncoding(1252));
             Write.Write(result);
             Write.Close();
             Stream.Close();
 
-            System.Diagnostics.Process.Start("test1.html");
+            System.Diagnostics.Process.Start("testxls2.html");  
              */
             /*
             FileStream Stream = new FileStream("test3.ppt", FileMode.Open, FileAccess.Read);

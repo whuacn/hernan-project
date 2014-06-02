@@ -57,9 +57,9 @@ namespace DocumentManager
             return result;
         }
 
-        public static byte[] ToHTML(byte[] buffer)
+        public static string ToHTML(byte[] buffer)
         {
-            byte[] result = null;
+            string result = null;
             string fileOrigen = TempManager.CreateTmpFile();
             string fileDestino = TempManager.CreateTmpFile();
 
@@ -91,7 +91,8 @@ namespace DocumentManager
                     objExcel.Workbooks.Close();
                 }
 
-                result = TempManager.ReadTmpFile(fileDestino);
+                result = TempManager.ReadTmpFileString(fileDestino);
+                result = Utils.HtmlEmbedImages(result);
 
                 TempManager.DeleteTmpFile(fileOrigen);
                 TempManager.DeleteTmpFile(fileDestino);
