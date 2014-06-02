@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Word = Microsoft.Office.Interop.Word;
 using Microsoft.Office.Interop;
 using Microsoft.Office.Core;
+using System.Runtime.InteropServices;
 
 
 namespace DocumentManager
@@ -46,6 +47,45 @@ namespace DocumentManager
             finally
             {
                 objWord.Quit(Word.WdSaveOptions.wdDoNotSaveChanges);
+                Marshal.ReleaseComObject(objWord);
+            }
+
+            return result;
+        }
+
+        public static string ToHTML(byte[] buffer)
+        {
+            string result = null;
+            string fileOrigen = TempManager.CreateTmpFile();
+            string fileDestino = TempManager.CreateTmpFile();
+
+            Word.Application objWord = new Word.Application();
+
+            try
+            {
+                TempManager.UpdateTmpFile(fileOrigen, buffer);
+
+                objWord.Visible = false;
+                objWord.ScreenUpdating = false;
+                objWord.Documents.Open(FileName: fileOrigen);
+
+                if (objWord.Documents.Count > 0)
+                {
+                    Microsoft.Office.Interop.Word.Document oDoc = objWord.ActiveDocument;
+                    oDoc.SaveAs(FileName: fileDestino, FileFormat: Word.WdSaveFormat.wdFormatFilteredHTML);
+                    oDoc.Close(Word.WdSaveOptions.wdDoNotSaveChanges);
+                }
+
+                result = TempManager.ReadTmpFileString(fileDestino);
+                result = Utils.HtmlEmbedImages(result);
+
+                TempManager.DeleteTmpFile(fileOrigen);
+                TempManager.DeleteTmpFile(fileDestino);
+            }
+            finally
+            {
+                objWord.Quit(Word.WdSaveOptions.wdDoNotSaveChanges);
+                Marshal.ReleaseComObject(objWord);
             }
 
             return result;

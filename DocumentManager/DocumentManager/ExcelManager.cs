@@ -8,6 +8,7 @@ using Excel = Microsoft.Office.Interop.Excel;
 using Microsoft.Office.Interop;
 using Microsoft.Office.Core;
 using System.Collections;
+using System.Runtime.InteropServices;
 
 namespace DocumentManager
 {
@@ -30,7 +31,8 @@ namespace DocumentManager
                 objExcel.Visible = false;
                 objExcel.ScreenUpdating = false;
                 objExcel.DisplayAlerts = false;
-            
+                objExcel.DisplayDocumentActionTaskPane = false;
+
                 objExcel.Workbooks.Open(fileOrigen);
 
                 if (objExcel.Workbooks.Count > 0)
@@ -49,6 +51,7 @@ namespace DocumentManager
             finally
             {
                 objExcel.Quit();
+                Marshal.ReleaseComObject(objExcel);
             }
 
             return result;

@@ -64,6 +64,24 @@ namespace DocumentManager
             }
             return result;
         }
+
+        public static string ReadTmpFileString(string tmpFile)
+        {
+            string result = null;
+            try
+            {
+                using (StreamReader sr = new StreamReader(tmpFile, Encoding.GetEncoding(1252)))
+                {
+                    result = sr.ReadToEnd();
+                    sr.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return result;
+        }
         public static void DeleteTmpFile(string tmpFile)
         {
             try

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using PowerPoint = Microsoft.Office.Interop.PowerPoint;
 using Microsoft.Office.Interop;
 using Microsoft.Office.Core;
+using System.Runtime.InteropServices;
 
 namespace DocumentManager
 {
@@ -29,6 +30,7 @@ namespace DocumentManager
 
                 if (oPPT != null)
                 {
+                    //oPPT.SaveAs(fileDestino, PowerPoint.PpSaveAsFileType.ppSaveAsHTML, MsoTriState.msoCTrue);
                     oPPT.ExportAsFixedFormat(fileDestino, PowerPoint.PpFixedFormatType.ppFixedFormatTypePDF);
                     oPPT.Close();
                 }
@@ -41,6 +43,7 @@ namespace DocumentManager
             finally
             {
                 objPPT.Quit();
+                Marshal.ReleaseComObject(objPPT);
             }
 
             return result;
