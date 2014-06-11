@@ -250,11 +250,11 @@ namespace My_Watermark
 		{
 			if (Operators.CompareString(Module_Internet.WEB_Site_DATA, "", false) == 0 | Operators.CompareString(Module_Watermark.PRG_LIC_URL_Main, "", false) == 0 | Operators.CompareString(Module_Watermark.PRG_LIC_URL_Mirror, "", false) == 0)
 			{
-				Module_Internet.WEB_Init_DATA(false);
+				//Module_Internet.WEB_Init_DATA(false);
 			}
 			if (Operators.CompareString(Module_Watermark.PRG_LIC_URL_Main, "", false) == 0)
 			{
-				Module_MyFunctions.my_MsgBox("Cannot download license info, please retry (verify your firewall/proxy).", MessageBoxIcon.Exclamation, false);
+				//Module_MyFunctions.my_MsgBox("Cannot download license info, please retry (verify your firewall/proxy).", MessageBoxIcon.Exclamation, false);
 			}
 			else
 			{

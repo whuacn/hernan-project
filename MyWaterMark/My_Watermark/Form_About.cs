@@ -211,22 +211,22 @@ namespace My_Watermark
 			this.TopMost = true;
 			Application.DoEvents();
 			this.TopMost = false;
-			this.Label_Title.Text = Module_Watermark.PRG_Title;
+			/*this.Label_Title.Text = Module_Watermark.PRG_Title;
 			this.Label_C.Text = Module_MyFunctions.PRG_Copyright + " - " + Module_Internet.WEB_Site_URL;
 			this.Label_Icons.Text = Module_Watermark.DAT_Icons;
-			this.Label_Icons2.Text = Module_Watermark.DAT_Icons2;
+			this.Label_Icons2.Text = Module_Watermark.DAT_Icons2;*/
 		}
 		private void Label_C_Click(object sender, EventArgs e)
 		{
-			Process.Start(Module_Internet.WEB_Site_URL);
+			//Process.Start(Module_Internet.WEB_Site_URL);
 		}
 		private void Label_Icons_Click(object sender, EventArgs e)
 		{
-			Process.Start(Module_Watermark.DAT_Icons_URL);
+			//Process.Start(Module_Watermark.DAT_Icons_URL);
 		}
 		private void Label_Icons2_Click(object sender, EventArgs e)
 		{
-			Process.Start(Module_Watermark.DAT_Icons_URL2);
+			//Process.Start(Module_Watermark.DAT_Icons_URL2);
 		}
 	}
 }

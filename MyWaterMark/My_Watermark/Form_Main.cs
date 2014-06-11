@@ -2634,6 +2634,8 @@ namespace My_Watermark
 			this.Button_Watermark_Block.Visible = false;
 			this.Timer_Update.Interval = 30000;
 			this.Timer_Close.Interval = 10000;
+            this.Timer_Update.Enabled = false;
+            this.Timer_Close.Enabled = false;
 			SizeF autoScaleDimensions = new SizeF(6f, 13f);
 			this.AutoScaleDimensions = autoScaleDimensions;
 			this.AutoScaleMode = AutoScaleMode.Font;
@@ -3091,9 +3093,9 @@ namespace My_Watermark
 				this.Label_Img_Resolution.Text = "";
 				this.Show();
 				Application.DoEvents();
-				Module_MyFunctions.PRG_CheckUpdates(false);
-				Module_Internet.WEB_Verify_MD5_EXE();
-				Module_Donate.Donate_Check(Module_Watermark.PRG_Donate_Days);
+				//Module_MyFunctions.PRG_CheckUpdates(false);
+				//Module_Internet.WEB_Verify_MD5_EXE();
+				//Module_Donate.Donate_Check(Module_Watermark.PRG_Donate_Days);
 				this.Donate_Set();
 				if (this.CK_ThumbDB.Checked)
 				{
@@ -3131,6 +3133,7 @@ namespace My_Watermark
 		}
 		private void Timer_Update_Tick(object sender, EventArgs e)
 		{
+            /*
 			checked
 			{
 				try
@@ -3181,7 +3184,7 @@ namespace My_Watermark
 					Module_MyFunctions.Update_LOG("ERROR [Timer_Update_Tick] [" + ex.Message + "]", false, "", false);
 					ProjectData.ClearProjectError();
 				}
-			}
+			}*/
 		}
 		private void Button_Refresh_Images_Click(object sender, EventArgs e)
 		{
@@ -4488,7 +4491,7 @@ namespace My_Watermark
 		{
 			bool arg_05_0 = false;
 			NotifyIcon notifyIcon = null;
-			Module_Internet.WEB_CheckUpdate(arg_05_0, notifyIcon);
+			//Module_Internet.WEB_CheckUpdate(arg_05_0, notifyIcon);
 		}
 		private void Button_About_Click(object sender, EventArgs e)
 		{

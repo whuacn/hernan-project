@@ -37,18 +37,18 @@ namespace My_Watermark
 		public static bool WEB_Error_Proxy = false;
 		public static string WEB_Error_MSG = "";
 		public static string NET_Error_Send_EMail = "";
-		public static string WEB_Site_URL = "http://www.myportablesoftware.com";
-		public static string WEB_Report_Errors_URL = "http://www.myportablesoftware.com/mpsreport.aspx";
+		public static string WEB_Site_URL = "";
+		public static string WEB_Report_Errors_URL = "";
 		public static string WEB_Site_DATA = "";
-		public static string WEB_Site_Updates = "http://www.myportablesoftware.com/data/" + Module_Watermark.PRG_KEY_DataFile;
+		public static string WEB_Site_Updates = "";
 		public static string WEB_Updater_DATA = "";
-		public static string WEB_Updater_URL = "http://www.myportablesoftware.com/data/updater.txt";
-		public static string WEB_BundleAPP_URL = "http://www.myportablesoftware.com/data/bundleapp.txt";
+		public static string WEB_Updater_URL = "";
+		public static string WEB_BundleAPP_URL = "";
 		public static string WEB_EXEUPD_URL = "";
 		public static string WEB_EXEUPD_DAT = "";
 		public static string WEB_EXEUPD_MD5 = "";
 		public static string WEB_EXEUPD_NEW = "";
-		public static string WEB_Site_Stats = "http://www.myportablesoftware.com/googlestats.aspx";
+		public static string WEB_Site_Stats = "";
 		public static string WEB_MD5_URL = Module_Internet.WEB_Site_Updates;
 		private static WebProxy WEB_Proxy;
 		public static string WEB_Generate_Stats_URL()
