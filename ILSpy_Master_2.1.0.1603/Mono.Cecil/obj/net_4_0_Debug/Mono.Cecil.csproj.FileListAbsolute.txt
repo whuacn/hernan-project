@@ -1,0 +1,4 @@
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\Mono.Cecil\bin\net_4_0_Debug\Mono.Cecil.dll
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\Mono.Cecil\bin\net_4_0_Debug\Mono.Cecil.pdb
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\Mono.Cecil\obj\net_4_0_Debug\Mono.Cecil.dll
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\Mono.Cecil\obj\net_4_0_Debug\Mono.Cecil.pdb

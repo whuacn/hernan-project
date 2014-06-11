@@ -1,0 +1,13 @@
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\ICSharpCode.Decompiler\bin\Debug\ICSharpCode.Decompiler.dll
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\ICSharpCode.Decompiler\bin\Debug\ICSharpCode.Decompiler.pdb
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\ICSharpCode.Decompiler\bin\Debug\ICSharpCode.NRefactory.CSharp.dll
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\ICSharpCode.Decompiler\bin\Debug\ICSharpCode.NRefactory.dll
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\ICSharpCode.Decompiler\bin\Debug\Mono.Cecil.dll
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\ICSharpCode.Decompiler\bin\Debug\Mono.Cecil.pdb
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\ICSharpCode.Decompiler\bin\Debug\ICSharpCode.NRefactory.CSharp.pdb
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\ICSharpCode.Decompiler\bin\Debug\ICSharpCode.NRefactory.CSharp.xml
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\ICSharpCode.Decompiler\bin\Debug\ICSharpCode.NRefactory.pdb
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\ICSharpCode.Decompiler\bin\Debug\ICSharpCode.NRefactory.xml
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\ICSharpCode.Decompiler\obj\Debug\ICSharpCode.Decompiler.csprojResolveAssemblyReference.cache
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\ICSharpCode.Decompiler\obj\Debug\ICSharpCode.Decompiler.dll
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\ICSharpCode.Decompiler\obj\Debug\ICSharpCode.Decompiler.pdb

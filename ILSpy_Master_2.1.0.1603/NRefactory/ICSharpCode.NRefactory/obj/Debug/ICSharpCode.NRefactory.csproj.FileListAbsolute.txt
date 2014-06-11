@@ -1,0 +1,6 @@
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\NRefactory\ICSharpCode.NRefactory\bin\Debug\ICSharpCode.NRefactory.dll
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\NRefactory\ICSharpCode.NRefactory\bin\Debug\ICSharpCode.NRefactory.pdb
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\NRefactory\ICSharpCode.NRefactory\bin\Debug\Mono.Cecil.dll
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\NRefactory\ICSharpCode.NRefactory\bin\Debug\Mono.Cecil.pdb
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\NRefactory\ICSharpCode.NRefactory\obj\Debug\ICSharpCode.NRefactory.dll
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\NRefactory\ICSharpCode.NRefactory\obj\Debug\ICSharpCode.NRefactory.pdb

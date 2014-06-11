@@ -1,0 +1,5 @@
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\Mono.Cecil\bin\net_4_0_Debug\Mono.Cecil.Pdb.dll
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\Mono.Cecil\bin\net_4_0_Debug\Mono.Cecil.Pdb.pdb
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\Mono.Cecil\symbols\pdb\obj\net_4_0_Debug\Mono.Cecil.Pdb.csprojResolveAssemblyReference.cache
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\Mono.Cecil\symbols\pdb\obj\net_4_0_Debug\Mono.Cecil.Pdb.dll
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\Mono.Cecil\symbols\pdb\obj\net_4_0_Debug\Mono.Cecil.Pdb.pdb

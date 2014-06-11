@@ -1,0 +1,12 @@
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\Debugger\Debugger.Core\bin\Debug\Debugger.Core.dll
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\Debugger\Debugger.Core\bin\Debug\Debugger.Core.pdb
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\Debugger\Debugger.Core\bin\Debug\ICSharpCode.NRefactory.CSharp.dll
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\Debugger\Debugger.Core\bin\Debug\ICSharpCode.NRefactory.dll
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\Debugger\Debugger.Core\bin\Debug\Mono.Cecil.dll
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\Debugger\Debugger.Core\bin\Debug\ICSharpCode.NRefactory.CSharp.pdb
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\Debugger\Debugger.Core\bin\Debug\ICSharpCode.NRefactory.CSharp.xml
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\Debugger\Debugger.Core\bin\Debug\ICSharpCode.NRefactory.pdb
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\Debugger\Debugger.Core\bin\Debug\ICSharpCode.NRefactory.xml
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\Debugger\Debugger.Core\bin\Debug\Mono.Cecil.pdb
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\Debugger\Debugger.Core\obj\Debug\Debugger.Core.dll
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\Debugger\Debugger.Core\obj\Debug\Debugger.Core.pdb

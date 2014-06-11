@@ -1,0 +1,5 @@
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\NRefactory\ICSharpCode.NRefactory\bin\Debug\ICSharpCode.NRefactory.CSharp.dll
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\NRefactory\ICSharpCode.NRefactory\bin\Debug\ICSharpCode.NRefactory.CSharp.pdb
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\NRefactory\ICSharpCode.NRefactory.CSharp\obj\Debug\ICSharpCode.NRefactory.CSharp.csprojResolveAssemblyReference.cache
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\NRefactory\ICSharpCode.NRefactory.CSharp\obj\Debug\ICSharpCode.NRefactory.CSharp.dll
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\NRefactory\ICSharpCode.NRefactory.CSharp\obj\Debug\ICSharpCode.NRefactory.CSharp.pdb

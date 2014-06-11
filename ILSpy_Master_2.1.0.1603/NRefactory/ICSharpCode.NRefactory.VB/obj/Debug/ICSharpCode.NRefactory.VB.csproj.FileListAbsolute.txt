@@ -1,0 +1,12 @@
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\NRefactory\ICSharpCode.NRefactory.VB\bin\Debug\ICSharpCode.NRefactory.VB.dll
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\NRefactory\ICSharpCode.NRefactory.VB\bin\Debug\ICSharpCode.NRefactory.VB.pdb
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\NRefactory\ICSharpCode.NRefactory.VB\bin\Debug\ICSharpCode.NRefactory.CSharp.dll
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\NRefactory\ICSharpCode.NRefactory.VB\bin\Debug\ICSharpCode.NRefactory.dll
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\NRefactory\ICSharpCode.NRefactory.VB\bin\Debug\Mono.Cecil.dll
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\NRefactory\ICSharpCode.NRefactory.VB\bin\Debug\ICSharpCode.NRefactory.CSharp.pdb
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\NRefactory\ICSharpCode.NRefactory.VB\bin\Debug\ICSharpCode.NRefactory.CSharp.xml
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\NRefactory\ICSharpCode.NRefactory.VB\bin\Debug\ICSharpCode.NRefactory.pdb
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\NRefactory\ICSharpCode.NRefactory.VB\bin\Debug\ICSharpCode.NRefactory.xml
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\NRefactory\ICSharpCode.NRefactory.VB\bin\Debug\Mono.Cecil.pdb
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\NRefactory\ICSharpCode.NRefactory.VB\obj\Debug\ICSharpCode.NRefactory.VB.dll
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\NRefactory\ICSharpCode.NRefactory.VB\obj\Debug\ICSharpCode.NRefactory.VB.pdb

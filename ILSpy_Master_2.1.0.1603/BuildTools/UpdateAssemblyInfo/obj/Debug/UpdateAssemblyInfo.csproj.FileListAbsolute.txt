@@ -1,0 +1,4 @@
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\BuildTools\UpdateAssemblyInfo\bin\Debug\UpdateAssemblyInfo.exe
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\BuildTools\UpdateAssemblyInfo\bin\Debug\UpdateAssemblyInfo.pdb
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\BuildTools\UpdateAssemblyInfo\obj\Debug\UpdateAssemblyInfo.exe
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\BuildTools\UpdateAssemblyInfo\obj\Debug\UpdateAssemblyInfo.pdb

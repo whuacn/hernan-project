@@ -1,0 +1,5 @@
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\ILSpy\bin\Debug\ILSpy.BamlDecompiler.Plugin.dll
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\ILSpy\bin\Debug\ILSpy.BamlDecompiler.Plugin.pdb
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\ILSpy.BamlDecompiler\obj\Debug\ILSpy.BamlDecompiler.csprojResolveAssemblyReference.cache
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\ILSpy.BamlDecompiler\obj\Debug\ILSpy.BamlDecompiler.Plugin.dll
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\ILSpy.BamlDecompiler\obj\Debug\ILSpy.BamlDecompiler.Plugin.pdb

@@ -1,0 +1,15 @@
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\ILSpy.BamlDecompiler\Tests\obj\Debug\ILSpy.BamlDecompiler.Tests.csprojResolveAssemblyReference.cache
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\ILSpy.BamlDecompiler\Tests\obj\Debug\Cases\AttachedEvent.baml
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\ILSpy.BamlDecompiler\Tests\obj\Debug\Cases\MyControl.baml
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\ILSpy.BamlDecompiler\Tests\obj\Debug\Cases\Resources.baml
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\ILSpy.BamlDecompiler\Tests\obj\Debug\Cases\Simple.baml
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\ILSpy.BamlDecompiler\Tests\obj\Debug\Cases\SimpleDictionary.baml
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\ILSpy.BamlDecompiler\Tests\obj\Debug\Cases\Dictionary1.baml
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\ILSpy.BamlDecompiler\Tests\obj\Debug\Cases\AttachedEvent.g.cs
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\ILSpy.BamlDecompiler\Tests\obj\Debug\Cases\MyControl.g.cs
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\ILSpy.BamlDecompiler\Tests\obj\Debug\Cases\Resources.g.cs
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\ILSpy.BamlDecompiler\Tests\obj\Debug\Cases\Simple.g.cs
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\ILSpy.BamlDecompiler\Tests\obj\Debug\Cases\SimpleNames.g.cs
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\ILSpy.BamlDecompiler\Tests\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\ILSpy.BamlDecompiler\Tests\obj\Debug\ILSpy.BamlDecompiler.Tests_MarkupCompile.cache
+C:\Users\hernan\Desktop\ILSpy_Master_2.1.0.1603_RTW_Source\ILSpy.BamlDecompiler\Tests\obj\Debug\ILSpy.BamlDecompiler.Tests_MarkupCompile.lref
