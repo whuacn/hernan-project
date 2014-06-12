@@ -1,0 +1,17 @@
+0	No error.
+1	Unknown error.
+2	The trace is currently running. Changing the trace at this time will result in an error.
+3	The specified Event is not valid. The event may not exist or it is not an appropriate one for the store procedure.
+4	The specified Column is not valid.
+5	The specified Column is not allowed for filtering.
+6	The specified Comparison Operator is not valid.
+7	The specified Logical Operator is not valid.
+8	The specified Status is not valid.
+9	The specified Trace Handle is not valid.
+10	Invalid options. Returned when options specified are incompatible.
+11	The specified Column is used internally and cannot be removed.
+12	File not created.
+13	Out of memory. Returned when there is not enough memory to perform the specified action.
+14	Invalid stop time. Returned when the stop time specified has already happened.
+15	Invalid parameters. Returned when the user supplied incompatible parameters.
+16	The function is not valid for this trace.
