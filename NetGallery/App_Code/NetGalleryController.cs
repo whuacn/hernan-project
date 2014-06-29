@@ -107,33 +107,6 @@ public class NetGalleryController
         return list;
     }
 
-    public static List<NavBar> GetNavBar2(string path)
-    {
-        path = Base64Decode(path);
-        path = path.Replace(StorePath, "");
-        List<NavBar> list = new List<NavBar>();
-        DirectoryInfo parent;
-        if (path == "") return list;
-        parent = new DirectoryInfo(resolveVirtual(path));
-
-        var di = parent;
-        NavBar n;
-        while (di.Name != di.Root.Name)
-        {
-            n = new NavBar();
-            n.Name = di.Name;
-            n.Link = (path == "") ? "" : "/?p=" + Base64Encode(di.FullName);
-            list.Add(n);
-            di = di.Parent;
-        }
-        n = new NavBar();
-        n.Name = "Inicio";
-        n.Link = "/";
-        list.Insert(0, n);
-
-        list.Reverse();
-        return list;
-    }
 
     public static string resolveVirtual(string physicalPath)
     {
