@@ -4,8 +4,17 @@
 
     void Application_Start(object sender, EventArgs e) 
     {
-        NetGalleryController.StorePath = System.Configuration.ConfigurationManager.AppSettings.Get("StorePath");
-        NetGalleryController.PhysicalPath = Server.MapPath(System.Configuration.ConfigurationManager.AppSettings.Get("StorePath"));
+        NetGalleryController.StorePath = System.Configuration.ConfigurationManager.AppSettings.Get("StorePath").Replace("\\", "/");
+        try
+        {
+            NetGalleryController.PhysicalPath = Server.MapPath(System.Configuration.ConfigurationManager.AppSettings.Get("StorePath"));
+        }
+        catch (Exception)
+        {
+            
+            NetGalleryController.PhysicalPath = System.Configuration.ConfigurationManager.AppSettings.Get("StorePath").Replace("\\","/");
+        }
+
     }
     
     void Application_End(object sender, EventArgs e) 
