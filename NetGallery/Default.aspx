@@ -19,7 +19,7 @@
     <form id="form1" runat="server">
     <div>
         <div id="navbar">
-            <h1>Superintendencia de Riesgos del Trabajo - Album de Fotos</h1>
+            <h1>Superintendencia de Riesgos del Trabajo</h1>
             <br /><p id="nav" runat="server"></p>    
         </div>
         <br /><br />
@@ -35,8 +35,7 @@
     <script src="/Scripts/jPages.js"></script>
     <script src="/glisse/glisse.js"></script>
         <script>
-            $(function () {
-
+            $(function () {               
                  $("img.lazy").lazyload({
                      event: "turnPage",
                      effect: "fadeIn"
@@ -60,6 +59,7 @@
                     $(this).data('glisse').changeEffect(val);
                 });
             });
+         
         </script>
 </body>
 </html>

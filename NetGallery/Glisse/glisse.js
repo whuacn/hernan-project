@@ -201,11 +201,14 @@
 
         var addImage = function addImage(pic) {
             spinner(true);
-            var img = $('<img/>',{src: pic}).appendTo(plugin.els['content']);
-            plugin.els['content'].css({ backgroundImage: 'url("'+pic+'")'});
-
+            var img = $('<img/>', { src: pic }).appendTo(plugin.els['content']);
+            img.height(plugin.els['content'].height());
+            /*plugin.els['content'].css({ backgroundImage: 'url("' + pic + '")' });
+            plugin.els['content'].css({ 'filter': 'progid:DXImageTransform.Microsoft.AlphaImageLoader(src="' + pic + '",sizingMethod="scale")' });
+            plugin.els['content'].css({ '-ms-filter': 'progid:DXImageTransform.Microsoft.AlphaImageLoader(src="' + pic + '",sizingMethod="scale")' });
+            */            
             img.load(function() {
-                img.remove();
+                //img.remove();
                 spinner(false);
                 plugin.els['content'].css({visibility: 'visible', opacity: 1})
                                      .css(getPrefix('transform')+'transform','scale(1)');

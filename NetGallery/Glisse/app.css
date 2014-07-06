@@ -60,7 +60,7 @@ html, body {
 body {
   font: 12px/18px "Lucida sans", sans-serif;
   /*background: #ffffff; */
-  background-color:rgba(0,0,0,.75);
+  background-color:#3C3C3C;
 }
 
 img {
@@ -77,16 +77,20 @@ img {
   padding: 0 20px;
   font-size: 12px;
   line-height: 20px;
-  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-  -o-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 1px 3px #111111;
+  -webkit-box-shadow: 0 1px 3px #111111;
+  -o-box-shadow: 0 1px 3px #111111;
+  box-shadow: 0 1px 3px #111111;
+  background-color:#CCCCCC;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f7f8f9), color-stop(100%, #cfd5dd));
   background-image: -webkit-linear-gradient(#f7f8f9, #cfd5dd);
   background-image: -moz-linear-gradient(#f7f8f9, #cfd5dd);
   background-image: -o-linear-gradient(#f7f8f9, #cfd5dd);
   background-image: -ms-linear-gradient(#f7f8f9, #cfd5dd);
-  background-image: linear-gradient(#f7f8f9, #cfd5dd); }
+  background-image: linear-gradient(#f7f8f9, #cfd5dd); 
+  background-image:url(/IMages/headbg.png);
+
+}
   #navbar p {
     float: left;
     margin-right: 10px; }
@@ -104,7 +108,7 @@ img {
   padding: 3px;
   cursor: pointer;
   text-decoration: none;
-  background:rgba(0,0,0,.7) center center no-repeat;
+  background:#111111 center center no-repeat;
   vertical-align:central;
   color:white;
   text-align:center;
@@ -120,16 +124,17 @@ img {
   transition: all 0.025s ease; }
 
 #navbar a:hover {
+  background-color: #62b5ee;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #62b5ee), color-stop(100%, #0690e5));
   background-image: -webkit-linear-gradient(#62b5ee, #0690e5);
   background-image: -moz-linear-gradient(#62b5ee, #0690e5);
   background-image: -o-linear-gradient(#62b5ee, #0690e5);
   background-image: -ms-linear-gradient(#62b5ee, #0690e5);
-  background-image: linear-gradient(#62b5ee, #0690e5);
-  -moz-box-shadow: 0 0 0 1px #0873b9, inset 0 1px 0 #8bc8f2, 0 1px 5px rgba(0, 0, 0, 0.6);
-  -webkit-box-shadow: 0 0 0 1px #0873b9, inset 0 1px 0 #8bc8f2, 0 1px 5px rgba(0, 0, 0, 0.6);
-  -o-box-shadow: 0 0 0 1px #0873b9, inset 0 1px 0 #8bc8f2, 0 1px 5px rgba(0, 0, 0, 0.6);
-  box-shadow: 0 0 0 1px #0873b9, inset 0 1px 0 #8bc8f2, 0 1px 5px rgba(0, 0, 0, 0.6); }
+  background-image: linear-gradient(#62b5ee, #0690e5);  
+  -moz-box-shadow: 0 0 0 1px #0873b9, inset 0 1px 0 #8bc8f2, 0 1px 5px #111111;
+  -webkit-box-shadow: 0 0 0 1px #0873b9, inset 0 1px 0 #8bc8f2, 0 1px 5px #111111;
+  -o-box-shadow: 0 0 0 1px #0873b9, inset 0 1px 0 #8bc8f2, 0 1px 5px #111111;
+  box-shadow: 0 0 0 1px #0873b9, inset 0 1px 0 #8bc8f2, 0 1px 5px #111111; }
 
 /* gallery content */
 #content {
@@ -147,10 +152,12 @@ img {
 
 #content .gallery li {
   display: inline-block;
+  zoom: 1;
+  *display: inline;
   padding: 6px;
   margin: 10px;
   cursor: pointer;
-  background:rgba(0,0,0,.6) center center no-repeat;
+  background:#111111 center center no-repeat;
   vertical-align:central;
   color:white;
   width: 200px;
@@ -168,16 +175,17 @@ img {
   transition: all 0.025s ease; }
 
 #content .gallery li:hover {
+  background-color: #62b5ee;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #62b5ee), color-stop(100%, #0690e5));
   background-image: -webkit-linear-gradient(#62b5ee, #0690e5);
   background-image: -moz-linear-gradient(#62b5ee, #0690e5);
   background-image: -o-linear-gradient(#62b5ee, #0690e5);
   background-image: -ms-linear-gradient(#62b5ee, #0690e5);
   background-image: linear-gradient(#62b5ee, #0690e5);
-  -moz-box-shadow: 0 0 0 1px #0873b9, inset 0 1px 0 #8bc8f2, 0 1px 5px rgba(0, 0, 0, 0.6);
-  -webkit-box-shadow: 0 0 0 1px #0873b9, inset 0 1px 0 #8bc8f2, 0 1px 5px rgba(0, 0, 0, 0.6);
-  -o-box-shadow: 0 0 0 1px #0873b9, inset 0 1px 0 #8bc8f2, 0 1px 5px rgba(0, 0, 0, 0.6);
-  box-shadow: 0 0 0 1px #0873b9, inset 0 1px 0 #8bc8f2, 0 1px 5px rgba(0, 0, 0, 0.6); }
+  -moz-box-shadow: 0 0 0 1px #0873b9, inset 0 1px 0 #8bc8f2, 0 1px 5px #111111;
+  -webkit-box-shadow: 0 0 0 1px #0873b9, inset 0 1px 0 #8bc8f2, 0 1px 5px #111111;
+  -o-box-shadow: 0 0 0 1px #0873b9, inset 0 1px 0 #8bc8f2, 0 1px 5px #111111;
+  box-shadow: 0 0 0 1px #0873b9, inset 0 1px 0 #8bc8f2, 0 1px 5px #111111; }
 
 #content .gallery li:hover img {
   border: 1px solid #0174bd; }
@@ -196,16 +204,17 @@ img {
   color: #fff;
   border-top: 1px solid #2d2f35;
   text-shadow: 0 -1px 0 #333333;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(87, 90, 98, 0.9)), color-stop(100%, rgba(62, 65, 72, 0.9)));
-  background-image: -webkit-linear-gradient(rgba(87, 90, 98, 0.9), rgba(62, 65, 72, 0.9));
-  background-image: -moz-linear-gradient(rgba(87, 90, 98, 0.9), rgba(62, 65, 72, 0.9));
-  background-image: -o-linear-gradient(rgba(87, 90, 98, 0.9), rgba(62, 65, 72, 0.9));
-  background-image: -ms-linear-gradient(rgba(87, 90, 98, 0.9), rgba(62, 65, 72, 0.9));
-  background-image: linear-gradient(rgba(87, 90, 98, 0.9), rgba(62, 65, 72, 0.9));
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 3px rgba(0, 0, 0, 0.7);
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 3px rgba(0, 0, 0, 0.7);
-  -o-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 3px rgba(0, 0, 0, 0.7);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 3px rgba(0, 0, 0, 0.7); }
+  background-color:#3C3C3C;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #575A62), color-stop(100%, #3E4148));
+  background-image: -webkit-linear-gradient(#575A62, #3E4148);
+  background-image: -moz-linear-gradient(#575A62, #3E4148);
+  background-image: -o-linear-gradient(#575A62, #3E4148);
+  background-image: -ms-linear-gradient(#575A62, #3E4148);
+  background-image: linear-gradient(#575A62, #3E4148);
+  -moz-box-shadow: inset 0 1px 0 #FFFFFF, 0 1px 3px #111111;
+  -webkit-box-shadow: inset 0 1px 0 #FFFFFF, 0 1px 3px #111111;
+  -o-box-shadow: inset 0 1px 0 #FFFFFF, 0 1px 3px #111111;
+  box-shadow: inset 0 1px 0 #FFFFFF, 0 1px 3px #111111; }
 
 .glisse-next a, .glisse-prev a {
   position: absolute;
@@ -226,19 +235,19 @@ img {
 
 .glisse-prev a {
   border-right: 1px solid #2d2f35;
-  -moz-box-shadow: inset -1px 0 0 rgba(255, 255, 255, 0.15);
-  -webkit-box-shadow: inset -1px 0 0 rgba(255, 255, 255, 0.15);
-  -o-box-shadow: inset -1px 0 0 rgba(255, 255, 255, 0.15);
-  box-shadow: inset -1px 0 0 rgba(255, 255, 255, 0.15); }
+  -moz-box-shadow: inset -1px 0 0 #FFFFFF;
+  -webkit-box-shadow: inset -1px 0 0 #FFFFFF;
+  -o-box-shadow: inset -1px 0 0 #FFFFFF;
+  box-shadow: inset -1px 0 0 #FFFFFF; }
 
 .glisse-next a {
   left: auto;
   right: 0;
   border-left: 1px solid #2d2f35;
-  -moz-box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.15);
-  -webkit-box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.15);
-  -o-box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.15);
-  box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.15); }
+  -moz-box-shadow: inset 1px 0 0 #FFFFFF;
+  -webkit-box-shadow: inset 1px 0 0 #FFFFFF;
+  -o-box-shadow: inset 1px 0 0 #FFFFFF;
+  box-shadow: inset 1px 0 0 #FFFFFF; }
 
 .glisse-legend {
   text-overflow: ellipsis;
@@ -251,3 +260,10 @@ img {
   right: 40px;
   text-align: center;
   line-height: 40px; }
+
+.glisse-folder-legend {
+    position:fixed;
+    *position:static;
+    text-align:center; 
+    width:200px;
+}

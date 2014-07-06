@@ -10,7 +10,7 @@ html{height:100%}
     bottom:0;
     left:0;
     right:0;
-    background-color:rgba(0,0,0,.75);
+    background-color:#111111;
 }
     #glisse-overlay.loading #glisse-spinner {opacity:1;} /* Display spinner */
     
@@ -25,6 +25,7 @@ html{height:100%}
     background-repeat: no-repeat;
     background-position: 50% 50%;
     opacity: 0;
+    text-align:center;
     -moz-background-size:       contain;
     -webkit-background-size:    contain;
     -o-background-size:         contain;
@@ -33,7 +34,7 @@ html{height:100%}
     backface-visibility:        hidden;
 }
     /* Hide images */
-    #glisse-overlay-content img{display:none;}
+    /*#glisse-overlay-content img{display:none;}*/
 
     /* Shake effect */
     #glisse-overlay-content.shake {
@@ -55,7 +56,7 @@ html{height:100%}
     margin: -40px 0 0 -40px;
     height: 80px;
     width: 80px;
-    background:rgba(0,0,0,.6) url(/Images/loader.gif) center center no-repeat;
+    background:#111111 url(/Images/loader.gif) center center no-repeat;
     border-radius:6px;
 }
 
