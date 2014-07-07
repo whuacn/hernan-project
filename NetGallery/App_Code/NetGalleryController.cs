@@ -235,7 +235,7 @@ public class NetGalleryController
         try
         {
             var plainTextBytes = System.Text.Encoding.UTF8.GetBytes(plainText);
-            return System.Convert.ToBase64String(plainTextBytes);
+            return System.Convert.ToBase64String(plainTextBytes) + ".jpg";
         }
         catch (Exception)
         {
@@ -245,6 +245,7 @@ public class NetGalleryController
 
     static string Base64Decode(string base64EncodedData)
     {
+        base64EncodedData = base64EncodedData.Replace(".jpg", "");
         var base64EncodedBytes = System.Convert.FromBase64String(base64EncodedData);
         return System.Text.Encoding.UTF8.GetString(base64EncodedBytes);
     }

@@ -10,10 +10,16 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
     <title></title>
-        <link rel="stylesheet" href="/glisse/glisse.css?1" />
-        <link rel="stylesheet" href="/glisse/app.css" />
-        <link rel="stylesheet" href="/Styles/jPages.css" />
-
+    <link rel="stylesheet" href="/shadowbox/shadowbox.css" />
+    <link rel="stylesheet" href="/Styles/app.css" />
+    <link rel="stylesheet" href="/Styles/jPages.css" />
+    <script src="/Scripts/jquery-1.7.1.min.js"></script>
+    <script src="/Scripts/jquery.lazyload.js"></script>    
+    <script src="/Scripts/jPages.js"></script>
+    <script src="/shadowbox/shadowbox.js"></script>
+    <script>
+        Shadowbox.init();
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -30,17 +36,16 @@
         </div>
     </div>
     </form>
-    <script src="/Scripts/jquery-1.7.1.min.js"></script>
-    <script src="/Scripts/jquery.lazyload.js"></script>
-    <script src="/Scripts/jPages.js"></script>
-    <script src="/glisse/glisse.js"></script>
+
         <script>
-            $(function () {               
+            $(function () {
+
                  $("img.lazy").lazyload({
                      event: "turnPage",
                      effect: "fadeIn"
-                });               
-                $('.tl').glisse({ changeSpeed: 550, fullscreen: false });
+                 });
+                 
+                //$('.tl').glisse({ changeSpeed: 550, fullscreen: false });
 
                 $("div.holder").jPages({
                     containerID: "thegallery",
@@ -53,12 +58,12 @@
                     }
                 });
             });
-            $('#changefx').change(function () {
+           /* $('#changefx').change(function () {
                 var val = $(this).val();
                 $('.tl').each(function () {
                     $(this).data('glisse').changeEffect(val);
                 });
-            });
+            });*/
          
         </script>
 </body>
