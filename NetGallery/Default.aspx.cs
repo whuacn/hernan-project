@@ -19,7 +19,7 @@ public partial class _Default : System.Web.UI.Page
 
 
             if (file.Type == TypeFile.Photo)
-                thegallery.InnerHtml += "<li><center><a href='Photo.aspx?pth=" + file.Path + "' rel='shadowbox[photo-gallery]'><img src='/Images/loader.gif' data-original='ThumbnailPhoto.aspx?p=" + file.Path + "' rel='group1' class='lazy' title='" + file.Description + "' /></a></center></li>";
+                thegallery.InnerHtml += "<li><center><a href='Photo.aspx?pth=" + file.Path + "' rel='shadowbox[photo-gallery]' title='" + file.Description + "'><img src='/Images/loader.gif' data-original='ThumbnailPhoto.aspx?p=" + file.Path + "' rel='group1' class='lazy' title='" + file.Description + "' /></a></center></li>";
         }
 
         List<NavBar> navs = NetGalleryController.GetNavBar(path);
