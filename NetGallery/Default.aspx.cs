@@ -15,7 +15,7 @@ public partial class _Default : System.Web.UI.Page
         foreach (NetFile file in files)
         {
             if (file.Type == TypeFile.Folder)
-                thegallery.InnerHtml += "<li><center><img src='/Images/galeria.png' style='width:100px' onclick='location.href=\"/?p=" + file.Path + "\"'  /><div class='glisse-folder-legend'>" + file.Name + "</div><center></li>";
+                thegallery.InnerHtml += "<li><center><img src='/Images/galeria.png' style='width:100px' onclick='location.href=\"/?p=" + file.Path + "\"'  /><div class='folder-legend'>" + file.Name + "</div><center></li>";
 
 
             if (file.Type == TypeFile.Photo)

@@ -261,8 +261,8 @@ img {
   text-align: center;
   line-height: 40px; }
 
-.glisse-folder-legend {
-    position:fixed;
+.folder-legend {
+    position:absolute;
     *position:static;
     text-align:center; 
     width:200px;
