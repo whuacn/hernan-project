@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<ClientSettings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <FontFamilyName>Consolas</FontFamilyName>
+  <FontSize>9</FontSize>
+  <TraceDefinitions>
+    <UiTraceDefinition>
+      <DurationHours>1</DurationHours>
+      <DurationMinutes>0</DurationMinutes>
+      <IntegratedConnection>true</IntegratedConnection>
+      <Name>&lt;&lt; Default &gt;&gt;</Name>
+      <Server>super06</Server>
+      <TraceEvents>
+        <TraceEvent>
+          <Columns>
+            <int>27</int>
+            <int>11</int>
+            <int>1</int>
+            <int>14</int>
+            <int>15</int>
+            <int>13</int>
+          </Columns>
+          <Id>10</Id>
+        </TraceEvent>
+      </TraceEvents>
+      <TraceFilters>
+        <TraceFilter>
+          <ColumnId>1</ColumnId>
+          <ComparisonOperator>Not_Equal</ComparisonOperator>
+          <LogicalOperator>And</LogicalOperator>
+          <Value>exec sp_reset_connection</Value>
+        </TraceFilter>
+      </TraceFilters>
+      <UserId />
+      <OrderedColumns>
+        <int>27</int>
+        <int>11</int>
+        <int>1</int>
+        <int>14</int>
+        <int>15</int>
+        <int>13</int>
+      </OrderedColumns>
+      <OutputFile />
+      <RecordLimit>5000</RecordLimit>
+    </UiTraceDefinition>
+  </TraceDefinitions>
+  <WindowPosition>
+    <X>25</X>
+    <Y>25</Y>
+  </WindowPosition>
+  <WindowSize>
+    <Width>683</Width>
+    <Height>410</Height>
+  </WindowSize>
+</ClientSettings>

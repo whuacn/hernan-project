@@ -1,0 +1,17 @@
+D:\hernan-project\SqlExpressTrace\SqlExpressTraceUI\bin\Debug\SqlExpressTrace.exe.config
+D:\hernan-project\SqlExpressTrace\SqlExpressTraceUI\bin\Debug\SqlExpressTrace.exe
+D:\hernan-project\SqlExpressTrace\SqlExpressTraceUI\bin\Debug\SqlExpressTrace.pdb
+D:\hernan-project\SqlExpressTrace\SqlExpressTraceUI\bin\Debug\SqlExpressTraceLib.dll
+D:\hernan-project\SqlExpressTrace\SqlExpressTraceUI\bin\Debug\SqlExpressTraceLib.pdb
+D:\hernan-project\SqlExpressTrace\SqlExpressTraceUI\obj\Debug\SqlExpressTraceUI.csprojResolveAssemblyReference.cache
+D:\hernan-project\SqlExpressTrace\SqlExpressTraceUI\obj\Debug\SqlExpressTraceUI.AboutDlg.resources
+D:\hernan-project\SqlExpressTrace\SqlExpressTraceUI\obj\Debug\SqlExpressTraceUI.CustomControls.EventSettingsCtrl.resources
+D:\hernan-project\SqlExpressTrace\SqlExpressTraceUI\obj\Debug\SqlExpressTraceUI.CustomControls.FilterSettingsCtrl.resources
+D:\hernan-project\SqlExpressTrace\SqlExpressTraceUI\obj\Debug\SqlTraceExpressUI.CustomControls.GeneralSettingsCtrl.resources
+D:\hernan-project\SqlExpressTrace\SqlExpressTraceUI\obj\Debug\SqlExpressTraceUI.CustomControls.TraceEventDisplay.resources
+D:\hernan-project\SqlExpressTrace\SqlExpressTraceUI\obj\Debug\SqlTraceExpressUI.MainDlg.resources
+D:\hernan-project\SqlExpressTrace\SqlExpressTraceUI\obj\Debug\SqlExpressTraceUI.Properties.Resources.resources
+D:\hernan-project\SqlExpressTrace\SqlExpressTraceUI\obj\Debug\SqlTraceExpressUI.TraceDefinitionDlg.resources
+D:\hernan-project\SqlExpressTrace\SqlExpressTraceUI\obj\Debug\SqlExpressTraceUI.csproj.GenerateResource.Cache
+D:\hernan-project\SqlExpressTrace\SqlExpressTraceUI\obj\Debug\SqlExpressTrace.exe
+D:\hernan-project\SqlExpressTrace\SqlExpressTraceUI\obj\Debug\SqlExpressTrace.pdb

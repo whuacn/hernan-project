@@ -1,0 +1,5 @@
+D:\hernan-project\SqlExpressTrace\SqlExpressTraceLib\bin\Debug\SqlExpressTraceLib.dll
+D:\hernan-project\SqlExpressTrace\SqlExpressTraceLib\bin\Debug\SqlExpressTraceLib.pdb
+D:\hernan-project\SqlExpressTrace\SqlExpressTraceLib\obj\Debug\SqlExpressTraceLib.csprojResolveAssemblyReference.cache
+D:\hernan-project\SqlExpressTrace\SqlExpressTraceLib\obj\Debug\SqlExpressTraceLib.dll
+D:\hernan-project\SqlExpressTrace\SqlExpressTraceLib\obj\Debug\SqlExpressTraceLib.pdb

@@ -271,6 +271,11 @@ namespace SqlExpressTraceUI.CustomControls
 					DataGridViewColumnSortMode.NotSortable : DataGridViewColumnSortMode.Automatic;
 			}
 		}
+
+        private void traceDisplayGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
 	}
 
 }
