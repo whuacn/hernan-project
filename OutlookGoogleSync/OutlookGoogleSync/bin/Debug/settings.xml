@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<Settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <RefreshToken>1/7qGzadwMNR2ZzKg_DQcSRgCLK1BZFCLXf7FyOBHD_rY</RefreshToken>
+    <MinuteOffsets>53,54,55,56</MinuteOffsets>
+    <DaysInThePast>1</DaysInThePast>
+    <DaysInTheFuture>60</DaysInTheFuture>
+    <UseGoogleCalendar>
+        <Id>hernanhegykozi@gmail.com</Id>
+        <Name>SRT</Name>
+    </UseGoogleCalendar>
+    <SyncEveryHour>true</SyncEveryHour>
+    <ShowBubbleTooltipWhenSyncing>true</ShowBubbleTooltipWhenSyncing>
+    <StartInTray>false</StartInTray>
+    <MinimizeToTray>true</MinimizeToTray>
+    <AddDescription>true</AddDescription>
+    <AddReminders>false</AddReminders>
+    <AddAttendeesToDescription>true</AddAttendeesToDescription>
+    <CreateTextFiles>false</CreateTextFiles>
+</Settings>
