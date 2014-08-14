@@ -9,6 +9,7 @@ using Microsoft.Office.Interop;
 using Microsoft.Office.Core;
 using System.Collections;
 using System.Runtime.InteropServices;
+using System.IO;
 
 namespace DocumentManager
 {
@@ -59,10 +60,27 @@ namespace DocumentManager
 
         public static string ToHTML(byte[] buffer)
         {
+            return ToHTML(buffer, null);
+        }
+        public static string ToHTML(byte[] buffer, string tempPath)
+        {
             string result = null;
-            string fileOrigen = TempManager.CreateTmpFile();
-            string fileDestino = TempManager.CreateTmpFile();
 
+            string fileOrigen = null;
+            string fileDestino = null;
+
+            if (tempPath == null)
+            {
+                fileOrigen = TempManager.CreateTmpFile();
+                fileDestino = TempManager.CreateTmpFile();
+                tempPath = Path.GetTempPath();
+            }
+            else {
+                fileOrigen = Path.Combine(tempPath, DateTime.Now.Ticks.ToString() + ".TMP");
+                fileDestino = Path.Combine(tempPath, DateTime.Now.Ticks.ToString() + "_dest.TMP");
+                File.Create(fileOrigen).Close();
+                File.Create(fileDestino).Close();            
+            }
 
             Excel.Application objExcel = new Excel.Application();
 
@@ -92,7 +110,7 @@ namespace DocumentManager
                 }
 
                 result = TempManager.ReadTmpFileString(fileDestino);
-                result = Utils.HtmlEmbedImages(result);
+                result = Utils.HtmlEmbedImages(result, tempPath);
 
                 TempManager.DeleteTmpFile(fileOrigen);
                 TempManager.DeleteTmpFile(fileDestino);

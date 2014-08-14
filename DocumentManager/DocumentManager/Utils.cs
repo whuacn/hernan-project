@@ -10,14 +10,14 @@ namespace DocumentManager
     public class Utils
     {
 
-        public static string HtmlEmbedImages(string htmlSource)
+        public static string HtmlEmbedImages(string htmlSource, string tempPath)
         {
             string regexImgSrc = @"<img[^>]*?src\s*=\s*[""']?([^'"" >]+?)[ '""][^>]*?>";
             MatchCollection matchesImgSrc = Regex.Matches(htmlSource, regexImgSrc, RegexOptions.IgnoreCase | RegexOptions.Singleline);
             foreach (Match m in matchesImgSrc)
             {
                 string src = m.Groups[1].Value;
-                string img = MakeImageSrcData(Path.Combine(Path.GetTempPath(), src));
+                string img = MakeImageSrcData(Path.Combine(tempPath, src));
                 htmlSource = htmlSource.Replace(src, img);
             }
             return htmlSource;

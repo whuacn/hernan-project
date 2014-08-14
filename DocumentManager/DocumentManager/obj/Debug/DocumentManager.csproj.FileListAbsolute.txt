@@ -2,3 +2,12 @@ E:\DESARROLLO\hernan-project\DocumentManager\DocumentManager\bin\Debug\DocumentM
 E:\DESARROLLO\hernan-project\DocumentManager\DocumentManager\bin\Debug\DocumentManager.pdb
 E:\DESARROLLO\hernan-project\DocumentManager\DocumentManager\obj\Debug\DocumentManager.dll
 E:\DESARROLLO\hernan-project\DocumentManager\DocumentManager\obj\Debug\DocumentManager.pdb
+D:\hernan-project\DocumentManager\DocumentManager\bin\Debug\DocumentManager.dll
+D:\hernan-project\DocumentManager\DocumentManager\bin\Debug\DocumentManager.pdb
+D:\hernan-project\DocumentManager\DocumentManager\bin\Debug\Microsoft.Office.Interop.Excel.dll
+D:\hernan-project\DocumentManager\DocumentManager\bin\Debug\Microsoft.Office.Interop.PowerPoint.dll
+D:\hernan-project\DocumentManager\DocumentManager\bin\Debug\Microsoft.Office.Interop.Word.dll
+D:\hernan-project\DocumentManager\DocumentManager\bin\Debug\Office.dll
+D:\hernan-project\DocumentManager\DocumentManager\bin\Debug\Microsoft.Vbe.Interop.dll
+D:\hernan-project\DocumentManager\DocumentManager\obj\Debug\DocumentManager.dll
+D:\hernan-project\DocumentManager\DocumentManager\obj\Debug\DocumentManager.pdb

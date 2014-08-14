@@ -9,6 +9,7 @@ using Google.Apis.Authentication.OAuth2.DotNetOpenAuth;
 using Google.Apis.Calendar.v3;
 using Google.Apis.Calendar.v3.Data;
 using Google.Apis.Util;
+using System.Net;
 
 
 namespace OutlookGoogleSync
@@ -34,11 +35,24 @@ namespace OutlookGoogleSync
 	    
 		public GoogleCalendar()
 		{
+
+
+
             var provider = new NativeApplicationClient(GoogleAuthenticationServer.Description);
             provider.ClientIdentifier = "662204240419.apps.googleusercontent.com";
             provider.ClientSecret = "4nJPnk5fE8yJM_HNUNQEEvjU";
+            
             service = new CalendarService(new OAuth2Authenticator<NativeApplicationClient>(provider, GetAuthentication));
             service.Key = "AIzaSyDRGFSAyMGondZKR8fww1RtRARYtCbBC4k";
+            
+           /* GDataRequestFactory requestFactory = (GDataRequestFactory)service.;
+            WebProxy myProxy = new WebProxy("http://my.proxy.example.com:3128/", true);
+            // potentially, setup credentials on the proxy here
+            myProxy.Credentials = CredentialCache.DefaultCredentials;
+            myProxy.UseDefaultCredentials = true;
+            requestFactory.Proxy = myProxy;*/
+
+
 		}
 		
 				
@@ -49,7 +63,7 @@ namespace OutlookGoogleSync
             state.Callback = new Uri(NativeApplicationClient.OutOfBandCallbackUrl);
             state.RefreshToken = Settings.Instance.RefreshToken;
             Uri authUri = arg.RequestUserAuthorization(state);
-            
+
             IAuthorizationState result = null;
             
 		    if (state.RefreshToken == "")

@@ -9,3 +9,16 @@ E:\DESARROLLO\hernan-project\DocumentManager\DocumentManager_Test\bin\Debug\Docu
 E:\DESARROLLO\hernan-project\DocumentManager\DocumentManager_Test\obj\Debug\DocumentManager_Test.csprojResolveAssemblyReference.cache
 E:\DESARROLLO\hernan-project\DocumentManager\DocumentManager_Test\obj\Debug\DocumentManager_Test.exe
 E:\DESARROLLO\hernan-project\DocumentManager\DocumentManager_Test\obj\Debug\DocumentManager_Test.pdb
+D:\hernan-project\DocumentManager\DocumentManager_Test\bin\Debug\DocumentManager_Test.exe.config
+D:\hernan-project\DocumentManager\DocumentManager_Test\obj\Debug\DocumentManager_Test.exe
+D:\hernan-project\DocumentManager\DocumentManager_Test\obj\Debug\DocumentManager_Test.pdb
+D:\hernan-project\DocumentManager\DocumentManager_Test\bin\Debug\DocumentManager_Test.exe
+D:\hernan-project\DocumentManager\DocumentManager_Test\bin\Debug\DocumentManager_Test.pdb
+D:\hernan-project\DocumentManager\DocumentManager_Test\bin\Debug\DocumentManager.dll
+D:\hernan-project\DocumentManager\DocumentManager_Test\bin\Debug\Microsoft.Office.Interop.Excel.dll
+D:\hernan-project\DocumentManager\DocumentManager_Test\bin\Debug\Microsoft.Office.Interop.PowerPoint.dll
+D:\hernan-project\DocumentManager\DocumentManager_Test\bin\Debug\office.dll
+D:\hernan-project\DocumentManager\DocumentManager_Test\bin\Debug\Microsoft.Office.Interop.Word.dll
+D:\hernan-project\DocumentManager\DocumentManager_Test\bin\Debug\Microsoft.Vbe.Interop.dll
+D:\hernan-project\DocumentManager\DocumentManager_Test\bin\Debug\DocumentManager.pdb
+D:\hernan-project\DocumentManager\DocumentManager_Test\obj\Debug\DocumentManager_Test.csprojResolveAssemblyReference.cache
