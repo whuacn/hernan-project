@@ -10,3 +10,16 @@ D:\Desarrollo\hernan-project\SqlScript\SqlScript\bin\Debug\Microsoft.SqlServer.S
 D:\Desarrollo\hernan-project\SqlScript\SqlScript\bin\Debug\Microsoft.SqlServer.SmoExtended.dll
 D:\Desarrollo\hernan-project\SqlScript\SqlScript\bin\Debug\Microsoft.SqlServer.SqlEnum.dll
 D:\Desarrollo\hernan-project\SqlScript\SqlScript\obj\Debug\SqlScript.csprojResolveAssemblyReference.cache
+D:\hernan-project\SqlScript\SqlScript\bin\Debug\SqlScript.exe.config
+D:\hernan-project\SqlScript\SqlScript\obj\Debug\SqlScript.exe
+D:\hernan-project\SqlScript\SqlScript\obj\Debug\SqlScript.pdb
+D:\hernan-project\SqlScript\SqlScript\bin\Debug\SqlScript.exe
+D:\hernan-project\SqlScript\SqlScript\bin\Debug\SqlScript.pdb
+D:\hernan-project\SqlScript\SqlScript\bin\Debug\CommandLine.dll
+D:\hernan-project\SqlScript\SqlScript\bin\Debug\Microsoft.SqlServer.ConnectionInfo.dll
+D:\hernan-project\SqlScript\SqlScript\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.dll
+D:\hernan-project\SqlScript\SqlScript\bin\Debug\Microsoft.SqlServer.Smo.dll
+D:\hernan-project\SqlScript\SqlScript\bin\Debug\Microsoft.SqlServer.SmoExtended.dll
+D:\hernan-project\SqlScript\SqlScript\bin\Debug\Microsoft.SqlServer.SqlClrProvider.dll
+D:\hernan-project\SqlScript\SqlScript\bin\Debug\Microsoft.SqlServer.SqlEnum.dll
+D:\hernan-project\SqlScript\SqlScript\obj\Debug\SqlScript.csprojResolveAssemblyReference.cache

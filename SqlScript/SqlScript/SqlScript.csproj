@@ -55,6 +55,11 @@
       <HintPath>smo\Microsoft.SqlServer.SmoExtended.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.SqlServer.SqlClrProvider, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>smo\Microsoft.SqlServer.SqlClrProvider.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.SqlServer.SqlEnum, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>smo\Microsoft.SqlServer.SqlEnum.dll</HintPath>
