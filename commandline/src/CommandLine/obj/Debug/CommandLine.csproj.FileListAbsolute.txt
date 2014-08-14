@@ -1,0 +1,6 @@
+D:\Desarrollo\hernan-project\commandline\src\CommandLine\bin\Debug\CommandLine.XML
+D:\Desarrollo\hernan-project\commandline\src\CommandLine\bin\Debug\CommandLine.dll
+D:\Desarrollo\hernan-project\commandline\src\CommandLine\bin\Debug\CommandLine.pdb
+D:\Desarrollo\hernan-project\commandline\src\CommandLine\obj\Debug\CommandLine.csprojResolveAssemblyReference.cache
+D:\Desarrollo\hernan-project\commandline\src\CommandLine\obj\Debug\CommandLine.dll
+D:\Desarrollo\hernan-project\commandline\src\CommandLine\obj\Debug\CommandLine.pdb

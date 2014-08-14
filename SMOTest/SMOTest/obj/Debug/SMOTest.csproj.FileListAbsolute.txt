@@ -9,3 +9,6 @@ c:\users\hernan\documents\visual studio 2013\Projects\SMOTest\SMOTest\bin\Debug\
 c:\users\hernan\documents\visual studio 2013\Projects\SMOTest\SMOTest\obj\Debug\SMOTest.csprojResolveAssemblyReference.cache
 c:\users\hernan\documents\visual studio 2013\Projects\SMOTest\SMOTest\obj\Debug\SMOTest.exe
 c:\users\hernan\documents\visual studio 2013\Projects\SMOTest\SMOTest\obj\Debug\SMOTest.pdb
+D:\Desarrollo\hernan-project\SMOTest\SMOTest\bin\Debug\SMOTest.exe.config
+D:\Desarrollo\hernan-project\SMOTest\SMOTest\obj\Debug\SMOTest.exe
+D:\Desarrollo\hernan-project\SMOTest\SMOTest\obj\Debug\SMOTest.pdb

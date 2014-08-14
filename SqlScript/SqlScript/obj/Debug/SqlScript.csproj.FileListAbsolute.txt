@@ -1,0 +1,12 @@
+D:\Desarrollo\hernan-project\SqlScript\SqlScript\bin\Debug\SqlScript.exe.config
+D:\Desarrollo\hernan-project\SqlScript\SqlScript\bin\Debug\SqlScript.exe
+D:\Desarrollo\hernan-project\SqlScript\SqlScript\bin\Debug\SqlScript.pdb
+D:\Desarrollo\hernan-project\SqlScript\SqlScript\bin\Debug\CommandLine.dll
+D:\Desarrollo\hernan-project\SqlScript\SqlScript\obj\Debug\SqlScript.exe
+D:\Desarrollo\hernan-project\SqlScript\SqlScript\obj\Debug\SqlScript.pdb
+D:\Desarrollo\hernan-project\SqlScript\SqlScript\bin\Debug\Microsoft.SqlServer.ConnectionInfo.dll
+D:\Desarrollo\hernan-project\SqlScript\SqlScript\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.dll
+D:\Desarrollo\hernan-project\SqlScript\SqlScript\bin\Debug\Microsoft.SqlServer.Smo.dll
+D:\Desarrollo\hernan-project\SqlScript\SqlScript\bin\Debug\Microsoft.SqlServer.SmoExtended.dll
+D:\Desarrollo\hernan-project\SqlScript\SqlScript\bin\Debug\Microsoft.SqlServer.SqlEnum.dll
+D:\Desarrollo\hernan-project\SqlScript\SqlScript\obj\Debug\SqlScript.csprojResolveAssemblyReference.cache

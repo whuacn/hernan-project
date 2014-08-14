@@ -1,0 +1,3 @@
+SqlScript.exe -a sql  -u sa -p 123456 -i localhost -d sundae -c -o d:\base.txt
+
+SqlScript.exe -i localhost -d sundae -c -o d:\base.txt
