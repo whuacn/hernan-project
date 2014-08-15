@@ -22,4 +22,3 @@ D:\hernan-project\SqlScript\SqlScript\bin\Debug\Microsoft.SqlServer.Smo.dll
 D:\hernan-project\SqlScript\SqlScript\bin\Debug\Microsoft.SqlServer.SmoExtended.dll
 D:\hernan-project\SqlScript\SqlScript\bin\Debug\Microsoft.SqlServer.SqlClrProvider.dll
 D:\hernan-project\SqlScript\SqlScript\bin\Debug\Microsoft.SqlServer.SqlEnum.dll
-D:\hernan-project\SqlScript\SqlScript\obj\Debug\SqlScript.csprojResolveAssemblyReference.cache

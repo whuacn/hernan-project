@@ -41,10 +41,13 @@ namespace SqlScript
         [Option('f', "functions", HelpText = "Indica si se realiza el script de las funciones.")]
         public bool Functions { get; set; }
 
-        [Option('m', "permission", DefaultValue = true, HelpText = "Indica si se agregan los permisos de los objetos.")]
+        [Option('n', "permission", DefaultValue = true, HelpText = "Indica si se agregan los permisos de los objetos.")]
         public bool Permission { get; set; }
 
-        [Option('o', "output", Required = true, HelpText = "Nombre del archivo de texto de salida.")]
+        [Option('m', "multiplefiles", DefaultValue = false, HelpText = "Generar un archivo .sql por cada objeto.")]
+        public bool MultipleFiles { get; set; }
+
+        [Option('o', "output", Required = true, HelpText = "Nombre del archivo de texto de salida o carpeta.")]
         public string OutPut { get; set; }
     }
 

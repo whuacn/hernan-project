@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -42,11 +43,15 @@ namespace SqlScript
 
             if (opt.Tables || opt.Complete)
             {
-                sb.Append(Environment.NewLine);
-                sb.Append("--TABLES----------------");
-                sb.Append(Environment.NewLine);
-                foreach (Table tbl in db.Tables)
+                if (!opt.MultipleFiles)
                 {
+                    sb.Append(Environment.NewLine);
+                    sb.Append("--TABLES----------------");
+                    sb.Append(Environment.NewLine);
+                }
+                StringBuilder sbtemp = new StringBuilder();
+                foreach (Table tbl in db.Tables)
+                {                    
                     ScriptingOptions options = new ScriptingOptions();
                     options.ClusteredIndexes = true;
                     options.Default = true;
@@ -60,19 +65,37 @@ namespace SqlScript
                     StringCollection coll = tbl.Script(options);
                     foreach (string str in coll)
                     {
-                        sb.Append(str);
-                        sb.Append(Environment.NewLine);
-                        sb.Append("GO");
-                        sb.Append(Environment.NewLine);
+                        sbtemp.Append(str);
+                        sbtemp.Append(Environment.NewLine);
+                        sbtemp.Append("GO");
+                        sbtemp.Append(Environment.NewLine);
+                    }
+
+                    if (opt.MultipleFiles)
+                    {
+                        System.IO.StreamWriter fs = System.IO.File.CreateText(Path.Combine(opt.OutPut,tbl.Name + ".sql"));
+                        fs.Write(sbtemp.ToString());
+                        fs.Close();
+                        sbtemp = null;
+                        sbtemp = new StringBuilder();
                     }
                 }
+
+                if (!opt.MultipleFiles)                
+                    sb.Append(sbtemp);
+                sbtemp = null;
+
             }
 
             if (opt.StoredProcedure || opt.Complete)
             {
-                sb.Append(Environment.NewLine);
-                sb.Append("--STORED PROCEDURES----------------");
-                sb.Append(Environment.NewLine);
+                if (!opt.MultipleFiles)
+                {
+                    sb.Append(Environment.NewLine);
+                    sb.Append("--STORED PROCEDURES----------------");
+                    sb.Append(Environment.NewLine);
+                }
+                StringBuilder sbtemp = new StringBuilder();
                 foreach (StoredProcedure sp in db.StoredProcedures)
                 {
                     if (!sp.IsSystemObject)
@@ -88,20 +111,37 @@ namespace SqlScript
                         StringCollection coll = sp.Script(options);
                         foreach (string str in coll)
                         {
-                            sb.Append(str);
-                            sb.Append(Environment.NewLine);
-                            sb.Append("GO");
-                            sb.Append(Environment.NewLine);
+                            sbtemp.Append(str);
+                            sbtemp.Append(Environment.NewLine);
+                            sbtemp.Append("GO");
+                            sbtemp.Append(Environment.NewLine);
+                        }
+
+                        if (opt.MultipleFiles)
+                        {
+                            System.IO.StreamWriter fs = System.IO.File.CreateText(Path.Combine(opt.OutPut, sp.Name + ".sql"));
+                            fs.Write(sbtemp.ToString());
+                            fs.Close();
+                            sbtemp = null;
+                            sbtemp = new StringBuilder();
                         }
                     }
                 }
+
+                if (!opt.MultipleFiles)
+                    sb.Append(sbtemp);
+                sbtemp = null;
             }
 
             if (opt.Functions || opt.Complete)
             {
-                sb.Append(Environment.NewLine);
-                sb.Append("--FUNCTIONS----------------");
-                sb.Append(Environment.NewLine);
+                if (!opt.MultipleFiles)
+                {
+                    sb.Append(Environment.NewLine);
+                    sb.Append("--FUNCTIONS----------------");
+                    sb.Append(Environment.NewLine);
+                }
+                StringBuilder sbtemp = new StringBuilder();
                 foreach (UserDefinedFunction f in db.UserDefinedFunctions)
                 {
                     if (!f.IsSystemObject)
@@ -117,20 +157,36 @@ namespace SqlScript
                         StringCollection coll = f.Script(options);
                         foreach (string str in coll)
                         {
-                            sb.Append(str);
-                            sb.Append(Environment.NewLine);
-                            sb.Append("GO");
-                            sb.Append(Environment.NewLine);
+                            sbtemp.Append(str);
+                            sbtemp.Append(Environment.NewLine);
+                            sbtemp.Append("GO");
+                            sbtemp.Append(Environment.NewLine);
+                        }
+                        if (opt.MultipleFiles)
+                        {
+                            System.IO.StreamWriter fs = System.IO.File.CreateText(Path.Combine(opt.OutPut, f.Name + ".sql"));
+                            fs.Write(sbtemp.ToString());
+                            fs.Close();
+                            sbtemp = null;
+                            sbtemp = new StringBuilder();
                         }
                     }
                 }
+
+                if (!opt.MultipleFiles)
+                    sb.Append(sbtemp);
+                sbtemp = null;
             }
 
             if (opt.View || opt.Complete)
             {
-                sb.Append(Environment.NewLine);
-                sb.Append("--VIEWS----------------");
-                sb.Append(Environment.NewLine);
+                if (!opt.MultipleFiles)
+                {
+                    sb.Append(Environment.NewLine);
+                    sb.Append("--VIEWS----------------");
+                    sb.Append(Environment.NewLine);
+                }
+                StringBuilder sbtemp = new StringBuilder();
                 foreach (View v in db.Views)
                 {
                     if (!v.IsSystemObject)
@@ -146,17 +202,32 @@ namespace SqlScript
                         StringCollection coll = v.Script(options);
                         foreach (string str in coll)
                         {
-                            sb.Append(str);
-                            sb.Append(Environment.NewLine);
-                            sb.Append("GO");
-                            sb.Append(Environment.NewLine);
+                            sbtemp.Append(str);
+                            sbtemp.Append(Environment.NewLine);
+                            sbtemp.Append("GO");
+                            sbtemp.Append(Environment.NewLine);
+                        }
+                        if (opt.MultipleFiles)
+                        {
+                            System.IO.StreamWriter fs = System.IO.File.CreateText(Path.Combine(opt.OutPut, v.Name + ".sql"));
+                            fs.Write(sbtemp.ToString());
+                            fs.Close();
+                            sbtemp = null;
+                            sbtemp = new StringBuilder();
                         }
                     }
                 }
+                if (!opt.MultipleFiles)
+                    sb.Append(sbtemp);
+                sbtemp = null;
             }
-            System.IO.StreamWriter fs = System.IO.File.CreateText(opt.OutPut);
-            fs.Write(sb.ToString());
-            fs.Close();
+            if (!opt.MultipleFiles)
+            {
+                System.IO.StreamWriter fs = System.IO.File.CreateText(opt.OutPut);
+                fs.Write(sb.ToString());
+                fs.Close();
+            }
+            sb = null;
 
         }
 
