@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="EndpointError" xml:space="preserve">
+    <value>The endpoint is disabled due to improper configuration settings.</value>
+  </data>
+  <data name="StatusRefreshingService" xml:space="preserve">
+    <value>Refreshing service ...</value>
+  </data>
+  <data name="StatusAddingServiceCompleted" xml:space="preserve">
+    <value>Service added successfully.</value>
+  </data>
+  <data name="SecurityWarning" xml:space="preserve">
+    <value>You are about to send information over the network. Insecure bindings or malicious services could allow private information to be viewed by others. Do not try to invoke services you do not trust, and use a secure binding if you are transmitting information you do not want others to see.</value>
+  </data>
+  <data name="FailToRunSystemInfo" xml:space="preserve">
+    <value>Failed to get the system information.</value>
+  </data>
+  <data name="StatusInvokingServiceCompleted" xml:space="preserve">
+    <value>Service invocation completed.</value>
+  </data>
+  <data name="RefreshingAction" xml:space="preserve">
+    <value>Refreshing...</value>
+  </data>
+  <data name="ErrorUnsupportedContract" xml:space="preserve">
+    <value>This service contract is not supported in the WCF Test Client. Refer to product documentation for a list of supported features.</value>
+  </data>
+  <data name="ErrorUnsupportedOperationBecauseOfUnsupportedType" xml:space="preserve">
+    <value>This operation is not supported in the WCF Test Client because it uses type {0}.</value>
+  </data>
+  <data name="StatusRefreshServiceCancelled" xml:space="preserve">
+    <value>Refreshing service was cancelled.</value>
+  </data>
+  <data name="ErrorFailedAddingService" xml:space="preserve">
+    <value>Failed to add a service. Service metadata may not be accessible. Make sure your service is running and exposing metadata.</value>
+  </data>
+  <data name="TypeError" xml:space="preserve">
+    <value>'{0}' is not a valid value for this type</value>
+  </data>
+  <data name="ConfigFileNodeName" xml:space="preserve">
+    <value>Config File</value>
+  </data>
+  <data name="InvalidContractNameAction" xml:space="preserve">
+    <value>To recover, please manually correct client configuration.
+Or restore to default configuration.
+Or check "Always regenerate config when launching services" in the Tools -&gt; Options menu, then refresh the service.</value>
+  </data>
+  <data name="FailedToNavigateForward" xml:space="preserve">
+    <value>Failed to navigate forward. The data set schema may not have enough key constraint applied on the current relation. Please double check the data set schema.</value>
+  </data>
+  <data name="StatusRefreshingServiceCompleted" xml:space="preserve">
+    <value>Service refreshed successfully.</value>
+  </data>
+  <data name="StatusAddingService" xml:space="preserve">
+    <value>Adding service ...</value>
+  </data>
+  <data name="StatusInvokingService" xml:space="preserve">
+    <value>Invoking service ...</value>
+  </data>
+  <data name="TextViewTpText" xml:space="preserve">
+    <value>Text View</value>
+  </data>
+  <data name="InvalidString" xml:space="preserve">
+    <value>String must not be null and must be at least one character long.</value>
+  </data>
+  <data name="InvalidContract" xml:space="preserve">
+    <value>The contract '{0}' in client configuration does not match the name in service contract, or there is no valid method in this contract.</value>
+  </data>
+  <data name="Copyright" xml:space="preserve">
+    <value>© Microsoft Corporation.  All rights reserved.</value>
+  </data>
+  <data name="Company" xml:space="preserve">
+    <value>Microsoft Corporation</value>
+  </data>
+  <data name="ConfigChanging" xml:space="preserve">
+    <value>Client.dll.config in the service node '{0}'</value>
+  </data>
+  <data name="AddServiceTitle" xml:space="preserve">
+    <value>Add Service</value>
+  </data>
+  <data name="InvalidConfig" xml:space="preserve">
+    <value>The config file is invalid. Please make sure it has the correct syntax.</value>
+  </data>
+  <data name="StartSvcConfigEditorFail" xml:space="preserve">
+    <value>Failed to start Service Configuration Editor. Please make sure Microsoft Windows SDK is correctly installed.</value>
+  </data>
+  <data name="FileNotExists" xml:space="preserve">
+    <value>File '{0}' does not exist.</value>
+  </data>
+  <data name="AddingAction" xml:space="preserve">
+    <value>Adding...</value>
+  </data>
+  <data name="ErrorMetadataToolNotFound" xml:space="preserve">
+    <value>The dependent tool 'svcutil.exe' is not found.</value>
+  </data>
+  <data name="ErrorFailedRefreshingService" xml:space="preserve">
+    <value>Failed to refresh the service. Service metadata may not be accessible. Make sure your service is running and exposing metadata.</value>
+  </data>
+  <data name="ProductName" xml:space="preserve">
+    <value>Microsoft WCF Test Client</value>
+  </data>
+  <data name="StatusLoadingConfigCompleted" xml:space="preserve">
+    <value>Configuration loaded successfully.</value>
+  </data>
+  <data name="ErrorMsgCbText" xml:space="preserve">
+    <value>&amp;Wrap</value>
+  </data>
+  <data name="DirectoryNotExist" xml:space="preserve">
+    <value>The directory '{0}' does not exist, please create it and run again.</value>
+  </data>
+  <data name="TypeHeader" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="AssemblyVersion" xml:space="preserve">
+    <value>Version {0}</value>
+  </data>
+  <data name="ErrorSettingsNotAccessible" xml:space="preserve">
+    <value>The option file is not writable, therefore, your settings cannot be saved.</value>
+  </data>
+  <data name="DefaultConfigNotFoundDetail" xml:space="preserve">
+    <value>The default configuration file does not exist. Please refresh your service and try again.</value>
+  </data>
+  <data name="ValueHeader" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="RootNodeName" xml:space="preserve">
+    <value>My Service Projects</value>
+  </data>
+  <data name="ErrorInvalidUrl" xml:space="preserve">
+    <value>URL '{0}' is not a valid URL for WCF Service</value>
+  </data>
+  <data name="StatusRemovingService" xml:space="preserve">
+    <value>Removing service ...</value>
+  </data>
+  <data name="NameHeader" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>About {0}</value>
+  </data>
+  <data name="Usage" xml:space="preserve">
+    <value>Usage:
+WcfTestClient.exe &lt;one mex or wsdl URL&gt; &lt;additional mex or wsdl URL&gt; &lt;additional mex or wsdl URL&gt; …
+WcfTestClient.exe /ProjectPath &lt;Path&gt;
+WcfTestClient.exe /RestoreProjectPath</value>
+  </data>
+  <data name="SvcConfigEditorNotFound" xml:space="preserve">
+    <value>Cannot find Service Configuration Editor. Please make sure Microsoft Windows SDK is correctly installed.</value>
+  </data>
+  <data name="StatusRemovingServiceCompleted" xml:space="preserve">
+    <value>Service removed successfully.</value>
+  </data>
+  <data name="ErrorUnsupportedOperation" xml:space="preserve">
+    <value>This operation is not supported in the WCF Test Client</value>
+  </data>
+  <data name="ViewDataSet" xml:space="preserve">
+    <value>View...</value>
+  </data>
+  <data name="AddServicePrompt" xml:space="preserve">
+    <value>Please enter the endpoint address:</value>
+  </data>
+  <data name="StatusLoadingConfig" xml:space="preserve">
+    <value>Loading configuration ...</value>
+  </data>
+  <data name="InvalidCmdLineSwitch" xml:space="preserve">
+    <value>Invalid command line switch.</value>
+  </data>
+  <data name="HtmlViewTpText" xml:space="preserve">
+    <value>Html View</value>
+  </data>
+  <data name="RenameTestCasePrompt" xml:space="preserve">
+    <value>Please enter test case name:</value>
+  </data>
+  <data name="RemoveServiceWarning" xml:space="preserve">
+    <value>The service will be removed.</value>
+  </data>
+  <data name="StatusLoadingConfigFailed" xml:space="preserve">
+    <value>Failed to load configuration.</value>
+  </data>
+  <data name="RenameTestCaseTitle" xml:space="preserve">
+    <value>Rename Test Case</value>
+  </data>
+  <data name="RefreshServiceWarningTitle" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="EditDataSet" xml:space="preserve">
+    <value>Edit...</value>
+  </data>
+  <data name="DifferentSchemaWarning" xml:space="preserve">
+    <value>You are going to paste a DataSet object with a different schema.</value>
+  </data>
+  <data name="ConfigNotFound" xml:space="preserve">
+    <value>The configuration file cannot be found. Please refresh your service.</value>
+  </data>
+  <data name="CannotCreateFolder" xml:space="preserve">
+    <value>Can not create the folder '{0}', please check if you have proper permissions.</value>
+  </data>
+  <data name="StatusAddingMultipleServicesFailed" xml:space="preserve">
+    <value>Failed to add {0} of {1} services. Service metadata may not be accessible. Make sure your service is running and exposing metadata.</value>
+  </data>
+  <data name="ErrorServiceAlreadyExists" xml:space="preserve">
+    <value>Service already exists in the current workspace</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="StatusReady" xml:space="preserve">
+    <value>Ready</value>
+  </data>
+  <data name="OneWayMessageDisplay" xml:space="preserve">
+    <value>One-way message is successfully delivered to the service side</value>
+  </data>
+  <data name="SecurityWarningTitle" xml:space="preserve">
+    <value>Security Warning</value>
+  </data>
+  <data name="StatusInvokingServiceFailed" xml:space="preserve">
+    <value>Failed to invoke the service. Possible causes: The service is offline or inaccessible; the client-side configuration does not match the proxy; the existing proxy is invalid. Refer to the stack trace for more detail. You can try to recover by starting a new proxy, restoring to default configuration, or refreshing the service.</value>
+  </data>
+  <data name="ErrorServiceMetadataCannotBeRetrieved" xml:space="preserve">
+    <value>The client was unable to retrieve service metadata. Make sure the service is running and exposing metadata.</value>
+  </data>
+  <data name="ProxyCodeNodeName" xml:space="preserve">
+    <value>Proxy Code</value>
+  </data>
+  <data name="ErrorBrowseLocationFormat" xml:space="preserve">
+    <value>"{0} of {1}"</value>
+  </data>
+  <data name="DefaultConfigNotFound" xml:space="preserve">
+    <value>The default configuration file cannot be found.</value>
+  </data>
+  <data name="RefreshServiceWarning" xml:space="preserve">
+    <value>You are about to refresh the service. After refreshing, the service status will be reset. Are you going to continue any way?</value>
+  </data>
+  <data name="ProductDescription" xml:space="preserve">
+    <value>Test client for Windows Communication Foundation services.
+
+Extended by Hernán Javier Hegykozi (hernanjh@gmail.com)</value>
+  </data>
+  <data name="StatusAddServiceCancelled" xml:space="preserve">
+    <value>Adding service was cancelled.</value>
+  </data>
+  <data name="ClosingClientStatus" xml:space="preserve">
+    <value>Closing ...</value>
+  </data>
+</root>
