@@ -1,0 +1,6 @@
+D:\Desarrollo\hernan-project\BIPanel\BIPanel\bin\Debug\BIPanel.dll
+D:\Desarrollo\hernan-project\BIPanel\BIPanel\bin\Debug\BIPanel.pdb
+D:\Desarrollo\hernan-project\BIPanel\BIPanel\obj\Debug\BIPanel.dll
+D:\Desarrollo\hernan-project\BIPanel\BIPanel\obj\Debug\BIPanel.pdb
+D:\Desarrollo\hernan-project\BIPanel\BIPanel\bin\Debug\DotNet.Highcharts.dll
+D:\Desarrollo\hernan-project\BIPanel\BIPanel\obj\Debug\BIPanel.csprojResolveAssemblyReference.cache

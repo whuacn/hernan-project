@@ -9,6 +9,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Presentacion", "http://loca
 	ProjectSection(WebsiteProperties) = preProject
 		UseIISExpress = "true"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		ProjectReferences = "{4382e153-f6e3-4079-9f86-852ee9b14731}|BIPanel.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_34545"
 		Debug.AspNetCompiler.PhysicalPath = "Presentacion\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_34545\"

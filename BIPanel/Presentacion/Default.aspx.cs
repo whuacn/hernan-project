@@ -9,319 +9,138 @@ using DotNet.Highcharts;
 using DotNet.Highcharts.Enums;
 using DotNet.Highcharts.Helpers;
 using DotNet.Highcharts.Options;
+using srt.bipanel.entidades;
+using srt.bipanel.interfaces;
+using srt.bipanel.servicios;
 
 public partial class _Default : System.Web.UI.Page
 {
+    
     protected void Page_Load(object sender, EventArgs e)
     {
-        BasicLine();
-        BasicBar();
-        BasicColumn();
-        BasicGauge();
-        BasicGauge2();
+        AddPanel("Gerencia de Sistemas");
+        AddPanel("Gerencia de Prevención");
+
     }
 
-    void BasicLine()
+    void AddPanel(string area)
     {
+        int count = 0;
 
-        Highcharts chart = new Highcharts("chartLine")
-                        .InitChart(new Chart
-                        {
-                            Type = ChartTypes.Line,
-                            Height = 300,
-                            Width = 705,
-                            BorderRadius = 10,
-                            BorderWidth = 1,
-                            /*MarginRight = 130,
-                            MarginBottom = 25,*/
-                            ClassName = "chart"
-                        })
-                        .SetTitle(new Title
-                        {
-                            Text = "Cantidad de Expedientes asignados", Style = "fontSize:'10pt'"
-                        })
-                        .SetXAxis(new XAxis { Categories = new string[] { "Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic" } })
-                        .SetYAxis(new YAxis { Title = new YAxisTitle { Text = "Expedientes" }})
-                        .SetTooltip(new Tooltip
-                        {
-                            Formatter = @"function() {
-                                        return '<b>'+ this.series.name +'</b><br/>'+
-                                    this.x +': '+ this.y +' Expedientes';
-                                }"
-                        })
-                        .SetLegend(new Legend
-                        {
-                            Enabled = false
-                            /*Layout = Layouts.Vertical,
-                            Align = HorizontalAligns.Right,
-                            VerticalAlign = VerticalAligns.Top,
-                            X = -10,
-                            Y = 100,
-                            BorderWidth = 0*/
-                        })
-                        .SetSeries(new[]
-                            {
-                                new Series { Name = "Expedientes", Data = new Data(new object[] { 8,5,25,26,45,18,16,9,15,11,23,18 }) }//,
-                                /*new Series { Name = "New York", Data = new Data(ChartsData.NewYorkData) },
-                                new Series { Name = "Berlin", Data = new Data(ChartsData.BerlinData) },
-                                new Series { Name = "London", Data = new Data(ChartsData.LondonData) }*/
-                            }
-                        );
-        ltrChart.Text = chart.ToHtmlString();
+        System.Web.UI.HtmlControls.HtmlGenericControl dynDiv = new System.Web.UI.HtmlControls.HtmlGenericControl("DIV");
+        dynDiv.Attributes.Add("class","accordion");
+
+        System.Web.UI.HtmlControls.HtmlGenericControl dynDiv2 = new System.Web.UI.HtmlControls.HtmlGenericControl("DIV");
+        dynDiv2.InnerHtml = "<b>" + area + "</b>";
+        dynDiv.Controls.Add(dynDiv2);
+
+        System.Web.UI.HtmlControls.HtmlGenericControl dynDiv3 = new System.Web.UI.HtmlControls.HtmlGenericControl("DIV");
+
+        AddGauge(Gauge1(), dynDiv3, count);
+        AddGauge(Gauge2(), dynDiv3, count);
+        AddGauge(Gauge3(), dynDiv3, count);
+        AddGauge(Gauge4(), dynDiv3, count);
+        AddGauge(Gauge2(), dynDiv3, count);
+        AddGauge(Gauge1(), dynDiv3, count);
+
+        dynDiv.Controls.Add(dynDiv3);
+
+        DivContent.Controls.Add(dynDiv);
+
     }
-
-    void BasicBar()
+    IIndicador Gauge1()
     {
+        IIndicador indicador = FactoryBIPanel.Indicador();
+        indicador.Titulo = "Cantidad de Expedientes asignados";
+        indicador.SubTitulo = "Depto. de Desarrollo de Aplicaciones";
+        indicador.Verde = 100;
+        indicador.Rojo = 50;
+        indicador.Ascendente = false;
+        indicador.Periodo = EPeriodo.Mensual;
+        indicador.UnidadMedida = "Expedientes";
 
-        Highcharts chart = new Highcharts("chartBar")
-                        .InitChart(new Chart
-                        {
-                            Type = ChartTypes.Bar,
-                            Height = 300,
-                            Width = 350,
-                            BorderRadius = 10,
-                            BorderWidth = 1,
-                            /*MarginRight = 130,
-                            MarginBottom = 25,*/
-                            ClassName = "chart"
-                        })
-                        .SetTitle(new Title
-                        {
-                            Text = "Cantidad de Expedientes asignados",
-                            Style = "fontSize:'10pt'"
-                        })
-                        .SetXAxis(new XAxis { Categories = new string[] { "Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic" } })
-                        .SetYAxis(new YAxis { Title = new YAxisTitle { Text = "Expedientes" } })
-                        .SetTooltip(new Tooltip
-                        {
-                            Formatter = @"function() {
-                                        return '<b>'+ this.series.name +'</b><br/>'+
-                                    this.x +': '+ this.y +' Expedientes';
-                                }"
-                        })
-                        .SetLegend(new Legend
-                        {
-                            Enabled = false
-                            /*Layout = Layouts.Vertical,
-                            Align = HorizontalAligns.Right,
-                            VerticalAlign = VerticalAligns.Top,
-                            X = -10,
-                            Y = 100,
-                            BorderWidth = 0*/
-                        })
-                        .SetSeries(new[]
-                            {
-                                new Series { Name = "Expedientes", Data = new Data(new object[] { 8,5,25,26,45,18,16,9,15,11,23,18 }) }//,
-                                /*new Series { Name = "New York", Data = new Data(ChartsData.NewYorkData) },
-                                new Series { Name = "Berlin", Data = new Data(ChartsData.BerlinData) },
-                                new Series { Name = "London", Data = new Data(ChartsData.LondonData) }*/
-                            }
-                        );
-        ltrChart2.Text = chart.ToHtmlString();
+        IValorIndicador valor1 = FactoryBIPanel.ValorIndicador();
+        valor1.Valor = 45;
+        indicador.Valores.Add(valor1);
+
+        return indicador;
     }
-
-    void BasicColumn()
+    IIndicador Gauge2()
     {
+        IIndicador indicador = FactoryBIPanel.Indicador();
+        indicador.Titulo = "Tiempo de Respuesta de Expedientes";
+        indicador.SubTitulo = "Depto. de Desarrollo de Aplicaciones";
+        indicador.Verde = 10;
+        indicador.Rojo = 25;
+        indicador.Ascendente = true;
+        indicador.Periodo = EPeriodo.Mensual;
+        indicador.UnidadMedida = "Horas";
 
-        Highcharts chart = new Highcharts("chartCol")
-                        .InitChart(new Chart
-                        {
-                            Type = ChartTypes.Column,
-                            Height= 300,
-                            Width = 350,
-                            BorderRadius = 10,
-                            BorderWidth = 1,
-                            /*MarginRight = 25,
-                            MarginBottom = 25,*/
-                            ClassName = "chart"
-                        })
-                        .SetTitle(new Title
-                        {
-                            Text = "Cantidad de Expedientes asignados",
-                            Style = "fontSize:'10pt'"
-                        })
-                        .SetXAxis(new XAxis { Categories = new string[] { "Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic" } })
-                        .SetYAxis(new YAxis { Title = new YAxisTitle { Text = "Expedientes" } })
-                        .SetTooltip(new Tooltip
-                        {
-                            Formatter = @"function() {
-                                        return '<b>'+ this.series.name +'</b><br/>'+
-                                    this.x +': '+ this.y +' Expedientes';
-                                }"
-                        })
-                        .SetLegend(new Legend
-                        {
-                            Enabled = false
-                            /*Layout = Layouts.Vertical,
-                            Align = HorizontalAligns.Right,
-                            VerticalAlign = VerticalAligns.Top,
-                            X = -10,
-                            Y = 100,
-                            BorderWidth = 0*/
-                        })
-                        .SetSeries(new[]
-                            {
-                                new Series { Name = "Expedientes", Data = new Data(new object[] { 8,5,25,26,45,18,16,9,15,11,23,18 }) }//,
-                                /*new Series { Name = "New York", Data = new Data(ChartsData.NewYorkData) },
-                                new Series { Name = "Berlin", Data = new Data(ChartsData.BerlinData) },
-                                new Series { Name = "London", Data = new Data(ChartsData.LondonData) }*/
-                            }
-                        );
-        ltrChart3.Text = chart.ToHtmlString();
+        IValorIndicador valor1 = FactoryBIPanel.ValorIndicador();
+        valor1.Valor = 5;
+        indicador.Valores.Add(valor1);
+
+        return indicador;
     }
-    void BasicGauge()
+    IIndicador Gauge3()
     {
-        Highcharts chart = new Highcharts("chartGauge")
-                        .InitChart(new Chart { 
-                            Type = ChartTypes.Solidgauge, 
-                            Height = 200, 
-                            Width = 350,
-                            BorderRadius = 10,
-                            BorderWidth = 1, })
-                        .SetTitle(new Title { Text = "Cantidad de Expedientes asignados", Style = "fontSize:'10pt'" })
-                        .SetPane(new Pane
-                        {
-                            Center = new[] { new PercentageOrPixel(50, true), new PercentageOrPixel(85, true) },
-                            Size = new PercentageOrPixel(170, true),
-                            StartAngle = -90,
-                            EndAngle = 90,
-                            Background = new[] 
-                            { 
-                                new BackgroundObject
-                                { 
-                                    BackgroundColor = new BackColorOrGradient(ColorTranslator.FromHtml("#EEE")),
-                                    InnerRadius = new PercentageOrPixel(60, true),
-                                    OuterRadius = new PercentageOrPixel(100, true),                                   
-                                    Shape = Shapes.Arc
-                                }
-                            }
-                        })
-                        .SetTooltip(new Tooltip { Enabled = false})
-                        /*.SetTooltip(new Tooltip
-                        {
-                            Formatter = @"function() {
-                                        return '<b>'+ this.series.name +'</b><br/>'+
-                                    this.x +': '+ this.y +' Expedientes';
-                                }"
-                        })*/
-                        .SetYAxis(new YAxis
-                        {
-                            LineWidth = 0,
-                            MinorTickInterval = null,
-                            TickPixelInterval = 400,
-                            TickWidth = 0,
-                            Labels = new YAxisLabels { Y = 16 },
-                            Min = 200,
-                            Max = 0,
-                            Title = new YAxisTitle { Text = "" },
-                            Stops = new Gradient
-                            {
-                                Stops = new object[,]
-                                {
-                                    { 0.1, ColorTranslator.FromHtml("#55BF3B") },
-                                    { 0.5, ColorTranslator.FromHtml("#DDDF0D") },
-                                    { 0.9, ColorTranslator.FromHtml("#DF5353") }
-                                }
-                            }
-                        })
-                        .SetPlotOptions(new PlotOptions
-                        {
-                            Solidgauge = new PlotOptionsSolidgauge
-                            {
-                                DataLabels = new PlotOptionsSolidgaugeDataLabels
-                                {
-                                    Y = 5,
-                                    BorderWidth = 0,
-                                    UseHTML = true,
-                                    Format = "<div style=\"text-align:center\"><span style=\"font-size:15px;color:black\">{y}</span><br/><span style=\"font-size:12px;color:silver\">Expedientes<br/>Asignados</span></div>"
-                                }
-                            }
-                        })
-                        .SetSeries(new Series
-                        {
-                            Name = "Cantidad",
-                            Data = new Data(new object[] { 30 }),
-                        });
+        IIndicador indicador = FactoryBIPanel.Indicador();
+        indicador.Titulo = "Cantidad de Llamadas Atendidas";
+        indicador.SubTitulo = "Depto. de Desarrollo de Aplicaciones";
+        indicador.Verde = 250;
+        indicador.Rojo = 100;
+        indicador.Ascendente = false;
+        indicador.Periodo = EPeriodo.Mensual;
+        indicador.UnidadMedida = "Llamadas";
 
-        ltrChart4.Text = chart.ToHtmlString();
+        IValorIndicador valor1 = FactoryBIPanel.ValorIndicador();
+        valor1.Valor = 200;
+        indicador.Valores.Add(valor1);
+
+        return indicador;
+
     }
-
-    void BasicGauge2()
+    IIndicador Gauge4()
     {
-        Highcharts chart = new Highcharts("chartGauge2")
-                        .InitChart(new Chart
-                        {
-                            Type = ChartTypes.Solidgauge,
-                            Height = 200,
-                            Width = 350,
-                            BorderRadius = 10,
-                            BorderWidth = 1,
-                        })
-                        .SetTitle(new Title { Text = "Tiempo de Respuesta de Expedientes", Style = "fontSize:'10pt'" })
-                        .SetPane(new Pane
-                        {
-                            Center = new[] { new PercentageOrPixel(50, true), new PercentageOrPixel(85, true) },
-                            Size = new PercentageOrPixel(170, true),
-                            StartAngle = -90,
-                            EndAngle = 90,
-                            Background = new[] 
-                            { 
-                                new BackgroundObject
-                                { 
-                                    BackgroundColor = new BackColorOrGradient(ColorTranslator.FromHtml("#EEE")),
-                                    InnerRadius = new PercentageOrPixel(60, true),
-                                    OuterRadius = new PercentageOrPixel(100, true),                                   
-                                    Shape = Shapes.Arc
-                                }
-                            }
-                        })
-                        .SetTooltip(new Tooltip { Enabled = false })
-            /*.SetTooltip(new Tooltip
-            {
-                Formatter = @"function() {
-                            return '<b>'+ this.series.name +'</b><br/>'+
-                        this.x +': '+ this.y +' Expedientes';
-                    }"
-            })*/
-                        .SetYAxis(new YAxis
-                        {
-                            LineWidth = 0,
-                            MinorTickInterval = null,
-                            TickPixelInterval = 400,
-                            TickWidth = 0,
-                            Labels = new YAxisLabels { Y = 16 },
-                            Min = 0,
-                            Max = 48,
-                            Title = new YAxisTitle { Text = "" },
-                            Stops = new Gradient
-                            {
-                                Stops = new object[,]
-                                {
-                                    { 0.1, ColorTranslator.FromHtml("#55BF3B") },
-                                    { 0.5, ColorTranslator.FromHtml("#DDDF0D") },
-                                    { 0.9, ColorTranslator.FromHtml("#DF5353") }
-                                }
-                            }
-                        })
-                        .SetPlotOptions(new PlotOptions
-                        {
-                            Solidgauge = new PlotOptionsSolidgauge
-                            {
-                                DataLabels = new PlotOptionsSolidgaugeDataLabels
-                                {
-                                    Y = 5,
-                                    BorderWidth = 0,
-                                    UseHTML = true,
-                                    Format = "<div style=\"text-align:center\"><span style=\"font-size:15px;color:black\">{y}</span><br/><span style=\"font-size:12px;color:silver\">Horas</span></div>"
-                                }
-                            }
-                        })
-                        .SetSeries(new Series
-                        {
-                            Name = "Cantidad",
-                            Data = new Data(new object[] { 12 }),
-                        });
+        IIndicador indicador = FactoryBIPanel.Indicador();
+        indicador.Titulo = "Cantidad de Reclamos Solucionados";
+        indicador.SubTitulo = "Depto. de Desarrollo de Aplicaciones";
+        indicador.Verde = 250;
+        indicador.Rojo = 100;
+        indicador.Ascendente = false;
+        indicador.Periodo = EPeriodo.Mensual;
+        indicador.UnidadMedida = "Reclamos";
 
-        ltrChart5.Text = chart.ToHtmlString();
+        IValorIndicador valor1 = FactoryBIPanel.ValorIndicador();
+        valor1.Valor = 260;
+        indicador.Valores.Add(valor1);
+
+        return indicador;
+
     }
+
+    void AddGauge(IIndicador indicador, System.Web.UI.HtmlControls.HtmlGenericControl div, int count)
+    {
+        count++;
+
+        if (count > 3)
+        {
+            div.Controls.Add(new LiteralControl("<br />"));
+            count = 1;
+        }
+
+        System.Web.UI.HtmlControls.HtmlGenericControl dynDiv = new System.Web.UI.HtmlControls.HtmlGenericControl("DIV");
+        dynDiv.ID = "dynDiv" + DateTime.Now.Ticks.ToString();
+        dynDiv.Style.Add(HtmlTextWriterStyle.Display, "inline-block");
+
+        Literal ctrlChart = new Literal();
+        ctrlChart.ID = "ltrChart" + DateTime.Now.Ticks.ToString();
+        ctrlChart.Text = GestorGrafico.GetInstance().CreateGauge(indicador);
+
+        dynDiv.Controls.Add(ctrlChart);
+
+        div.Controls.Add(dynDiv);
+    }
+
+    
 }
