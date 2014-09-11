@@ -8,7 +8,7 @@
         <Id>hernanhegykozi@gmail.com</Id>
         <Name>SRT</Name>
     </UseGoogleCalendar>
-    <SyncEveryHour>true</SyncEveryHour>
+    <SyncEveryHour>false</SyncEveryHour>
     <ShowBubbleTooltipWhenSyncing>true</ShowBubbleTooltipWhenSyncing>
     <StartInTray>false</StartInTray>
     <MinimizeToTray>true</MinimizeToTray>
