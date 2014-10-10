@@ -141,7 +141,7 @@ namespace PDFLive
             docStream = new MemoryStream();
             writer = PdfWriter.GetInstance(doc, docStream);
             //writer.CompressionLevel = PdfStream.BEST_COMPRESSION;
-            encryptPdf();
+            //encryptPdf();
             doc.Open();
             writer.Info.Merge(Dictionary);
             Merge(content);
@@ -314,31 +314,30 @@ namespace PDFLive
 
                             float textAngle = 45;
                             PdfGState gstate = new PdfGState();
-                            gstate.FillOpacity = 0.1f;
-                            gstate.StrokeOpacity = 0.1f;
+                            gstate.FillOpacity = 0.2f;
+                            gstate.StrokeOpacity = 0.2f;
 
                             pdfPageContents.SetGState(gstate);
-                            pdfPageContents.BeginText();
+                            
                             BaseFont baseFont = BaseFont.CreateFont(fuente, BaseFont.WINANSI, BaseFont.EMBEDDED);
                             pdfPageContents.SetFontAndSize(baseFont, size);
                             BaseColor c = new BaseColor(System.Drawing.ColorTranslator.FromHtml(color).ToArgb());
                             pdfPageContents.SetColorFill(c);
 
-                           
-                            var x = (pageSize.Width) / 2;
-                            var y = (pageSize.Height) / 2;
-
-                            //float fw = getTextheight(baseFont, size, watermarkText);
-                           // x = x - (fw / 2);
-                           /* Type1Font baseFont2 = baseFont as Type1Font;
-                            if (baseFont2 != null)
-                            { 
-                                x = x + baseFont2.llx;
-                                y = y + baseFont2.lly;
-                            }*/
-
+                            float x, y = 0;
+                            if (pageSize.Width < pageSize.Height)
+                            {
+                                x = 100;
+                                y = ((pageSize.Height - pageSize.Width) / 2);
+                            }
+                            else
+                            {
+                                y = 25;
+                                x = ((pageSize.Width - pageSize.Height) / 2);
+                            }
+                            
+                            pdfPageContents.BeginText();
                             pdfPageContents.ShowTextAligned(PdfContentByte.ALIGN_CENTER, watermarkText, x, y, textAngle);
-
                             pdfPageContents.EndText();
                         }
                         pdfStamper.FormFlattening = true;
@@ -351,6 +350,12 @@ namespace PDFLive
             addHeader("WaterMarkText", watermarkText);
         }
 
+        public float getTextheight(BaseFont baseFont, float fontSize, string text)
+        {
+            float ascend = baseFont.GetAscentPoint(text, fontSize);
+            float descend = baseFont.GetDescentPoint(text, fontSize);
+            return ascend - descend;
+        }
 
         /// <summary>
         /// Inserta texto en todas las paginas del PDF abierto

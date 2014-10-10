@@ -20,3 +20,14 @@ C:\Users\hhegykozi\Desktop\PDFLive\PDFLiveTest\obj\Debug\PDFLiveTest.csprojResol
 C:\Users\hhegykozi\Desktop\PDFLive\PDFLiveTest\obj\Debug\PDFLiveTest.PDF2.resources
 C:\Users\hhegykozi\Desktop\PDFLive\PDFLiveTest\obj\Debug\PDFLiveTest.Properties.Resources.resources
 C:\Users\hhegykozi\Desktop\PDFLive\PDFLiveTest\obj\Debug\PDFLiveTest.csproj.GenerateResource.Cache
+D:\Desarrollo\hernan-project\PDFLive\PDFLiveTest\bin\Debug\PDFLiveTest.exe.config
+D:\Desarrollo\hernan-project\PDFLive\PDFLiveTest\obj\Debug\PDFLiveTest.exe
+D:\Desarrollo\hernan-project\PDFLive\PDFLiveTest\obj\Debug\PDFLiveTest.pdb
+D:\Desarrollo\hernan-project\PDFLive\PDFLiveTest\bin\Debug\PDFLiveTest.exe
+D:\Desarrollo\hernan-project\PDFLive\PDFLiveTest\bin\Debug\PDFLiveTest.pdb
+D:\Desarrollo\hernan-project\PDFLive\PDFLiveTest\bin\Debug\PDFLive.dll
+D:\Desarrollo\hernan-project\PDFLive\PDFLiveTest\bin\Debug\PDFLive.pdb
+D:\Desarrollo\hernan-project\PDFLive\PDFLiveTest\obj\Debug\PDFLiveTest.csprojResolveAssemblyReference.cache
+D:\Desarrollo\hernan-project\PDFLive\PDFLiveTest\obj\Debug\PDFLiveTest.PDF2.resources
+D:\Desarrollo\hernan-project\PDFLive\PDFLiveTest\obj\Debug\PDFLiveTest.Properties.Resources.resources
+D:\Desarrollo\hernan-project\PDFLive\PDFLiveTest\obj\Debug\PDFLiveTest.csproj.GenerateResource.Cache
