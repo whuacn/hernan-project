@@ -73,7 +73,13 @@ namespace iTextSharp.text.pdf {
         
         /** Holds value of property fixedHeight. */
         private float fixedHeight = 0;
-        
+
+        /**ADD HH Si es un TH. */
+        private bool isth = false;
+
+        /**ADD HH Si se definió width de las columnas*/
+        private float csswidth = 0;
+
         /** Holds value of property noWrap. */
         private bool noWrap = false;
         
@@ -221,6 +227,8 @@ namespace iTextSharp.text.pdf {
             paddingBottom = cell.paddingBottom;
             phrase = cell.phrase;
             fixedHeight = cell.fixedHeight;
+            isth = cell.isth;
+            csswidth = cell.csswidth;
             minimumHeight = cell.minimumHeight;
             noWrap = cell.noWrap;
             colspan = cell.colspan;
@@ -505,7 +513,35 @@ namespace iTextSharp.text.pdf {
                 minimumHeight = 0;
             }
         }
-        
+
+        // ADD HH
+        public bool isTH
+        {
+            get
+            {
+                return isth;
+            }
+            set
+            {
+                isth = value;
+
+            }
+        }
+
+        // ADD HH
+        public float CssWidth
+        {
+            get
+            {
+                return csswidth;
+            }
+            set
+            {
+                csswidth = value;
+
+            }
+        }
+
         /**
         * Tells you whether the cell has a fixed height.
         * 

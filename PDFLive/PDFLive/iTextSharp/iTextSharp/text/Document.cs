@@ -116,19 +116,19 @@ namespace iTextSharp.text {
         // membervariables concerning the layout
 
         ///<summary> The size of the page. </summary>
-        protected Rectangle pageSize;
+        public Rectangle pageSize;
 
         ///<summary> margin in x direction starting from the left </summary>
-        protected float marginLeft = 0;
+        public float marginLeft = 0;
 
         ///<summary> margin in x direction starting from the right </summary>
-        protected float marginRight = 0;
+        public float marginRight = 0;
 
         ///<summary> margin in y direction starting from the top </summary>
-        protected float marginTop = 0;
+        public float marginTop = 0;
 
         ///<summary> margin in y direction starting from the bottom </summary>
-        protected float marginBottom = 0;
+        public float marginBottom = 0;
 
         protected bool marginMirroring = false;
 

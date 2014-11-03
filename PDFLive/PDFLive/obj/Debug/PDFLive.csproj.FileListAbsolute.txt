@@ -13,8 +13,8 @@ C:\Users\hhegykozi\Desktop\PDFLive\PDFLive\obj\Debug\PDFLive.pdb
 E:\DESARROLLO\hernan-project\PDFLive\PDFLive\obj\Debug\PDFLive.csprojResolveAssemblyReference.cache
 D:\Desarrollo\hernan-project\PDFLive\PDFLive\bin\Debug\PDFLive.dll
 D:\Desarrollo\hernan-project\PDFLive\PDFLive\bin\Debug\PDFLive.pdb
-D:\Desarrollo\hernan-project\PDFLive\PDFLive\obj\Debug\PDFLive.csprojResolveAssemblyReference.cache
 D:\Desarrollo\hernan-project\PDFLive\PDFLive\obj\Debug\PDFLive.Properties.Resources.resources
 D:\Desarrollo\hernan-project\PDFLive\PDFLive\obj\Debug\PDFLive.csproj.GenerateResource.Cache
 D:\Desarrollo\hernan-project\PDFLive\PDFLive\obj\Debug\PDFLive.dll
 D:\Desarrollo\hernan-project\PDFLive\PDFLive\obj\Debug\PDFLive.pdb
+D:\Desarrollo\hernan-project\PDFLive\PDFLive\obj\Debug\PDFLive.csprojResolveAssemblyReference.cache

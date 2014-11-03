@@ -102,6 +102,10 @@ namespace iTextSharp.text.html.simpleparser {
          */
 	    virtual public PdfPCell CreatePdfPCell(String tag, ChainedProperties chain) {
 		    PdfPCell cell = new PdfPCell((Phrase)null);
+            // ADD HH
+            if (tag.Equals("th"))            
+                cell.isTH = true;
+            
             // colspan
 		    String value = chain[HtmlTags.COLSPAN];
             if (value != null)
@@ -127,7 +131,7 @@ namespace iTextSharp.text.html.simpleparser {
             value = chain[HtmlTags.BORDER];
             float border = 0;
             if (value != null)
-                border = float.Parse(value, CultureInfo.InvariantCulture);
+                border = float.Parse(ClearMedida(value), CultureInfo.InvariantCulture);
             cell.BorderWidth = border;
             // cellpadding
             value = chain[HtmlTags.CELLPADDING];
@@ -137,8 +141,162 @@ namespace iTextSharp.text.html.simpleparser {
             // background color
             value = chain[HtmlTags.BGCOLOR];
             cell.BackgroundColor = HtmlUtilities.DecodeColor(value);
+
+            try
+            {
+                value = chain["cellpadding"];
+                if (value != null)
+                    cell.Padding = float.Parse(value, System.Globalization.NumberFormatInfo.InvariantInfo);
+                cell.UseDescender = true;
+            }
+            catch { }
+            try
+            {
+                value = chain["background-color"];
+                cell.BackgroundColor = HtmlUtilities.DecodeColor(value);
+            }
+            catch { }
+            try
+            {
+                /*Bordes*/
+                value = chain["border-color"];
+                if (value != null)
+                    cell.BorderColor = HtmlUtilities.DecodeColor(value);
+            }
+            catch { }
+            try
+            {
+                value = chain["border-bottom-color"];
+                if (value != null)
+                    cell.BorderColorBottom = HtmlUtilities.DecodeColor(value);
+            }
+            catch { }
+            try
+            {
+                value = chain["border-left-color"];
+                if (value != null)
+                    cell.BorderColorLeft = HtmlUtilities.DecodeColor(value);
+            }
+            catch { }
+            try
+            {
+                value = chain["border-right-color"];
+                if (value != null)
+                    cell.BorderColorRight = HtmlUtilities.DecodeColor(value);
+            }
+            catch { }
+            try
+            {
+                value = chain["border-top-color"];
+                if (value != null)
+                    cell.BorderColorTop = HtmlUtilities.DecodeColor(value);
+            }
+            catch { }
+            try
+            {
+                value = chain["border-width"];
+                if (value != null)
+                    cell.BorderWidth = (float)Convert.ToDecimal(ClearMedida(value));
+            }
+            catch { }
+            try
+            {
+                value = chain["border-bottom-width"];
+                if (value != null)
+                    cell.BorderWidthBottom = (float)Convert.ToDecimal(ClearMedida(value));
+            }
+            catch { }
+            try
+            {
+                value = chain["border-left-width"];
+                if (value != null)
+                    cell.BorderWidthLeft = (float)Convert.ToDecimal(ClearMedida(value));
+            }
+            catch { }
+            try
+            {
+                value = chain["border-right-width"];
+                if (value != null)
+                    cell.BorderWidthRight = (float)Convert.ToDecimal(ClearMedida(value));
+            }
+            catch { }
+            try
+            {
+                value = chain["border-top-width"];
+                if (value != null)
+                    cell.BorderWidthTop = (float)Convert.ToDecimal(ClearMedida(value));
+            }
+            catch { }
+            try
+            {
+                value = chain["height"];
+                if (value != null)
+                {
+                    cell.MinimumHeight = (float)Convert.ToDecimal(ClearMedida(value));
+                }
+            }
+            catch { }
+            /*padding*/
+            try
+            {
+                value = chain["padding"];
+                if (value != null)
+                    cell.Padding = (float)Convert.ToDecimal(ClearMedida(value));
+            }
+            catch { }
+            try
+            {
+                value = chain["padding-bottom"];
+                if (value != null)
+                    cell.PaddingBottom = (float)Convert.ToDecimal(ClearMedida(value));
+            }
+            catch { }
+            try
+            {
+                value = chain["padding-left"];
+                if (value != null)
+                    cell.PaddingLeft = (float)Convert.ToDecimal(ClearMedida(value));
+            }
+            catch { }
+            try
+            {
+                value = chain["padding-right"];
+                if (value != null)
+                    cell.PaddingRight = (float)Convert.ToDecimal(ClearMedida(value));
+            }
+            catch { }
+            try
+            {
+                value = chain["padding-top"];
+                if (value != null)
+                    cell.PaddingTop = (float)Convert.ToDecimal(ClearMedida(value));
+            }
+            catch { }
+            /*fin padding*/
+
+            try
+            {
+                value = chain["width"];
+                if (value != null)
+                {
+                    if (value != "100%")
+                        cell.CssWidth = (float)Convert.ToDecimal(ClearMedida(value));
+                }
+            }
+            catch { }
             return cell;
 	    }
+
+        public String ClearMedida(string str)
+        {
+            if (str.EndsWith("px"))
+                str = str.Substring(0, str.Length - 2);
+
+            if (str.EndsWith("%"))
+                str = str.Substring(0, str.Length - 1);
+
+            return str;
+        }
 
         virtual public bool Add(IElement o) {
             cell.AddElement(o);

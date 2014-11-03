@@ -91,6 +91,7 @@ namespace iTextSharp.text.html.simpleparser {
            this[HtmlTags.TR] = TR;
            this[HtmlTags.U] = EM_STRONG_STRIKE_SUP_SUP;
            this[HtmlTags.UL] = UL_OL;
+           this[HtmlTags.NEWPAGE] = NEWPAGE;
         }
 
         /**
@@ -172,6 +173,30 @@ namespace iTextSharp.text.html.simpleparser {
              * @see com.itextpdf.text.html.simpleparser.HTMLTagProcessors#endElement(com.itextpdf.text.html.simpleparser.HTMLWorker, java.lang.String)
              */
             virtual public void EndElement(HTMLWorker worker, String tag) {
+            }
+
+        }
+
+        /**
+         * ADD HH
+         * Object that processes the newpage tag.
+         */
+        public static IHTMLTagProcessor NEWPAGE = new HTMLTagProcessor_NEWPAGE();
+
+        private class HTMLTagProcessor_NEWPAGE : IHTMLTagProcessor
+        {
+            /**
+             * @see com.itextpdf.text.html.simpleparser.HTMLTagProcessors#startElement(com.itextpdf.text.html.simpleparser.HTMLWorker, java.lang.String, java.util.Map)
+             */
+            virtual public void StartElement(HTMLWorker worker, String tag, IDictionary<String, String> attrs)
+            {
+                worker.NewPage();
+            }
+            /**
+             * @see com.itextpdf.text.html.simpleparser.HTMLTagProcessors#endElement(com.itextpdf.text.html.simpleparser.HTMLWorker, java.lang.String)
+             */
+            virtual public void EndElement(HTMLWorker worker, String tag)
+            {
             }
 
         }

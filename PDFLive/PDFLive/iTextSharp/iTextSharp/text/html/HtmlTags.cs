@@ -183,6 +183,8 @@ namespace iTextSharp.text.html {
 	     */
 	    public const String UL = "ul";
 
+        //ADD HH
+        public const String NEWPAGE = "newpage";
 	    // attributes (some are not real HTML attributes!)
 
 	    /** name of an attribute */

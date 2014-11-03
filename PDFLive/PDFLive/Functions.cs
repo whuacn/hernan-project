@@ -41,5 +41,16 @@ namespace PDFLive
             //CONVIERTE MILIMETROS A POINTS
             return (float)(((num / 10) / 2.54) * 72);
         }
+
+        internal static void Errorhandle(String mensaje, Exception e)
+        {
+            Console.WriteLine("Message:    {0}\n", e.Message);
+            Console.WriteLine("Source:     {0}\n", e.Source);
+            Console.WriteLine("TargetSite: {0}\n", e.TargetSite.Name);
+            Console.WriteLine("StackTrace: {0}\n", e.StackTrace);
+
+            throw new Exception(mensaje, e);
+
+        }
     }
 }

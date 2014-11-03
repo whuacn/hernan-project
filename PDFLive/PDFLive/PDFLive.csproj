@@ -48,9 +48,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConvertHTML\EventPage.cs" />
+    <Compile Include="DOL\DBase\DIBaseVisitor.cs" />
+    <Compile Include="DOL\DBase\DIDiagnosisable.cs" />
+    <Compile Include="DOL\DBase\DIVisitor.cs" />
+    <Compile Include="DOL\DHtml\DCssResolver\DCssProperty.cs" />
+    <Compile Include="DOL\DHtml\DCssResolver\DCssPropertyCollection.cs" />
+    <Compile Include="DOL\DHtml\DCssResolver\DCssResolver.cs" />
+    <Compile Include="DOL\DHtml\DCssResolver\DCssSelector.cs" />
+    <Compile Include="DOL\DHtml\DCssResolver\DCssSimpleSelector.cs" />
+    <Compile Include="DOL\DHtml\DCssResolver\DCssSpecificity.cs" />
+    <Compile Include="DOL\DHtml\DHtmlParser\DHtmlAttribute.cs" />
+    <Compile Include="DOL\DHtml\DHtmlParser\DHtmlAttributeCollection.cs" />
+    <Compile Include="DOL\DHtml\DHtmlParser\DHtmlDocument.cs" />
+    <Compile Include="DOL\DHtml\DHtmlParser\DHtmlGeneralParser.cs" />
+    <Compile Include="DOL\DHtml\DHtmlParser\DHtmlNodeCollection.cs" />
+    <Compile Include="DOL\DHtml\DHtmlParser\DIHtmlNodeHasAttribute.cs" />
+    <Compile Include="DOL\DHtml\DHtmlParser\DIHtmlParser.cs" />
+    <Compile Include="DOL\DHtml\DHtmlParser\Node\DHtmlComment.cs" />
+    <Compile Include="DOL\DHtml\DHtmlParser\Node\DHtmlElement.cs" />
+    <Compile Include="DOL\DHtml\DHtmlParser\Node\DHtmlNode.cs" />
+    <Compile Include="DOL\DHtml\DHtmlParser\Node\DHtmlProcessingInstruction.cs" />
+    <Compile Include="DOL\DHtml\DHtmlParser\Node\DHtmlScript.cs" />
+    <Compile Include="DOL\DHtml\DHtmlParser\Node\DHtmlStyle.cs" />
+    <Compile Include="DOL\DHtml\DHtmlParser\Node\DHtmlText.cs" />
+    <Compile Include="DOL\DHtml\DHtmlTextProcessor.cs" />
     <Compile Include="Functions.cs" />
-    <Compile Include="HTMLConvert\HTMLConvert.cs" />
-    <Compile Include="HTMLConvert\IHTMLConvert.cs" />
+    <Compile Include="ConvertHTML\HTMLConvert.cs" />
+    <Compile Include="ConvertHTML\HTMLFunctions.cs" />
+    <Compile Include="ConvertHTML\IHTMLConvert.cs" />
+    <Compile Include="ConvertHTML\Structures.cs" />
     <Compile Include="iTextSharp\iTextSharp\awt\geom\AffineTransform.cs" />
     <Compile Include="iTextSharp\iTextSharp\awt\geom\Point.cs" />
     <Compile Include="iTextSharp\iTextSharp\awt\geom\Point2D.cs" />
@@ -1801,6 +1828,25 @@
     <EmbeddedResource Include="iTextSharp\iTextSharp\text\pdf\fonts\Times-Italic.afm" />
     <EmbeddedResource Include="iTextSharp\iTextSharp\text\pdf\fonts\Times-Roman.afm" />
     <EmbeddedResource Include="iTextSharp\iTextSharp\text\pdf\fonts\ZapfDingbats.afm" />
+    <EmbeddedResource Include="iTextSharp\iTextSharp\text\pdf\fonts\Arial-Bold.afm" />
+    <EmbeddedResource Include="iTextSharp\iTextSharp\text\pdf\fonts\Arial-BoldOblique.afm" />
+    <EmbeddedResource Include="iTextSharp\iTextSharp\text\pdf\fonts\Arial-Oblique.afm" />
+    <EmbeddedResource Include="iTextSharp\iTextSharp\text\pdf\fonts\Arial.afm" />
+    <EmbeddedResource Include="iTextSharp\iTextSharp\text\pdf\fonts\c39hrp24dhtt.ttf" />
+    <EmbeddedResource Include="iTextSharp\iTextSharp\text\pdf\fonts\Georgia-Bold.ttf" />
+    <EmbeddedResource Include="iTextSharp\iTextSharp\text\pdf\fonts\Georgia-BoldOblique.ttf" />
+    <EmbeddedResource Include="iTextSharp\iTextSharp\text\pdf\fonts\Georgia-Oblique.ttf" />
+    <EmbeddedResource Include="iTextSharp\iTextSharp\text\pdf\fonts\Georgia.ttf" />
+    <EmbeddedResource Include="iTextSharp\iTextSharp\text\pdf\fonts\LucidaSans-Bold.ttf" />
+    <EmbeddedResource Include="iTextSharp\iTextSharp\text\pdf\fonts\LucidaSans-BoldOblique.ttf" />
+    <EmbeddedResource Include="iTextSharp\iTextSharp\text\pdf\fonts\LucidaSans-Oblique.ttf" />
+    <EmbeddedResource Include="iTextSharp\iTextSharp\text\pdf\fonts\LucidaSans.ttf" />
+    <EmbeddedResource Include="iTextSharp\iTextSharp\text\pdf\fonts\Tahoma-Bold.ttf" />
+    <EmbeddedResource Include="iTextSharp\iTextSharp\text\pdf\fonts\Tahoma.ttf" />
+    <EmbeddedResource Include="iTextSharp\iTextSharp\text\pdf\fonts\Verdana-Bold.ttf" />
+    <EmbeddedResource Include="iTextSharp\iTextSharp\text\pdf\fonts\Verdana-BoldOblique.ttf" />
+    <EmbeddedResource Include="iTextSharp\iTextSharp\text\pdf\fonts\Verdana-Oblique.ttf" />
+    <EmbeddedResource Include="iTextSharp\iTextSharp\text\pdf\fonts\Verdana.ttf" />
     <None Include="PDFLive.snk" />
   </ItemGroup>
   <ItemGroup>

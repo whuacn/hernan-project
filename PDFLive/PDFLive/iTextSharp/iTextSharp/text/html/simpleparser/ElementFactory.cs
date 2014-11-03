@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
+using System.Net;
 using System.util;
 using iTextSharp.text;
 using iTextSharp.text.html;
@@ -369,7 +370,7 @@ namespace iTextSharp.text.html.simpleparser {
                 IDocListener document,
                 IImageProvider img_provider,
                 Dictionary<String, Image> img_store,
-                String img_baseurl) {
+                String img_baseurl, bool auth, string user, string pass) {
             Image img = null;
             // getting the image using an image provider
             if (img_provider != null)
@@ -394,7 +395,26 @@ namespace iTextSharp.text.html.simpleparser {
                     path = "";
                 src = Path.Combine(path, src);
             }
-            img = Image.GetInstance(src);
+            //img = Image.GetInstance(src);
+            //ADD HH
+            System.Net.WebClient MyWebClient = new System.Net.WebClient();
+
+            if (auth)
+            {
+                NetworkCredential myCredentials = new NetworkCredential(user, pass);
+                MyWebClient.Credentials = myCredentials;
+            }
+            else
+            {
+                MyWebClient.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
+            }
+            try
+            {
+                Byte[] imgData = MyWebClient.DownloadData(src);
+                img = Image.GetInstance(imgData);
+            }
+            catch { img = null; }
+
             if (img == null)
                 return null;
             

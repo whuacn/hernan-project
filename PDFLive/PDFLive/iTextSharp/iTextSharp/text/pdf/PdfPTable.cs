@@ -78,6 +78,8 @@ namespace iTextSharp.text.pdf {
         */
         public const int TEXTCANVAS = 3;
 
+        //ADD HH
+        public int widths_seteados = 0;
         protected List<PdfPRow> rows = new List<PdfPRow>();
         protected float totalHeight = 0;
         protected PdfPCell[] currentRow;

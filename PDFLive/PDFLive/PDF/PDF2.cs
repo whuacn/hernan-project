@@ -141,7 +141,7 @@ namespace PDFLive
             docStream = new MemoryStream();
             writer = PdfWriter.GetInstance(doc, docStream);
             //writer.CompressionLevel = PdfStream.BEST_COMPRESSION;
-            //encryptPdf();
+            encryptPdf();
             doc.Open();
             writer.Info.Merge(Dictionary);
             Merge(content);
@@ -265,10 +265,11 @@ namespace PDFLive
         {
             try
             {
-                //Dictionary = writer.Info;
                 int permissions = PdfWriter.ALLOW_COPY;
-                if (this.allowPrint)
+
+                if (this.allowPrint)                
                     permissions = permissions | PdfWriter.ALLOW_PRINTING;
+
                 byte[] pass = System.Text.Encoding.UTF8.GetBytes(_password);
                 writer.SetEncryption(null, pass, permissions, PdfWriter.ENCRYPTION_AES_128);
             }

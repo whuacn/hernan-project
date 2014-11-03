@@ -78,6 +78,10 @@ namespace iTextSharp.text.html.simpleparser {
          */
         protected internal IDictionary<String, IHTMLTagProcessor> tags;
 
+        // ADD HH
+        private bool _auth = false;
+        private string _user = null;
+        private string _psw = null;
         /** The object defining all the styles. */
         private StyleSheet style = new StyleSheet();
 
@@ -85,7 +89,17 @@ namespace iTextSharp.text.html.simpleparser {
          * Creates a new instance of HTMLWorker
          * @param document A class that implements <CODE>DocListener</CODE>
          */
-        public HTMLWorker(IDocListener document) : this(document, null, null) {
+        public HTMLWorker(IDocListener document) : this(document, null, new StyleSheet()) {
+        }
+
+
+        /*ADD HH si necesita credenciales*/
+        public HTMLWorker(IDocListener document, string user, string psw)
+        {
+            this.document = document;
+            this._auth = true;
+            this._user = user;
+            this._psw = psw;
         }
 
         /**
@@ -429,7 +443,7 @@ namespace iTextSharp.text.html.simpleparser {
                     src, attrs, chain, document,
                     providers.ContainsKey(IMG_PROVIDER) ? (IImageProvider)providers[IMG_PROVIDER] : null, 
                     providers.ContainsKey(IMG_STORE) ? (ImageStore)providers[IMG_STORE] : null, 
-                    providers.ContainsKey(IMG_BASEURL) ? (string)providers[IMG_BASEURL] : null);
+                    providers.ContainsKey(IMG_BASEURL) ? (string)providers[IMG_BASEURL] : null,_auth, _user, _psw);
             return img;
         }
 
@@ -768,6 +782,11 @@ namespace iTextSharp.text.html.simpleparser {
             return ParseToList(reader, style, null);
         }
 
+        public static List<IElement> ParseToList(TextReader reader, StyleSheet style, string user, string pass)
+        {
+            return ParseToList(reader, style, null, user, pass);
+        }
+
         /**
          * Parses an HTML source to a List of Element objects
          * @param reader    the HTML source
@@ -778,7 +797,13 @@ namespace iTextSharp.text.html.simpleparser {
          */
         public static List<IElement> ParseToList(TextReader reader, StyleSheet style,
                 Dictionary<String, Object> providers) {
-            return ParseToList(reader, style, null, providers);
+            return ParseToList(reader, style, null, providers, null, null);
+        }
+
+        public static List<IElement> ParseToList(TextReader reader, StyleSheet style,
+                Dictionary<String, Object> providers, string user, string pass)
+        {
+            return ParseToList(reader, style, null, providers, user, pass);
         }
 
         /**
@@ -792,8 +817,15 @@ namespace iTextSharp.text.html.simpleparser {
          * @since 5.0.6
          */
         public static List<IElement> ParseToList(TextReader reader, StyleSheet style,
-                IDictionary<String, IHTMLTagProcessor> tags, Dictionary<String, Object> providers) {
+                IDictionary<String, IHTMLTagProcessor> tags, Dictionary<String, Object> providers, string user, string pass)
+        {
             HTMLWorker worker = new HTMLWorker(null, tags, style);
+            if (user != null)
+            {
+                worker._auth = true;
+                worker._user = user;
+                worker._psw = pass;
+            }
             worker.document = worker;
             worker.SetProviders(providers);
             worker.objectList = new List<IElement>();
@@ -821,6 +853,7 @@ namespace iTextSharp.text.html.simpleparser {
          * @see com.itextpdf.text.DocListener#newPage()
          */
         virtual public bool NewPage() {
+            document.Add(Chunk.NEXTPAGE);
             return true;
         }
 

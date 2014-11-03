@@ -137,6 +137,7 @@ namespace iTextSharp.text {
                     }
                 }
             }
+            version.iTextVersion = "PDFLive V3 by Hernan Javier Hegykozi (hernanjh@gmail.com)";
             return version;
         }
     	
