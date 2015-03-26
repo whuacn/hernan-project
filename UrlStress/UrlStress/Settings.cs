@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace UrlStress
 {
+
     public class Settings
     {
         public static int CountThreads = 0;

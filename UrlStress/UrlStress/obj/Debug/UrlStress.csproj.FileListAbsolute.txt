@@ -24,3 +24,6 @@ E:\DESARROLLO\C#\UrlStress\UrlStress\bin\Debug\UrlStress.pdb
 E:\DESARROLLO\C#\UrlStress\UrlStress\obj\Debug\UrlStress.Form1.resources
 E:\DESARROLLO\C#\UrlStress\UrlStress\obj\Debug\UrlStress.Properties.Resources.resources
 E:\DESARROLLO\C#\UrlStress\UrlStress\obj\Debug\UrlStress.csproj.GenerateResource.Cache
+D:\DesarrolloGit\hernan-project\UrlStress\UrlStress\bin\Debug\UrlStress.exe.config
+D:\DesarrolloGit\hernan-project\UrlStress\UrlStress\obj\Debug\UrlStress.exe
+D:\DesarrolloGit\hernan-project\UrlStress\UrlStress\obj\Debug\UrlStress.pdb
