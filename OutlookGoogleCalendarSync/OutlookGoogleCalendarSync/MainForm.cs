@@ -154,7 +154,7 @@ namespace OutlookGoogleCalendarSync {
             #region Sync Options box
             syncDirection.Items.Add(SyncDirection.OutlookToGoogle);
             syncDirection.Items.Add(SyncDirection.GoogleToOutlook);
-            //syncDirection.Items.Add(SyncDirection.Bidirectional);
+            syncDirection.Items.Add(SyncDirection.Bidirectional);
             for (int i = 0; i < syncDirection.Items.Count; i++) {
                 SyncDirection sd = (syncDirection.Items[i] as SyncDirection);
                 if (sd.Id == Settings.Instance.SyncDirection.Id) {
@@ -504,6 +504,12 @@ namespace OutlookGoogleCalendarSync {
                 return sync_outlookToGoogle(OutlookEntries, googleEntries);
             } else if (Settings.Instance.SyncDirection == SyncDirection.GoogleToOutlook) {
                 return sync_googleToOutlook(googleEntries, OutlookEntries);
+            } else if (Settings.Instance.SyncDirection == SyncDirection.Bidirectional)
+            {
+                bool r;
+                r = sync_outlookToGoogle(OutlookEntries, googleEntries);
+                r = sync_googleToOutlook(googleEntries, OutlookEntries);
+                return r;
             }
             return false;
         }

@@ -142,7 +142,6 @@ D:\Desarrollo\hernan-project\OutlookGoogleSync\OutlookGoogleSync\bin\Debug\Googl
 D:\Desarrollo\hernan-project\OutlookGoogleSync\OutlookGoogleSync\bin\Debug\Google.Apis.Calendar.v3.pdb
 D:\Desarrollo\hernan-project\OutlookGoogleSync\OutlookGoogleSync\bin\Debug\Google.Apis.Calendar.v3.xml
 D:\Desarrollo\hernan-project\OutlookGoogleSync\OutlookGoogleSync\bin\Debug\Newtonsoft.Json.Net35.xml
-D:\Desarrollo\hernan-project\OutlookGoogleSync\OutlookGoogleSync\obj\x86\Debug\OutlookGoogleSync.csprojResolveAssemblyReference.cache
 D:\Desarrollo\hernan-project\OutlookGoogleSync\OutlookGoogleSync\obj\x86\Debug\OutlookGoogleSync.EnterAuthorizationCode.resources
 D:\Desarrollo\hernan-project\OutlookGoogleSync\OutlookGoogleSync\obj\x86\Debug\OutlookGoogleSync.MainForm.resources
 D:\Desarrollo\hernan-project\OutlookGoogleSync\OutlookGoogleSync\obj\x86\Debug\OutlookGoogleSync.csproj.GenerateResource.Cache
