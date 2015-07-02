@@ -1,4 +1,0 @@
-C:\Users\hernan\Desktop\protegetufuturo\protegetufuturo\protegetufuturo\bin\protegetufuturo.dll
-C:\Users\hernan\Desktop\protegetufuturo\protegetufuturo\protegetufuturo\bin\protegetufuturo.pdb
-C:\Users\hernan\Desktop\protegetufuturo\protegetufuturo\protegetufuturo\obj\Debug\protegetufuturo.dll
-C:\Users\hernan\Desktop\protegetufuturo\protegetufuturo\protegetufuturo\obj\Debug\protegetufuturo.pdb

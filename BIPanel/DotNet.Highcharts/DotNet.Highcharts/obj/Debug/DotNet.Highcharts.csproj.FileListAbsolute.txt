@@ -1,5 +1,0 @@
-C:\Users\hernan\Desktop\DotNet.Highcharts\DotNet.Highcharts\bin\Debug\DotNet.Highcharts.dll
-C:\Users\hernan\Desktop\DotNet.Highcharts\DotNet.Highcharts\bin\Debug\DotNet.Highcharts.pdb
-C:\Users\hernan\Desktop\DotNet.Highcharts\DotNet.Highcharts\obj\Debug\DotNet.Highcharts.csprojResolveAssemblyReference.cache
-C:\Users\hernan\Desktop\DotNet.Highcharts\DotNet.Highcharts\obj\Debug\DotNet.Highcharts.dll
-C:\Users\hernan\Desktop\DotNet.Highcharts\DotNet.Highcharts\obj\Debug\DotNet.Highcharts.pdb

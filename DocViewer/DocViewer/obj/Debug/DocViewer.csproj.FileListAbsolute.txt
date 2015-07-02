@@ -1,8 +1,0 @@
-D:\Desarrollo\hernan-project\DocViewer\DocViewer\obj\Debug\DocViewer.csprojResolveAssemblyReference.cache
-D:\Desarrollo\hernan-project\DocViewer\DocViewer\bin\Debug\DocViewer.dll
-D:\Desarrollo\hernan-project\DocViewer\DocViewer\bin\Debug\DocViewer.pdb
-D:\Desarrollo\hernan-project\DocViewer\DocViewer\bin\Debug\DocumentFormat.OpenXml.dll
-D:\Desarrollo\hernan-project\DocViewer\DocViewer\bin\Debug\OpenXmlPowerTools.dll
-D:\Desarrollo\hernan-project\DocViewer\DocViewer\bin\Debug\OpenXmlPowerTools.pdb
-D:\Desarrollo\hernan-project\DocViewer\DocViewer\obj\Debug\DocViewer.dll
-D:\Desarrollo\hernan-project\DocViewer\DocViewer\obj\Debug\DocViewer.pdb
