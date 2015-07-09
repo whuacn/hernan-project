@@ -3214,7 +3214,8 @@ namespace OpenXmlPowerTools
                             if (contentType == "image/png" ||
                                 contentType == "image/gif" ||
                                 contentType == "image/tiff" ||
-                                contentType == "image/jpeg")
+                                contentType == "image/jpeg" ||
+                                contentType == "image/x-emf")
                             {
                                 using (Stream partStream = imagePart.GetStream())
                                 using (Bitmap bitmap = new Bitmap(partStream))
@@ -3231,6 +3232,7 @@ namespace OpenXmlPowerTools
                                             ContentType = contentType,
                                             DrawingElement = element,
                                             AltText = altText,
+                                            ImagePart = imagePart,
                                         };
                                         return imageHandler(imageInfo);
                                     }
@@ -3240,6 +3242,7 @@ namespace OpenXmlPowerTools
                                         ContentType = contentType,
                                         DrawingElement = element,
                                         AltText = altText,
+                                        ImagePart = imagePart,
                                     };
                                     return imageHandler(imageInfo2);
                                 };

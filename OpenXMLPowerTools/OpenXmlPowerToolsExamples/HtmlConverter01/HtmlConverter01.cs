@@ -29,7 +29,7 @@ class HtmlConverterHelper
          * This example loads each document into a byte array, then into a memory stream, so that the document can be opened for writing without
          * modifying the source document.
          */
-        foreach (var file in Directory.GetFiles("../../", "Especificacion_Encuestas v1.1.docx"))
+        foreach (var file in Directory.GetFiles("../../", "Especificacion_Documentos Digitales v1.4.docx"))
         {
             ConvertToHtml(file, "../../");
         }
