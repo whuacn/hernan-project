@@ -6,3 +6,13 @@ C:\Users\Hernan\Desktop\OxPt-3-1-02\OpenXmlPowerToolsExamples\HtmlConverter01\bi
 C:\Users\Hernan\Desktop\OxPt-3-1-02\OpenXmlPowerToolsExamples\HtmlConverter01\obj\Debug\HtmlConverter01.csprojResolveAssemblyReference.cache
 C:\Users\Hernan\Desktop\OxPt-3-1-02\OpenXmlPowerToolsExamples\HtmlConverter01\obj\Debug\HtmlConverter01.exe
 C:\Users\Hernan\Desktop\OxPt-3-1-02\OpenXmlPowerToolsExamples\HtmlConverter01\obj\Debug\HtmlConverter01.pdb
+E:\DesarrolloGit\hernan-project\OpenXMLPowerTools\OpenXmlPowerToolsExamples\HtmlConverter01\bin\Debug\HtmlConverter01.exe.config
+E:\DesarrolloGit\hernan-project\OpenXMLPowerTools\OpenXmlPowerToolsExamples\HtmlConverter01\bin\Debug\HtmlConverter01.exe
+E:\DesarrolloGit\hernan-project\OpenXMLPowerTools\OpenXmlPowerToolsExamples\HtmlConverter01\bin\Debug\HtmlConverter01.pdb
+E:\DesarrolloGit\hernan-project\OpenXMLPowerTools\OpenXmlPowerToolsExamples\HtmlConverter01\bin\Debug\DocumentFormat.OpenXml.dll
+E:\DesarrolloGit\hernan-project\OpenXMLPowerTools\OpenXmlPowerToolsExamples\HtmlConverter01\bin\Debug\OpenXmlPowerTools.dll
+E:\DesarrolloGit\hernan-project\OpenXMLPowerTools\OpenXmlPowerToolsExamples\HtmlConverter01\bin\Debug\OpenXmlPowerTools.pdb
+E:\DesarrolloGit\hernan-project\OpenXMLPowerTools\OpenXmlPowerToolsExamples\HtmlConverter01\bin\Debug\DocumentFormat.OpenXml.xml
+E:\DesarrolloGit\hernan-project\OpenXMLPowerTools\OpenXmlPowerToolsExamples\HtmlConverter01\obj\Debug\HtmlConverter01.csprojResolveAssemblyReference.cache
+E:\DesarrolloGit\hernan-project\OpenXMLPowerTools\OpenXmlPowerToolsExamples\HtmlConverter01\obj\Debug\HtmlConverter01.exe
+E:\DesarrolloGit\hernan-project\OpenXMLPowerTools\OpenXmlPowerToolsExamples\HtmlConverter01\obj\Debug\HtmlConverter01.pdb

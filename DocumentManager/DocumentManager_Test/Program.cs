@@ -28,8 +28,8 @@ namespace DocumentManager
 
             System.Diagnostics.Process.Start("test7.pdf");
             */
-            
-            FileStream Stream = new FileStream("test7.docx", FileMode.Open, FileAccess.Read);
+
+            FileStream Stream = new FileStream("Especificacion_Documentos Digitales v1.4.docx", FileMode.Open, FileAccess.Read);
             BinaryReader br = new BinaryReader(Stream);
             byte[] buffer = br.ReadBytes((int)Stream.Length);
             br.Close();
@@ -37,13 +37,13 @@ namespace DocumentManager
            
             string result  = WordManager.ToHTML(buffer);
 
-            Stream = new FileStream("test7.html", FileMode.Create, FileAccess.Write);
+            Stream = new FileStream("Especificacion_Documentos Digitales v1.4.html", FileMode.Create, FileAccess.Write);
             StreamWriter Write = new StreamWriter(Stream, Encoding.GetEncoding(1252));
             Write.Write(result);
             Write.Close();
             Stream.Close();
 
-            System.Diagnostics.Process.Start("test7.html");             
+            System.Diagnostics.Process.Start("Especificacion_Documentos Digitales v1.4.html");             
              
 
 

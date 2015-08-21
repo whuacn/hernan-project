@@ -22,3 +22,11 @@ D:\hernan-project\DocumentManager\DocumentManager_Test\bin\Debug\Microsoft.Offic
 D:\hernan-project\DocumentManager\DocumentManager_Test\bin\Debug\Microsoft.Vbe.Interop.dll
 D:\hernan-project\DocumentManager\DocumentManager_Test\bin\Debug\DocumentManager.pdb
 D:\hernan-project\DocumentManager\DocumentManager_Test\obj\Debug\DocumentManager_Test.csprojResolveAssemblyReference.cache
+E:\DesarrolloGit\hernan-project\DocumentManager\DocumentManager_Test\bin\Debug\DocumentManager_Test.exe.config
+E:\DesarrolloGit\hernan-project\DocumentManager\DocumentManager_Test\obj\Debug\DocumentManager_Test.exe
+E:\DesarrolloGit\hernan-project\DocumentManager\DocumentManager_Test\obj\Debug\DocumentManager_Test.pdb
+E:\DesarrolloGit\hernan-project\DocumentManager\DocumentManager_Test\bin\Debug\DocumentManager_Test.exe
+E:\DesarrolloGit\hernan-project\DocumentManager\DocumentManager_Test\bin\Debug\DocumentManager_Test.pdb
+E:\DesarrolloGit\hernan-project\DocumentManager\DocumentManager_Test\bin\Debug\DocumentManager.dll
+E:\DesarrolloGit\hernan-project\DocumentManager\DocumentManager_Test\bin\Debug\DocumentManager.pdb
+E:\DesarrolloGit\hernan-project\DocumentManager\DocumentManager_Test\obj\Debug\DocumentManager_Test.csprojResolveAssemblyReference.cache

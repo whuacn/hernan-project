@@ -1,1 +1,2 @@
 C:\Users\Hernan\Desktop\OxPt-3-1-02\OpenXmlPowerToolsExamples\FormattingAssembler01\bin\Debug\FormattingAssembler01.exe.config
+E:\DesarrolloGit\hernan-project\OpenXMLPowerTools\OpenXmlPowerToolsExamples\FormattingAssembler01\bin\Debug\FormattingAssembler01.exe.config

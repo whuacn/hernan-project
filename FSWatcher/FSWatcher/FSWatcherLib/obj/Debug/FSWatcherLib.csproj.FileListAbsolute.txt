@@ -1,0 +1,10 @@
+C:\Users\hernan\Desktop\FSWatcher\FSWatcher\FSWatcherLib\bin\Debug\FSWatcherLib.dll
+C:\Users\hernan\Desktop\FSWatcher\FSWatcher\FSWatcherLib\bin\Debug\FSWatcherLib.pdb
+C:\Users\hernan\Desktop\FSWatcher\FSWatcher\FSWatcherLib\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\hernan\Desktop\FSWatcher\FSWatcher\FSWatcherLib\obj\Debug\FSWatcherLib.dll
+C:\Users\hernan\Desktop\FSWatcher\FSWatcher\FSWatcherLib\obj\Debug\FSWatcherLib.pdb
+E:\DESARROLLO\C#\FSWatcher\FSWatcher\FSWatcherLib\bin\Debug\FSWatcherLib.dll
+E:\DESARROLLO\C#\FSWatcher\FSWatcher\FSWatcherLib\bin\Debug\FSWatcherLib.pdb
+E:\DESARROLLO\C#\FSWatcher\FSWatcher\FSWatcherLib\obj\Debug\FSWatcherLib.csprojResolveAssemblyReference.cache
+E:\DESARROLLO\C#\FSWatcher\FSWatcher\FSWatcherLib\obj\Debug\FSWatcherLib.dll
+E:\DESARROLLO\C#\FSWatcher\FSWatcher\FSWatcherLib\obj\Debug\FSWatcherLib.pdb

@@ -11,3 +11,9 @@ D:\hernan-project\DocumentManager\DocumentManager\bin\Debug\Office.dll
 D:\hernan-project\DocumentManager\DocumentManager\bin\Debug\Microsoft.Vbe.Interop.dll
 D:\hernan-project\DocumentManager\DocumentManager\obj\Debug\DocumentManager.dll
 D:\hernan-project\DocumentManager\DocumentManager\obj\Debug\DocumentManager.pdb
+E:\DesarrolloGit\hernan-project\DocumentManager\DocumentManager\bin\Debug\DocumentManager.dll
+E:\DesarrolloGit\hernan-project\DocumentManager\DocumentManager\bin\Debug\DocumentManager.pdb
+E:\DesarrolloGit\hernan-project\DocumentManager\DocumentManager\obj\Debug\DocumentManager.dll
+E:\DesarrolloGit\hernan-project\DocumentManager\DocumentManager\obj\Debug\DocumentManager.pdb
+E:\DesarrolloGit\hernan-project\DocumentManager\DocumentManager\bin\Debug\Microsoft.Office.Interop.Excel.dll
+E:\DesarrolloGit\hernan-project\DocumentManager\DocumentManager\bin\Debug\Microsoft.Office.Interop.PowerPoint.dll
