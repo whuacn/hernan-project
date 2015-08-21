@@ -1,0 +1,7 @@
+E:\DESARROLLO\C#\SiteMonitor\SiteMonitor\bin\Release\SiteMonitor.exe
+E:\DESARROLLO\C#\SiteMonitor\SiteMonitor\bin\Release\SiteMonitor.pdb
+E:\DESARROLLO\C#\SiteMonitor\SiteMonitor\obj\Release\SiteMonitor.csprojResolveAssemblyReference.cache
+E:\DESARROLLO\C#\SiteMonitor\SiteMonitor\obj\Release\SiteMonitor.Form1.resources
+E:\DESARROLLO\C#\SiteMonitor\SiteMonitor\obj\Release\SiteMonitor.csproj.GenerateResource.Cache
+E:\DESARROLLO\C#\SiteMonitor\SiteMonitor\obj\Release\SiteMonitor.exe
+E:\DESARROLLO\C#\SiteMonitor\SiteMonitor\obj\Release\SiteMonitor.pdb

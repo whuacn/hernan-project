@@ -1,0 +1,5 @@
+N:\DESARROLLO\C#\AppExtend\Contracts\obj\Debug\ResolveAssemblyReference.cache
+N:\DESARROLLO\C#\AppExtend\Contracts\bin\Debug\Contracts.dll
+N:\DESARROLLO\C#\AppExtend\Contracts\bin\Debug\Contracts.pdb
+N:\DESARROLLO\C#\AppExtend\Contracts\obj\Debug\Contracts.dll
+N:\DESARROLLO\C#\AppExtend\Contracts\obj\Debug\Contracts.pdb

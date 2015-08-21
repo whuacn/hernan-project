@@ -1,0 +1,11 @@
+N:\DESARROLLO\C#\AppExtend\AppExtend\bin\Debug\AppExtend.exe
+N:\DESARROLLO\C#\AppExtend\AppExtend\bin\Debug\AppExtend.pdb
+N:\DESARROLLO\C#\AppExtend\AppExtend\bin\Debug\Contracts.dll
+N:\DESARROLLO\C#\AppExtend\AppExtend\bin\Debug\Contracts.pdb
+N:\DESARROLLO\C#\AppExtend\AppExtend\obj\x86\Debug\ResolveAssemblyReference.cache
+N:\DESARROLLO\C#\AppExtend\AppExtend\obj\x86\Debug\AppExtend.frmPrincipal.resources
+N:\DESARROLLO\C#\AppExtend\AppExtend\obj\x86\Debug\AppExtend.Properties.Resources.resources
+N:\DESARROLLO\C#\AppExtend\AppExtend\obj\x86\Debug\GenerateResource.read.1.tlog
+N:\DESARROLLO\C#\AppExtend\AppExtend\obj\x86\Debug\GenerateResource.write.1.tlog
+N:\DESARROLLO\C#\AppExtend\AppExtend\obj\x86\Debug\AppExtend.exe
+N:\DESARROLLO\C#\AppExtend\AppExtend\obj\x86\Debug\AppExtend.pdb

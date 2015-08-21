@@ -1,0 +1,10 @@
+N:\DESARROLLO\C#\AppExtend\Plug1\obj\Debug\ResolveAssemblyReference.cache
+N:\DESARROLLO\C#\AppExtend\Plug1\bin\Debug\Plug1.dll
+N:\DESARROLLO\C#\AppExtend\Plug1\bin\Debug\Plug1.pdb
+N:\DESARROLLO\C#\AppExtend\Plug1\bin\Debug\Contracts.dll
+N:\DESARROLLO\C#\AppExtend\Plug1\bin\Debug\Contracts.pdb
+N:\DESARROLLO\C#\AppExtend\Plug1\obj\Debug\Plug1.dll
+N:\DESARROLLO\C#\AppExtend\Plug1\obj\Debug\Plug1.pdb
+N:\DESARROLLO\C#\AppExtend\Plug1\obj\Debug\Plug1.About.resources
+N:\DESARROLLO\C#\AppExtend\Plug1\obj\Debug\GenerateResource.read.1.tlog
+N:\DESARROLLO\C#\AppExtend\Plug1\obj\Debug\GenerateResource.write.1.tlog
