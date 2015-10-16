@@ -1,0 +1,7 @@
+E:\DESARROLLO\C#\WindowsServiceTest\WindowsServiceTest\bin\Debug\WindowsServiceTest.exe.config
+E:\DESARROLLO\C#\WindowsServiceTest\WindowsServiceTest\bin\Debug\WindowsServiceTest.exe
+E:\DESARROLLO\C#\WindowsServiceTest\WindowsServiceTest\bin\Debug\WindowsServiceTest.pdb
+E:\DESARROLLO\C#\WindowsServiceTest\WindowsServiceTest\obj\Debug\WindowsServiceTest.ProjectInstaller.resources
+E:\DESARROLLO\C#\WindowsServiceTest\WindowsServiceTest\obj\Debug\WindowsServiceTest.csproj.GenerateResource.Cache
+E:\DESARROLLO\C#\WindowsServiceTest\WindowsServiceTest\obj\Debug\WindowsServiceTest.exe
+E:\DESARROLLO\C#\WindowsServiceTest\WindowsServiceTest\obj\Debug\WindowsServiceTest.pdb

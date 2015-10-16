@@ -1,0 +1,13 @@
+﻿Instalando ensamblado 'E:\DESARROLLO\C#\WindowsServiceTest\WindowsServiceTest\bin\Debug\WindowsServiceTest - copia.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   logfile = E:\DESARROLLO\C#\WindowsServiceTest\WindowsServiceTest\bin\Debug\WindowsServiceTest - copia.InstallLog
+   assemblypath = E:\DESARROLLO\C#\WindowsServiceTest\WindowsServiceTest\bin\Debug\WindowsServiceTest - copia.exe
+Instalando el servicio ServiceTest...
+El servicio ServiceTest se ha instalado correctamente.
+Creando el origen de EventLog ServiceTest en el registro Application...
+Confirmando ensamblado 'E:\DESARROLLO\C#\WindowsServiceTest\WindowsServiceTest\bin\Debug\WindowsServiceTest - copia.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   logfile = E:\DESARROLLO\C#\WindowsServiceTest\WindowsServiceTest\bin\Debug\WindowsServiceTest - copia.InstallLog
+   assemblypath = E:\DESARROLLO\C#\WindowsServiceTest\WindowsServiceTest\bin\Debug\WindowsServiceTest - copia.exe
