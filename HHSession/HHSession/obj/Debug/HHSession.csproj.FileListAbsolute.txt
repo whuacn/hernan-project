@@ -1,0 +1,6 @@
+E:\DesarrolloGit\hernan-project\HHSession\HHSession\bin\Debug\HHSession.dll
+E:\DesarrolloGit\hernan-project\HHSession\HHSession\bin\Debug\HHSession.pdb
+E:\DesarrolloGit\hernan-project\HHSession\HHSession\obj\Debug\HHSession.dll
+E:\DesarrolloGit\hernan-project\HHSession\HHSession\obj\Debug\HHSession.pdb
+E:\DesarrolloGit\hernan-project\HHSession\HHSession\bin\Debug\HHSession.snk
+E:\DesarrolloGit\hernan-project\HHSession\HHSession\bin\Debug\System.Web.dll
